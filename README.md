@@ -1,6 +1,6 @@
 # sda-data-structures
 
-Repository with the implementations from the exercises.
+Repository with implementations from the exercises.
 
 Additional materials on the topics:
 

@@ -8,4 +8,4 @@ Additional materials on the topics:
 
  - Sparse Table: https://cp-algorithms.com/data_structures/sparse-table.html
 
- - Segment Tree Decomposition: https://cp-algorithms.com/data_structures/segment_tree.html
+ - Segment Tree: https://cp-algorithms.com/data_structures/segment_tree.html

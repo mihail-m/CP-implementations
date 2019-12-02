@@ -73,33 +73,33 @@ void putLinks() {
 void checkText(string text) {
     Node* node = root;                      
     for (int i = 0; i < text.size(); i++) { 
-        Node* n = node;
+        Node* nextNode = node;
 
-        while (n->children[text[i]] == nullptr && n != root) {
-            n = n->link;
+        while (nextNode->children[text[i]] == nullptr && nextNode != root) {
+            nextNode = nextNode->link;
         }
 
-        if (n == root) {            
-            n = n->children[text[i]];
+        if (nextNode == root) {            
+            nextNode = nextNode->children[text[i]];
 
-            if (n == nullptr) {
-                n = root;
+            if (nextNode == nullptr) {
+                nextNode = root;
             }
         } else {
-            n = n->children[text[i]];
+            nextNode = nextNode->children[text[i]];
         }
 
-        Node* n1 = n;  
+        Node* tempNode = nextNode;  
 
-        while (n1 != root) {     
-            if (n1->isWord) { 
+        while (tempNode != root) {     
+            if (tempNode->isWord) { 
                 cout << "Word ending at index: " << i << endl;
             }
 
-            n1 = n1->link;
+            tempNode = tempNode->link;
         }
 
-        node = n;
+        node = tempNode;
     }
 }
 

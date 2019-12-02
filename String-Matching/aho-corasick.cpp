@@ -2,22 +2,22 @@
 
 using namespace std;
 
-static const int MAX_SYMBOLS = 256;
+static const int BASE = 256;
 static const int MAX_SIZE = 100001;
 
 struct Node {
     bool isWord;
     char letter;
-    Node* par;
+    Node* parent;
     Node* link;
-    Node* child[MAX_SYMBOLS + 1];
+    Node* children[BASE + 1];
 
     Node() {
         isWord = false;
         link = nullptr;
         letter = ' ';
-        for (int i = 0; i < MAX_SYMBOLS; i++) {
-            child[i] = nullptr;
+        for (int i = 0; i < BASE; i++) {
+            children[i] = nullptr;
         }
     }
 };
@@ -29,19 +29,19 @@ int memCnt;
 void addWord(string word) {
     Node* node = root;                              
     for (char letter : word) {         
-        if (node->child[letter] == nullptr) {
-            node->child[letter] = &memoryHolder[memCnt++];
-            node->child[letter]->par = node;
-            node->child[letter]->letter = letter;
+        if (node->children[letter] == nullptr) {
+            node->children[letter] = &memoryHolder[memCnt++];
+            node->children[letter]->parent = node;
+            node->children[letter]->letter = letter;
         }
-        node = node->child[letter];               
+        node = node->children[letter];               
     }
     node->isWord = true;                        
 }
 
 void putLinks() {
     root->link = root;
-    root->par = root;
+    root->parent = root;
     
     queue<Node*> q;     
     q.push(root);
@@ -50,19 +50,19 @@ void putLinks() {
         Node* node = q.front();
         q.pop();
 
-        for (int i = 0; i < MAX_SYMBOLS; i++) {
-            if (node->child[i] != nullptr) {
-                q.push(node->child[i]);
+        for (int i = 0; i < BASE; i++) {
+            if (node->children[i] != nullptr) {
+                q.push(node->children[i]);
             }
         }
 
-        Node* linkTo = node->par->link;
+        Node* linkTo = node->parent->link;
 
-        while (linkTo->child[node->letter] == nullptr && linkTo != root) {
+        while (linkTo->children[node->letter] == nullptr && linkTo != root) {
             linkTo = linkTo->link;
         }
 
-        node->link = linkTo->child[node->letter];
+        node->link = linkTo->children[node->letter];
 
         if (node->link == NULL || node->link == node) {
             node->link = root;
@@ -75,18 +75,18 @@ void checkText(string text) {
     for (int i = 0; i < text.size(); i++) { 
         Node* n = node;
 
-        while (n->child[text[i]] == nullptr && n != root) {
+        while (n->children[text[i]] == nullptr && n != root) {
             n = n->link;
         }
 
         if (n == root) {            
-            n = n->child[text[i]];
+            n = n->children[text[i]];
 
             if (n == nullptr) {
                 n = root;
             }
         } else {
-            n = n->child[text[i]];
+            n = n->children[text[i]];
         }
 
         Node* n1 = n;  
@@ -106,10 +106,10 @@ void checkText(string text) {
 bool findWord(string word) {
     Node* node = root; 
     for (char letter : word) {
-        if (node->child[letter] == nullptr) {
+        if (node->children[letter] == nullptr) {
             return false;
         }
-        node = node->child[letter];
+        node = node->children[letter];
     }
     return node->isWord;
 }

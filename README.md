@@ -4,6 +4,10 @@ Repository with implementations from the exercises.
 
 Additional materials on the topics:
 
+- Geometry:
+
+  - Convex Hull (Graham Scan): https://cp-algorithms.com/geometry/grahams-scan-convex-hull.html
+
 - Range Query:
 
   - Sqrt Decomposition: https://cp-algorithms.com/data_structures/sqrt_decomposition.html

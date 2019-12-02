@@ -101,7 +101,7 @@ void solve() {
 
 		int l, r;
 		cin >> l >> r;
-
+		
 		if (type == 'U') {
 			int v;
 			cin >> v;

@@ -4,20 +4,24 @@ Repository with implementations from the exercises.
 
 Additional materials on the topics:
 
- - Sqrt Decomposition: https://cp-algorithms.com/data_structures/sqrt_decomposition.html
+- Range Query:
 
- - Sparse Table: https://cp-algorithms.com/data_structures/sparse-table.html
+  - Sqrt Decomposition: https://cp-algorithms.com/data_structures/sqrt_decomposition.html
 
- - Segment Tree: https://cp-algorithms.com/data_structures/segment_tree.html
+  - Sparse Table: https://cp-algorithms.com/data_structures/sparse-table.html
 
- - Fenwick Tree (BITree): https://cp-algorithms.com/data_structures/fenwick.html
+  - Segment Tree: https://cp-algorithms.com/data_structures/segment_tree.html
 
- - Roling Hash: https://cp-algorithms.com/string/string-hashing.html
+  - Fenwick Tree (BITree): https://cp-algorithms.com/data_structures/fenwick.html
 
- - Rabin Karp: https://cp-algorithms.com/string/rabin-karp.html
+- String matching:
+ 
+  - Roling Hash: https://cp-algorithms.com/string/string-hashing.html
 
- - Trie (Prefix Tree): https://www.geeksforgeeks.org/trie-insert-and-search/
+  - Rabin Karp: https://cp-algorithms.com/string/rabin-karp.html
 
- - Knuth Morris Pratt (KMP): https://cp-algorithms.com/string/prefix-function.html
+  - Trie (Prefix Tree): https://www.geeksforgeeks.org/trie-insert-and-search/
 
- - Aho Corasick (KMP Generalization): https://cp-algorithms.com/string/aho_corasick.html
+  - Knuth Morris Pratt (KMP): https://cp-algorithms.com/string/prefix-function.html
+
+  - Aho Corasick (KMP Generalization): https://cp-algorithms.com/string/aho_corasick.html

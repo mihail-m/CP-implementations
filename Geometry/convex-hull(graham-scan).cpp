@@ -13,7 +13,7 @@ int dist(pair<int, int> p1, pair<int, int> p2) {
 
 int orientation(pair<int, int> p1, pair<int, int> p2, pair<int, int> p3) {
 	return (p2.y - p1.y) * (p3.x - p2.x) -
-		   (p2.x - p1.x) * (p3.y - p2.y);
+	       (p2.x - p1.x) * (p3.y - p2.y);
 }
 
 bool compare(pair<int, int> p1, pair<int, int> p2) {

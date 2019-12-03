@@ -3,54 +3,54 @@ using namespace std;
 
 static const int BASE = 256;
 
-struct Node {
-	bool isWord;
-	Node* children[BASE];
+struct prefix_node {
+	bool is_word;
+	prefix_node* children[BASE];
 
-	Node() {
-		isWord = false;
+	prefix_node() {
+		is_word = false;
 		for (int i = 0; i < BASE; i++) {
 			children[i] = nullptr;
 		}
 	}
 };
 
-Node* root;
-Node memoryHolder[MAX_SIZE];
-int memCnt;
+prefix_node* root;
+prefix_node memory_holder[MAX_SIZE];
+int mem_cnt;
 
-void addWord(string word) {
-	Node* node = root;
+void add_word(string word) {
+	prefix_node* node = root;
 	for (char letter : word) {
 		if (node->children[letter] == nullptr) {
-			node->children[letter] = &memoryHolder[memCnt++];
+			node->children[letter] = &memory_holder[mem_cnt++];
 		}
 		node = node->children[letter];
 	}
-	node->isWord = true;
+	node->is_word = true;
 }
 
-bool findWord(string word) {
-	Node* node = root;
+bool find_word(string word) {
+	prefix_node* node = root;
 	for (char letter : word) {
 		if (node->children[letter] == nullptr) {
 			return false;
 		}
 		node = node->children[letter];
 	}
-	return node->isWord;
+	return node->is_word;
 }
 
 void build() {
 	int n;
 	cin >> n;
 
-	root = new Node();
+	root = new prefix_node();
 
 	for (int i = 0; i < n; i++) {
 		string word;
 		cin >> word;
-		addWord(word);
+		add_word(word);
 	}
 }
 
@@ -61,7 +61,7 @@ void solve() {
 	for (int i = 0; i < q; i++) {
 		string word;
 		cin >> word;
-		cout << findWord(word) << endl;
+		cout << find_word(word) << endl;
 	}
 }
 

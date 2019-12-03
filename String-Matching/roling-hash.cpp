@@ -5,38 +5,38 @@ static const int MOD = 1000000000 + 7; // 10^9 + 7 (prime number)
 static const int BASE = 257; // prime number
 static const int MAX_SIZE = 100001;
 
-long long basePowers[MAX_SIZE];
+long long base_powers[MAX_SIZE];
 
-void getPowers(int to) {
-	basePowers[0] = 1;
+void get_powers(int to) {
+	base_powers[0] = 1;
 	for (int i = 1; i <= to; i++) {
-		basePowers[i] = (basePowers[i - 1] * BASE) % MOD;
+		base_powers[i] = (base_powers[i - 1] * BASE) % MOD;
 	}
 }
  
-long long getHash(string word) {
+long long get_hash(string word) {
 	long long result = 0;
 
 	for (int i = 0; i < word.size(); i++) {
-		result = (result + word[i] * basePowers[i]) % MOD;
+		result = (result + word[i] * base_powers[i]) % MOD;
 	}
 
 	return result;
 }
 
-int rollingHash(string text, string word) {
-	getPowers(word.size());
+int rolling_hash(string text, string word) {
+	get_powers(word.size());
 
-	long long wordHash = getHash(word);
-	long long curHash = getHash(text.substr(0, word.size()));
+	long long word_hash = get_hash(word);
+	long long cur_hash = get_hash(text.substr(0, word.size()));
 
-	int occurrences = (curHash == wordHash);
+	int occurrences = (cur_hash == word_hash);
 
 	for (int i = word.size(); i < text.size(); i++) {
-		curHash -= (text[i - word.size()] * basePowers[word.size() - 1]) % MOD;
-		curHash = ((curHash * BASE) % MOD + text[i]) % MOD;
+		cur_hash -= (text[i - word.size()] * base_powers[word.size() - 1]) % MOD;
+		cur_hash = ((cur_hash * BASE) % MOD + text[i]) % MOD;
 
-		occurrences += (curHash == wordHash);
+		occurrences += (cur_hash == word_hash);
 	}
 
 	return occurrences;
@@ -53,7 +53,7 @@ int main() {
 	cin >> text;
 	cin >> word;
 
-	cout << rollingHash(text, word) << "\n";
+	cout << rolling_hash(text, word) << "\n";
 
 	return 0;
 }

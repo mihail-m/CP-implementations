@@ -22,7 +22,7 @@ void update(int index, int value) {
     } 
 }
 
-int findSum(int index) { 
+int find_sum(int index) { 
     int res = 0;
     index++; 
     while (index > 0) { 
@@ -43,7 +43,7 @@ void solve() {
 	for (int i = 0; i < q; i++) {
 		int l, r;
 		cin >> l >> r;
-		cout << findSum(r) - findSum(l - 1) << "\n";
+		cout << find_sum(r) - find_sum(l - 1) << "\n";
 	}
 }
 

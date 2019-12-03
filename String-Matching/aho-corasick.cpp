@@ -2,135 +2,135 @@
 
 using namespace std;
 
-static const int BASE = 256;
+static const int MAX_SYMBOLS = 256;
 static const int MAX_SIZE = 100001;
 
-struct Node {
-    bool isWord;
+struct automation_node {
+    bool is_word;
     char letter;
-    Node* parent;
-    Node* link;
-    Node* children[BASE + 1];
+    automation_node* par;
+    automation_node* link;
+    automation_node* child[MAX_SYMBOLS + 1];
 
-    Node() {
-        isWord = false;
+    automation_node() {
+        is_word = false;
         link = nullptr;
         letter = ' ';
-        for (int i = 0; i < BASE; i++) {
-            children[i] = nullptr;
+        for (int i = 0; i < MAX_SYMBOLS; i++) {
+            child[i] = nullptr;
         }
     }
 };
 
-Node* root;
-Node memoryHolder[MAX_SIZE];
+automation_node* root;
+automation_node memoryHolder[MAX_SIZE];
 int memCnt;
 
-void addWord(string word) {
-    Node* node = root;                              
+void add_word(string word) {
+    automation_node* node = root;                              
     for (char letter : word) {         
-        if (node->children[letter] == nullptr) {
-            node->children[letter] = &memoryHolder[memCnt++];
-            node->children[letter]->parent = node;
-            node->children[letter]->letter = letter;
+        if (node->child[letter] == nullptr) {
+            node->child[letter] = &memoryHolder[memCnt++];
+            node->child[letter]->par = node;
+            node->child[letter]->letter = letter;
         }
-        node = node->children[letter];               
+        node = node->child[letter];               
     }
-    node->isWord = true;                        
+    node->is_word = true;                        
 }
 
-void putLinks() {
+void put_links() {
     root->link = root;
-    root->parent = root;
+    root->par = root;
     
-    queue<Node*> q;     
+    queue<automation_node*> q;     
     q.push(root);
 
     while (q.empty() == false) {
-        Node* node = q.front();
+        automation_node* node = q.front();
         q.pop();
 
-        for (int i = 0; i < BASE; i++) {
-            if (node->children[i] != nullptr) {
-                q.push(node->children[i]);
+        for (int i = 0; i < MAX_SYMBOLS; i++) {
+            if (node->child[i] != nullptr) {
+                q.push(node->child[i]);
             }
         }
 
-        Node* linkTo = node->parent->link;
+        automation_node* linkTo = node->par->link;
 
-        while (linkTo->children[node->letter] == nullptr && linkTo != root) {
+        while (linkTo->child[node->letter] == nullptr && linkTo != root) {
             linkTo = linkTo->link;
         }
 
-        node->link = linkTo->children[node->letter];
+        node->link = linkTo->child[node->letter];
 
-        if (node->link == NULL || node->link == node) {
+        if (node->link == nullptr || node->link == node) {
             node->link = root;
         }
     }
 }
 
-void checkText(string text) {
-    Node* node = root;                      
+void check_text(string text) {
+    automation_node* node = root;                      
     for (int i = 0; i < text.size(); i++) { 
-        Node* nextNode = node;
+        automation_node* n = node;
 
-        while (nextNode->children[text[i]] == nullptr && nextNode != root) {
-            nextNode = nextNode->link;
+        while (n->child[text[i]] == nullptr && n != root) {
+            n = n->link;
         }
 
-        if (nextNode == root) {            
-            nextNode = nextNode->children[text[i]];
+        if (n == root) {            
+            n = n->child[text[i]];
 
-            if (nextNode == nullptr) {
-                nextNode = root;
+            if (n == nullptr) {
+                n = root;
             }
         } else {
-            nextNode = nextNode->children[text[i]];
+            n = n->child[text[i]];
         }
 
-        Node* tempNode = nextNode;  
+        automation_node* n1 = n;  
 
-        while (tempNode != root) {     
-            if (tempNode->isWord) { 
+        while (n1 != root) {     
+            if (n1->is_word) { 
                 cout << "Word ending at index: " << i << endl;
             }
 
-            tempNode = tempNode->link;
+            n1 = n1->link;
         }
 
-        node = tempNode;
+        node = n;
     }
 }
 
-bool findWord(string word) {
-    Node* node = root; 
+bool find_word(string word) {
+    automation_node* node = root; 
     for (char letter : word) {
-        if (node->children[letter] == nullptr) {
+        if (node->child[letter] == nullptr) {
             return false;
         }
-        node = node->children[letter];
+        node = node->child[letter];
     }
-    return node->isWord;
+    return node->is_word;
 }
 
 void build() {
-    root = new Node();
+    root = new automation_node();
 
     int n;
     cin >> n;
     for (int i = 0; i < n; i++) {
         string word;
         cin >> word;
-        addWord(word);
+        add_word(word);
     }
-    putLinks();
+    put_links();
 }
 
 void solve() {
     string text;
     cin >> text;
-    checkText(text);
+    check_text(text);
 }
 
 int main() {

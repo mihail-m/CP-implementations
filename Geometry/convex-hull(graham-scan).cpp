@@ -36,7 +36,7 @@ pair<int, int> top2(stack<pair<int, int>> s) {
 	return res;
 }
 
-void arrangePoints() {
+void arrange_points() {
 	int minPoint = 0;
 
 	for (int i = 0; i < points.size(); i++) {
@@ -51,41 +51,41 @@ void arrangePoints() {
 
 	sort(points.begin() + 1, points.end(), compare);
 
-	int viablePoints = 1;
+	int viable_points = 1;
 	for (int i = 1; i < points.size(); i++) {
 		while (i < points.size() - 1 && orientation(points[0], points[i], points[i + 1]) == 0) {
 			i++;
 		}
-		points[viablePoints++] = points[i];
+		points[viable_points++] = points[i];
 	}
 	
-	while (points.size() > viablePoints) {
+	while (points.size() > viable_points) {
 		points.pop_back();
 	}
 }
 
-void grahamScan() {
-	arrangePoints();
+void graham_scan() {
+	arrange_points();
 
 	if (points.size() < 3) {
 		return;
 	}
 
-	stack<pair<int, int>> convexHull; 
-	convexHull.push(points[0]);
-	convexHull.push(points[1]);
-	convexHull.push(points[2]);
+	stack<pair<int, int>> convex_hull; 
+	convex_hull.push(points[0]);
+	convex_hull.push(points[1]);
+	convex_hull.push(points[2]);
 
 	for (int i = 3; i < points.size(); i++) {
-		while (orientation(top2(convexHull), convexHull.top(), points[i]) >= 0) {
-			convexHull.pop();
+		while (orientation(top2(convex_hull), convex_hull.top(), points[i]) >= 0) {
+			convex_hull.pop();
 		}
-		convexHull.push(points[i]);
+		convex_hull.push(points[i]);
 	}
 
-	while (convexHull.empty() == false) {
-		cout << "(" << convexHull.top().x << ", " << convexHull.top().y << ")\n";
-		convexHull.pop();
+	while (convex_hull.empty() == false) {
+		cout << "(" << convex_hull.top().x << ", " << convex_hull.top().y << ")\n";
+		convex_hull.pop();
 	}
 }
 
@@ -105,7 +105,7 @@ int main() {
 	cout.tie(nullptr);
 
 	input();
-	grahamScan();
+	graham_scan();
 
 	return 0;
 }

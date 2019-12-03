@@ -5,44 +5,44 @@ static const int MOD = 1000000000 + 7; // 10^9 + 7 (prime number)
 static const int BASE = 257; // prime number
 static const int MAX_SIZE = 100001;
 
-long long basePowers[MAX_SIZE];
-long long prefixHash[MAX_SIZE];
+long long base_powers[MAX_SIZE];
+long long prefix_hash[MAX_SIZE];
 
-void getPowers(int to) {
-	basePowers[0] = 1;
+void get_powers(int to) {
+	base_powers[0] = 1;
 	for (int i = 1; i <= to; i++) {
-		basePowers[i] = (basePowers[i - 1] * BASE) % MOD;
+		base_powers[i] = (base_powers[i - 1] * BASE) % MOD;
 	}
 }
 
-void getPrefixHashes(string text) {
+void get_prefix_hashes(string text) {
 	for (int i = 0; i < text.size(); i++) {
-		prefixHash[i + 1] = (prefixHash[i] + text[i] * basePowers[i]) % MOD;
+		prefix_hash[i + 1] = (prefix_hash[i] + text[i] * base_powers[i]) % MOD;
 	}
 }
 
-long long getHash(string word) {
+long long get_hash(string word) {
 	long long result = 0;
 
 	for (int i = 0; i < word.size(); i++) {
-		result = (result + word[i] * basePowers[i]) % MOD;
+		result = (result + word[i] * base_powers[i]) % MOD;
 	}
 
 	return result;
 }
 
-int rabinKarp(string text, string word) {
-	getPowers(text.size());
-	getPrefixHashes(text);
+int rabin_karp(string text, string word) {
+	get_powers(text.size());
+	get_prefix_hashes(text);
 
-	long long wordHash = getHash(word);
-	long long curHash = prefixHash[word.size()];
+	long long word_hash = get_hash(word);
+	long long cur_hash = prefix_hash[word.size()];
 
-	int occurrences = (curHash == wordHash);
+	int occurrences = (cur_hash == word_hash);
 
 	for (int i = word.size() + 1; i <= text.size(); i++) {
-		curHash = (prefixHash[i] + MOD - prefixHash[i - word.size()]) % MOD;
-		occurrences += (curHash == ((wordHash * basePowers[i - word.size()]) % MOD));
+		cur_hash = (prefix_hash[i] + MOD - prefix_hash[i - word.size()]) % MOD;
+		occurrences += (cur_hash == ((word_hash * base_powers[i - word.size()]) % MOD));
 	}
 
 	return occurrences;
@@ -59,7 +59,7 @@ int main() {
 	cin >> text;
 	cin >> word;
 
-	cout << rabinKarp(text, word) << endl;
+	cout << rabin_karp(text, word) << endl;
 
 	return 0;
 }

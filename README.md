@@ -8,6 +8,8 @@ Additional materials on the topics:
 
   - Convex Hull (Graham Scan): https://cp-algorithms.com/geometry/grahams-scan-convex-hull.html
 
+  - KD Tree: https://en.wikipedia.org/wiki/K-d_tree
+
 - Range Query:
 
   - Sqrt Decomposition: https://cp-algorithms.com/data_structures/sqrt_decomposition.html

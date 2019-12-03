@@ -5,7 +5,7 @@ static const int MAX_SIZE = 100001;
 
 int lsp[MAX_SIZE];
 
-void findLsp(string word) {
+void find_lsp(string word) {
 	int i = 1;
 	int j = 0;
 	lsp[0] = 0;
@@ -27,7 +27,7 @@ void findLsp(string word) {
 }
 
 int kmp(string text, string word) {
-	findLsp(word);
+	find_lsp(word);
 
 	int i = 0;
 	int j = 0;

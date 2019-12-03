@@ -34,7 +34,7 @@ void build() {
 	}
 }
 
-int findMin(int l, int r) {
+int find_min(int l, int r) {
 	int i = log_2[r - l + 1];
 	return min(st[l][i], st[r - (1 << i) + 1][i]);
 }
@@ -44,7 +44,7 @@ void solve() {
 	for (int i = 0; i < q; i++) {
 		int l, r;
 		cin >> l >> r;
-		cout << findMin(l, r) << "\n";
+		cout << find_min(l, r) << "\n";
 	}
 }
 

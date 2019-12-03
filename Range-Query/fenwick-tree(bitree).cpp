@@ -23,7 +23,7 @@ void update(int index, int value) {
 }
 
 int find_sum(int index) { 
-    int res = 0;
+    int sum = 0;
     index++; 
     while (index > 0) { 
         sum += bitree[index];

@@ -109,6 +109,9 @@ void solve() {
 
 	int q;
 	cin >> q;
+
+	cout << fixed << setprecision(2);
+
 	for (int i = 0; i < q; i++) {
 		vector<int> point;
 
@@ -119,7 +122,6 @@ void solve() {
 			point.push_back(coordinate);
 		}
 
-		cout << fixed << setprecision(2);
 		cout << sqrt(nearest_neighbour(root, point)) << "\n";
 	}
 }

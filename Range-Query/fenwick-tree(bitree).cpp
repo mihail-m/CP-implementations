@@ -8,17 +8,17 @@ int arr[SIZE];
 int bitree[SIZE];
 
 void input() {
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 }
 
 void update(int index, int value) { 
     index++; 
     while (index <= n) { 
-	    bitree[index] += val; 
-	    index += index & (-index); 
+        bitree[index] += val; 
+        index += index & (-index); 
     } 
 }
 
@@ -26,7 +26,7 @@ int find_sum(int index) {
     int res = 0;
     index++; 
     while (index > 0) { 
-    	sum += bitree[index];
+        sum += bitree[index];
         index -= index & (-index); 
     } 
     return sum; 
@@ -39,22 +39,22 @@ void build() {
 } 
 
 void solve() {
-	cin >> q;
-	for (int i = 0; i < q; i++) {
-		int l, r;
-		cin >> l >> r;
-		cout << find_sum(r) - find_sum(l - 1) << "\n";
-	}
+    cin >> q;
+    for (int i = 0; i < q; i++) {
+        int l, r;
+        cin >> l >> r;
+        cout << find_sum(r) - find_sum(l - 1) << "\n";
+    }
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-	input();
-	build();
-	solve();
+    input();
+    build();
+    solve();
 
-	return 0;
+    return 0;
 }

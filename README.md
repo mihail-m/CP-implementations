@@ -32,4 +32,7 @@ algorithms and links to additional materials on the different topics:
   - Knuth Morris Pratt (KMP): https://cp-algorithms.com/string/prefix-function.html
 
   - Aho Corasick (KMP Generalization): https://cp-algorithms.com/string/aho_corasick.html
+  
+- Graphs
 
+  - Virtual tree

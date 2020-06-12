@@ -27,17 +27,17 @@ int kth_smallest(int k) {
     int r = n - 1;
 
     while (l <= r) {
-    	int pivot = partition(l, r);
+        int pivot = partition(l, r);
 
-    	if (pivot == k - 1) {
-    		return arr[pivot];
-    	}
+        if (pivot == k - 1) {
+            return arr[pivot];
+        }
 
-    	if (arr[pivot] < k) {
-    		l = pivot + 1;
-    	} else {
-    		r = pivot - 1;
-    	}
+        if (arr[pivot] < k) {
+            l = pivot + 1;
+        } else {
+            r = pivot - 1;
+        }
     }
 
     return INT_MIN;
@@ -45,28 +45,28 @@ int kth_smallest(int k) {
 
 
 void test() {
-	int k;
-	cin >> k;
+    int k;
+    cin >> k;
 
-	srand(time(nullptr));
+    srand(time(nullptr));
 
-	cerr << kth_smallest(k) << endl;
+    cerr << kth_smallest(k) << endl;
 }
 
 void input() {
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-	input();
-	test();
+    input();
+    test();
 
-	return 0;
+    return 0;
 }

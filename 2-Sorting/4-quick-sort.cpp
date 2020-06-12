@@ -20,40 +20,40 @@ int partition(vector<int>& arr, int l, int r)  {
 } 
 
 void quick_sort(vector<int>& arr, int l, int r) {
-	if (r - l <= 0) {
-		return;
-	}
+    if (r - l <= 0) {
+        return;
+    }
 
-	int pivot = partition(arr, l, r);
+    int pivot = partition(arr, l, r);
 
-	quick_sort(arr, l, pivot - 1);
-	quick_sort(arr, pivot + 1, r);
+    quick_sort(arr, l, pivot - 1);
+    quick_sort(arr, pivot + 1, r);
 }
 
 void test() {
-	int n;
-	cin >> n;
+    int n;
+    cin >> n;
 
-	vector<int> arr(n);
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 
-	quick_sort(arr, 0, arr.size() - 1);
+    quick_sort(arr, 0, arr.size() - 1);
 
-	for (int i : arr) {
-		cerr << i << " ";
-	}
-	cerr << "\n";
+    for (int i : arr) {
+        cerr << i << " ";
+    }
+    cerr << "\n";
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
-	srand(time(nullptr));
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    srand(time(nullptr));
 
-	test();
+    test();
 
-	return 0;
+    return 0;
 }

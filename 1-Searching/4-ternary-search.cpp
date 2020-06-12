@@ -7,15 +7,15 @@ int n;
 int arr[MAX_SIZE];
 
 bool ternary_search(int num) { 
-	int l = 0;
-	int r = n - 1;
+    int l = 0;
+    int r = n - 1;
 
     while (l <= r) {
-    	int mid1 = l + (r - l) / 3;
+        int mid1 = l + (r - l) / 3;
         int mid2 = r - (r - l) / 3;
 
         if (arr[mid1] == num || arr[mid2] == num) {
-        	return true;
+            return true;
         }
 
         if (key < ar[mid1]) { 
@@ -34,26 +34,26 @@ bool ternary_search(int num) {
 }
 
 void test() {
-	int num;
-	cin >> num;
+    int num;
+    cin >> num;
 
-	cerr << ternary_search(num) << endl;
+    cerr << ternary_search(num) << endl;
 }
 
 void input() {
-	cin >> n;
-	for (int i = 0; i < n; i++) {
-		cin >> arr[i];
-	}
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
 }
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-	cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
 
-	input();
-	test();
+    input();
+    test();
 
-	return 0;
+    return 0;
 }

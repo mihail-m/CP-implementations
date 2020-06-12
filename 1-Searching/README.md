@@ -1,6 +1,7 @@
 # Searching:
 
   ## Binary search:
+  
     - Search for an element in a sorted array.
     - Search for the minimal/maximal value for which a given monotonous function statisfies some condition.
     - O(log n) complexity.
@@ -13,6 +14,7 @@
       because after every shrink the size is halved, hense we have (r - l + 1), (r - l + 1) / 2, (r - l + 1) / 2^2, ..., (r - l + 1) / 2^log2 (r - l + 1) = 1 => O(log2 (r - l + 1)).
 
   ## Jump search:
+  
     - Search for an element in a sorted array.
     - O(sqrt(n)) complexity.
     - The idea is that we can split out array in blocks of size sqrt(n), where n is the size of the array. This way we can check if the value we are searching for is smaller than the last element of every block. 
@@ -21,6 +23,7 @@
       that O(sqrt(n)) more steps to find if the value is in the chosen block, because we know that every block also has a size of sqrt(n) => O(sqrt(n) + sqrt(n)) = O(sqrt(n)). 
     
   ## Exponential search:
+  
     - Search for an element in a sorted array.
     - Search for the maximal value for which a given monotonous function statisfies some condition.
     - O(log n) complexity.
@@ -29,12 +32,14 @@
       also O(log2(n)) => O(log2(n)) overall. This search is usefull when we are searching for the maximal value for which the function satisfies some condition but we don't know how big that value can be.
 
   ## Ternary search:
+  
     - Search for an element in a sorted array.
     - Search for the minimal/maximal value for which a given unimodal function statisfies some condition.
     - O(log n) complexity.
     - The idea is almost the same a the binary search, but we split the interval in 3 parts, hense we can also work with unimodal fucntions.	
 
   ## Quick select:
+  
     - Search for the k-th smallest element in an array.
     - n average case complexity but n^2 worst case (happens rarely enough).
     - We will use the fact that we can choose a random element from an array and order the array in such a way that all smaller elements are before the chosen element and all bigger are after it. More importantly

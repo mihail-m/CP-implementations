@@ -1,16 +1,15 @@
 # Data structures and algorithms library.
 
-Repository with implementations of the following data structures and
-algorithms and some explanations.
+Repository with implementations and explanations of the following data structures and algorithms.
 
-- Searching:
+### Searching:
   - Binary search 
   - Jump search
   - Exponential search
   - Ternary search
   - Quick select
 
-- Sorting:
+### Sorting:
   - Selection sort
   - Bubble sort
   - Insertion sort
@@ -21,7 +20,7 @@ algorithms and some explanations.
   - Bucket sort
   - Radix sort
 
-- Basic Data Structures:
+### Basic Data Structures:
   - Linked list
   - Doubly linked list
   - Stack
@@ -31,7 +30,7 @@ algorithms and some explanations.
   - Heap
   - Hash table
 
-- Graphs:
+### Graphs:
   - DFS
   - BFS
   - Number of paths of fixed length
@@ -57,7 +56,7 @@ algorithms and some explanations.
   - Path queries on tree (LSA + Segment tree)
   - A*
 
-- String matching:
+### String matching:
   - Rolling hash
   - Rabin Karp
   - Trie (Prefix Tree)
@@ -66,7 +65,7 @@ algorithms and some explanations.
   - Suffix array
   - Hash segment tree
 
-- Range Query:
+### Range Query:
   - Sqrt decomposition
   - Sparse table
   - 2D Sparse table
@@ -76,12 +75,12 @@ algorithms and some explanations.
   - Merge sort segment tree
   - Implicit treap
 
-- Persistance:
+### Persistance:
   - Persitent array
   - Persistent stack
   - Persistent segment tree
 
-- Math:
+### Math:
   - Fast pow
   - Euclidean algorithm (greatest common divisor)
   - Sieve of Eratosthenes
@@ -91,7 +90,7 @@ algorithms and some explanations.
   - Matrix fast pow
   - Fast Fourier transform
 
-- Geometry:
+### Geometry:
   - Convex hull (Graham Scan)
   - KD tree
 

@@ -27,8 +27,8 @@ Problem: Sort an array with n elements.
 
 - <p>We insert each element in such a postion that the already processed part of the array in sorted.<br>
 
-     When we are at postion i we must find the minimum j such that arr[i] > arr[j]. Then we shift all elements at positions: j, j + 1, ..., i<br>
-     one postition to the right and insert(assign) the current element to postion j.<br>
+     When we are at postion i we must find the minimum j such that arr[i] > arr[j]. Then we shift all elements at positions:<br>
+     j, j + 1, ..., i one postition to the right and insert(assign) the current element to postion j.<br>
      
      Once we do this for each position we end up with a sorted array.</p>
 
@@ -44,7 +44,6 @@ Problem: Sort an array with n elements.
        <li> all elements smaller than the one we have chosen,
        <li> all elements bigger than the onew we have chosen.
      </ul><br>
-     
      Then we repeat the prosedure for each of the created subarrays until we end up with small enough subarrays: of size 1 or 0.<br>
 
      This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it<br>
@@ -102,9 +101,8 @@ Problem: Sort an array with n elements.
        <li>...
        <li>Lastly we sort them by their first digit.
      </ul><br>
-     
      This procedure will yield a sorted array for obvious reasons I beleive.<br>
 
-     We perform a counting sort with comlexity O(n + 10) = O(n) for evert digit) => O(n * log10(largest number)) = O(n log(largest number))</p>.
+     We perform a counting sort with comlexity O(n + 10) = O(n) for evert digit) => O(n * log10(largest number)) = O(n log(largest number)).</p>
   
 

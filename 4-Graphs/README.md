@@ -1,52 +1,52 @@
 # Graphs:
 
-  - DFS:
+## DFS
 
-  - BFS:
+## BFS
 
-  - Number of paths of fixed length:
+## Number of paths of fixed length
 
-  - Dijkstra:
+## Dijkstra
 
-  - Belman Ford:
+## Belman Ford
 
-  - Shortest Path Faster Algorithm (SPFA):
+## Shortest Path Faster Algorithm (SPFA)
 
-  - Floyd Warshall:
+## Floyd Warshall
 
-  - Prim:
+## Prim
 
-  - Kruskal:
+## Kruskal
 
-  - Find cycles:
+## Find cycles
 
-  - Find bridges:
+## Find bridges
 
-  - Find articulation points:
+## Find articulation points
 
-  - Topological sort:
+## Topological sort
 
-  - Strongly connected components (Koraraju):
+## Strongly connected components (Koraraju)
 
-  - Boolean 2 satisfiability (2-SAT):
+## Boolean 2 satisfiability (2-SAT)
 
-  - K-th ancestor:
+## K-th ancestor
 
-  - Lowest common ancestor (LSA):
+## Lowest common ancestor (LSA)
 
-  - Max flow (Edmonds Karp):
+## Max flow (Edmonds Karp)
 
-  - Max flow (Dinic):
+## Max flow (Dinic)
 
-  - Max flow (MPM):
+## Max flow (MPM)
 
-  - Min cost max flow (assignment problem):
+## Min cost max flow (assignment problem)
 
-  - Virtual tree:
+## Virtual tree
 
-  - Path queries on tree (LSA + Segment tree):
+## Path queries on tree (LSA + Segment tree)
 
-  - A*
+## A*
 
 
   

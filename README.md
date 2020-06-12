@@ -24,8 +24,6 @@ Repository with implementations and explanations of the following data structure
   - Doubly linked list
   - Stack
   - Queue
-  - Jump list
-  - Skip list
   - Heap
   - Hash table
 

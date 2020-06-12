@@ -17,7 +17,6 @@ Repository with implementations and explanations of the following data structure
   - Merge sort
   - Heap sort
   - Counting sort
-  - Bucket sort
   - Radix sort
 
 ### Basic Data Structures:

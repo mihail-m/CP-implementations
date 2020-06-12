@@ -1,4 +1,4 @@
-# Searching:
+﻿# Searching:
 
 ## Binary search
 - Search for an element in a sorted array.
@@ -57,6 +57,8 @@
 
 - <p>We will use the fact that we can choose a random element from an array and order the array in such a way that all smaller elements are before the chosen element and all bigger are after it. More importantly this can be done in linear time (O(n)).<br>
   
+     This can be done by considering each element consecutively and if it is smaller than the chosen element we put it in the beginning of our array.<br>
+
   The idea is that we can choose a random element from our array and order the elements in the above mentioned way. This way we will split out array in 2 subarrays:
   <ul>
     <li> all elements smaller than the one we have chosen,

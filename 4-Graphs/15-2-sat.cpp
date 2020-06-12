@@ -7,8 +7,6 @@ int n, m; // nodes and edges
 vector<int> graph[MAX_SIZE];
 vector<int> rev_graph[MAX_SIZE];
 
-vector<int> condensed_grah[MAX_SIZE];
-
 vector<int> top_sort;
 bool visited[MAX_SIZE];
 
@@ -37,14 +35,14 @@ void dfs(int u) {
 }
 
 int kosaraju() {
-    for (int u = 0; u < n; u++) {
+    for (int u = 0; u < 2 * n; u++) {
         if (!visited[u]) {
             dfs(u);
         }
     }
 
     reverse(top_sort.begin(), top_sort.end());
-    fill(visited, visited + n, false);
+    fill(visited, visited + (2 * n), false);
 
     int num = 0;
     for (int u : top_sort) {
@@ -54,7 +52,7 @@ int kosaraju() {
         }
     }
 
-    for (int u = 0; u < n; u++) {
+    for (int u = 0; u < 2 * n; u++) {
         cerr << component[u] << " ";
     }
     cerr << "\n";
@@ -62,32 +60,21 @@ int kosaraju() {
     return num;
 }
 
-void build_condensed_grah() {
-    for (int u = 0; u < n; u++) {
-        for (int v : graph[u]) {
-            if (component[u] != component[v]) {
-                condensed_grah[component[u]].push_back(component[v]);
-            }
+bool solve() {
+    kosaraju();
+
+    for (int i = 0; i < n; i++) {
+        if (component[i] == component[i + n]) {
+            return false;
         }
     }
-}
 
-void solve() {
-    int condensed_n = kosaraju();
-
-    build_condensed_grah();
-
-    for (int u = 0; u < condensed_n; u++) {
-        cerr << u << ": ";
-        for (int v : condensed_grah[u]) {
-            cerr << v << " ";
-        }
-        cerr << "\n";
-    }
+    return true;
 }
 
 void input() {
     cin >> n >> m;
+    n /= 2;
     for (int i = 0; i < m; i++) {
         int u, v;
         cin >> u >> v;
@@ -104,7 +91,7 @@ int main() {
     cout.tie(nullptr);
 
     input();
-    solve();
+    cerr << solve() << "\n";
 
     return 0;
 }

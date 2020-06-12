@@ -13,7 +13,7 @@
     <li> v is in [m + 1, r] (the interval has shrunk in half).
   </ul>
 
-     After shrinking out interval enough times it will consist of only a single value. It is easy to see that we will shrink the interval at most log2 (r - l + 1) times, because after every shrink the size is halved, hense we have:<br> 
+     After shrinking out interval enough times it will consist of only a single value. It is easy to see that we will shrink the interval at most log2 (r - l + 1) times, because after every shrink the size is halved, hence we have:<br> 
      (r - l + 1), (r - l + 1) / 2,        (r - l + 1) / 2^2, ..., (r - l + 1) / 2^log2 (r - l + 1) = 1 => O(log2 (r - l + 1)).</p>
      
      <p align="center">
@@ -56,7 +56,7 @@
 
 - O(log n) complexity.
 
-- The idea is almost the same a the binary search, but we split the interval in 3 parts, hense we can also work with unimodal fucntions.
+- The idea is almost the same a the binary search, but we split the interval in 3 parts, hence we can also work with unimodal fucntions.
 
 ## Quick select:
 - Search for the k-th smallest element in an array.

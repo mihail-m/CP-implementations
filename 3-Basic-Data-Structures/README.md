@@ -1,23 +1,19 @@
 # Basic Data Structures:
 
-### Linked list
+## Linked list
 
-### Doubly linked list
+## Doubly linked list
 
-### Stack
+## Stack
 
-### Queue
+## Queue
 
-### Min(Max) stack
+## Min(Max) stack
 
-### Min(Max) queue
+## Min(Max) queue
 
-### Jump list
+## Heap
 
-### Skip list
-
-### Heap
-
-### Hash table
+## Hash table
   
 

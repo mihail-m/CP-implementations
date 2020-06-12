@@ -12,6 +12,10 @@ Problem: Sort an array with n elements.
      element for postition i will be the minimal element in the rest of the array: min(arr[i + 1], arr[i + 2], ..., arr[n - 1]).<br>
  
      Once we do this for each postition we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://thumbs.gfycat.com/SnappyMasculineAmericancicada-size_restricted.gif">
+     </p>
 
 ### Bubble sort
 - O(n^2) complexity.
@@ -21,6 +25,10 @@ Problem: Sort an array with n elements.
      When we are at postion i we start swapin our current element with the previous one while they are in the wrong order.<br>
 
      Once we do this for each position we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://miro.medium.com/max/802/1*7seGXJi3te9beNfpAvFXEQ.gif">
+     </p>
 
 ### Insertion sort
 - O(n^2) complexity.
@@ -31,6 +39,10 @@ Problem: Sort an array with n elements.
      j, j + 1, ..., i one postition to the right and insert(assign) the current element to postion j.<br>
      
      Once we do this for each position we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://thumbs.gfycat.com/DenseBaggyIbis-size_restricted.gif">
+     </p>
 
 ### Quick sort
 - n log n average case complexity and n^2 worst case.
@@ -46,7 +58,9 @@ Problem: Sort an array with n elements.
      </ul><br>
      Then we repeat the prosedure for each of the created subarrays until we end up with small enough subarrays: of size 1 or 0.<br>
      
-     ![alt-text](https://www.tutorialspoint.com/data_structures_algorithms/images/quick_sort_partition_animation.gif)
+     <p align="center">
+       <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/quick_sort_partition_animation.gif">
+     </p>
 
      This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
 

@@ -59,6 +59,8 @@ Problem: Sort an array with n elements.
 
      We can merge all subarrays of sizes 1 into sorted subarrays of size 2. Then we can merge all subarrays of size 2 into sorted subarrays of size 4 and so on. Lastly we end up with <br>
      2 sorted subarrays of size n / 2 and we merge them in to one sorted array => the sorted version of our original array. 
+     
+     ![alt-text](https://cdn.programiz.com/sites/tutorial2program/files/merge-sort-example_0.png)
 
      The overall complexity comes from merging all the subarrays. 
      <ul>

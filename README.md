@@ -1,38 +1,99 @@
 # Data structures and algorithms library.
 
 Repository with implementations of the following data structures and
-algorithms and links to additional materials on the different topics:
+algorithms and some explanations.
 
-- Geometry:
+- Searching:
+  - Binary search 
+  - Jump search
+  - Exponential search
+  - Ternary search
+  - Quick select
+  - Bit Trie
 
-  - Convex Hull (Graham Scan): https://cp-algorithms.com/geometry/grahams-scan-convex-hull.html
+- Sorting:
+  - Selection sort
+  - Bubble sort
+  - Insertion sort
+  - Quick sort
+  - Merge sort
+  - Heap sort
+  - Counting sort
+  - Bucket sort
+  - Radix sort
 
-  - KD Tree: https://en.wikipedia.org/wiki/K-d_tree
+- Basic Data Structures:
+  - Linked list
+  - Doubly linked list
+  - Stack
+  - Queue
+  - Jump list
+  - Skip list
+  - Heap
+  - Hash table
 
-- Range Query:
-
-  - Sqrt Decomposition: https://cp-algorithms.com/data_structures/sqrt_decomposition.html
-
-  - Sparse Table: https://cp-algorithms.com/data_structures/sparse-table.html
-
-  - Segment Tree: https://cp-algorithms.com/data_structures/segment_tree.html
-
-  - Fenwick Tree (BITree): https://cp-algorithms.com/data_structures/fenwick.html
-
-  - Implicit Treap: https://cp-algorithms.com/data_structures/treap.html
+- Graphs:
+  - DFS
+  - BFS
+  - Number of paths of fixed length
+  - Dijkstra
+  - Belman Ford
+  - Shortest Path Faster Algorithm (SPFA)
+  - Floyd Warshall
+  - Prim
+  - Kruskal
+  - Find cycles
+  - Find bridges
+  - Find articulation points
+  - Topological sort
+  - Strongly connected components (Koraraju)
+  - Boolean 2 satisfiability (2-SAT)
+  - K-th ancestor
+  - Lowest common ancestor (LSA)
+  - Max flow (Edmonds Karp)
+  - Max flow (Dinic)
+  - Max flow (MPM)
+  - Min cost max flow (assignment problem)
+  - Virtual tree
+  - Path queries on tree (LSA + Segment tree)
 
 - String matching:
- 
-  - Roling Hash: https://cp-algorithms.com/string/string-hashing.html
+  - Rolling hash
+  - Rabin Karp
+  - Trie (Prefix Tree)
+  - Knuth Morris Pratt (KMP)
+  - Aho corasick (KMP Generalization)
+  - Suffix array
 
-  - Rabin Karp: https://cp-algorithms.com/string/rabin-karp.html
+- Range Query:
+  - Sqrt decomposition
+  - Sparse table
+  - 2D Sparse table
+  - Segment tree
+  - 2D Segment Tree
+  - Merge sort segment tree
+  - Fenwick tree (BITree)
+  - Implicit treap
 
-  - Trie (Prefix Tree): https://www.geeksforgeeks.org/trie-insert-and-search/
+- Persistance:
+  - Persitent array
+  - Persistent stack
+  - Persistent segment tree
 
-  - Knuth Morris Pratt (KMP): https://cp-algorithms.com/string/prefix-function.html
+- Math:
+  - Fast pow
+  - Euclidean algorithm (greatest common divisor)
+  - Sieve of Eratosthenes
+  - Linear diophantine equations
+  - Gaussian elimination
+  - Modular multiplicative inverse
+  - Matrix fast pow
+  - Fast Fourier transform
 
-  - Aho Corasick (KMP Generalization): https://cp-algorithms.com/string/aho_corasick.html
+- Geometry:
+  - Convex hull (Graham Scan)
+  - KD tree
+
+
   
-- Graphs
 
-  - Virtual tree

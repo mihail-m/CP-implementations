@@ -7,7 +7,7 @@ int n;
 int arr[MAX_SIZE];
 
 int partition(int l, int r)  { 
-    int pivot = l + rand() % (r - l + 2);
+    int pivot = l + rand() % (r - l + 1);
     swap(arr[r], arr[pivot]);
 
     int i = l;

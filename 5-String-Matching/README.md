@@ -1,17 +1,17 @@
 # String matching:
 
-  - Rolling hash:
+## Rolling hash
 
-  - Rabin Karp:
+## Rabin Karp
 
-  - Trie (Prefix Tree):
+## Trie (Prefix Tree)
 
-  - Knuth Morris Pratt (KMP):
+## Knuth Morris Pratt (KMP)
 
-  - Aho corasick (KMP Generalization):
+## Aho corasick (KMP Generalization)
 
-  - Suffix array:
+## Suffix array
 
-  - Hash segment tree
+## Hash segment tree
   
 

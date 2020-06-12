@@ -211,16 +211,7 @@ void test() {
     }
 
     l.print();
-    l.insert_begin(15);
-    l.print();
     l.reverse();
-    l.print();
-    l.erase_pos(0);
-    l.print();
-    l.erase_pos(3);
-    l.print();
-    l.insert_pos(14, 2);
-    l.erase_end();
     l.print();
     l.free();
 }
@@ -229,8 +220,6 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-
-    freopen("test.in", "r", stdin);
 
     test();
 

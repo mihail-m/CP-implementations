@@ -2,9 +2,9 @@
 
   ## Binary search:
   
-    - Search for an element in a sorted array.
-    - Search for the minimal/maximal value for which a given monotonous function statisfies some condition.
-    - O(log n) complexity.
+    Search for an element in a sorted array.
+    Search for the minimal/maximal value for which a given monotonous function statisfies some condition.
+    O(log n) complexity.
     - The general idea is that when we have some interval defined by [l, r] and we are searching for a value v in the interval.
       We can simply check in which half of the interval v resides. If m is the middle of the interval [l, r], there are 3 cases: 
         1. v is at m (we have nothing more to do here), 

@@ -45,7 +45,7 @@
         1. The element we have chosen is the kth-smallest (then we are done),
         2. The element we have chosen is bigger than the k-th smalles (then we need only the first subarray),
         3. The element we have chosen is smaller than the k-th smalles (then we need only the second subarray).
-     We can continue to do this for each subbaray until we find the k-th smallest element. For each time this will take us linear time to do, but each time the subarray will be smaller. On average the prosedure
+      We can continue to do this for each subbaray until we find the k-th smallest element. For each time this will take us linear time to do, but each time the subarray will be smaller. On average the prosedure
       will comlete after O(n) operations, but in the worst case scenario it will take O(n^2). The worst case happens rarely enough that this method is prefered over the sort and take the element an index k which
       takes O(n log n) time.
       

@@ -74,8 +74,7 @@ Problem: Sort an array with n elements.
 
 - <p>The idea is to use a heap of the elements of the array and get the top of the heap util we go trough all the elements.<br>
 
-     Insertion into a heap in with log n complexity and we do it n times => O(n log n) to build the heap. Removing the top happens in O(1) and we do it n times => O(n) times =><br>
-     Overall complexity oi O(n lon n) + O(n) = O(n log n).</p>
+     Insertion into a heap in with log n complexity and we do it n times => O(n log n) to build the heap. Removing the top happens in O(1) and we do it n times => O(n) times => overall complexity is O(n lon n) + O(n) = O(n log n).</p>
 
 ### Counting sort
 - O(n + largest number) complexity.

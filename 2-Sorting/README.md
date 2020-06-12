@@ -12,6 +12,10 @@ Problem: Sort an array with n elements.
      element for postition i will be the minimal element in the rest of the array: min(arr[i + 1], arr[i + 2], ..., arr[n - 1]).<br>
  
      Once we do this for each postition we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://thumbs.gfycat.com/SnappyMasculineAmericancicada-size_restricted.gif">
+     </p>
 
 ### Bubble sort
 - O(n^2) complexity.
@@ -21,16 +25,24 @@ Problem: Sort an array with n elements.
      When we are at postion i we start swapin our current element with the previous one while they are in the wrong order.<br>
 
      Once we do this for each position we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://miro.medium.com/max/802/1*7seGXJi3te9beNfpAvFXEQ.gif">
+     </p>
 
 ### Insertion sort
 - O(n^2) complexity.
 
 - <p>We insert each element in such a postion that the already processed part of the array in sorted.<br>
 
-     When we are at postion i we must find the minimum j such that arr[i] > arr[j]. Then we shift all elements at positions: j, j + 1, ..., i<br>
-     one postition to the right and insert(assign) the current element to postion j.<br>
+     When we are at postion i we must find the minimum j such that arr[i] > arr[j]. Then we shift all elements at positions:<br>
+     j, j + 1, ..., i one postition to the right and insert(assign) the current element to postion j.<br>
      
      Once we do this for each position we end up with a sorted array.</p>
+     
+     <p align="center">
+       <img src="https://thumbs.gfycat.com/DenseBaggyIbis-size_restricted.gif">
+     </p>
 
 ### Quick sort
 - n log n average case complexity and n^2 worst case.
@@ -44,12 +56,13 @@ Problem: Sort an array with n elements.
        <li> all elements smaller than the one we have chosen,
        <li> all elements bigger than the onew we have chosen.
      </ul><br>
-     
      Then we repeat the prosedure for each of the created subarrays until we end up with small enough subarrays: of size 1 or 0.<br>
+     
+     <p align="center">
+       <img src="https://www.tutorialspoint.com/data_structures_algorithms/images/quick_sort_partition_animation.gif">
+     </p>
 
-     This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it<br>
-     into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is <br>
-     sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
+     This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
 
 ### Merge sort
 - O(n log n) complexity.
@@ -62,6 +75,8 @@ Problem: Sort an array with n elements.
 
      We can merge all subarrays of sizes 1 into sorted subarrays of size 2. Then we can merge all subarrays of size 2 into sorted subarrays of size 4 and so on. Lastly we end up with <br>
      2 sorted subarrays of size n / 2 and we merge them in to one sorted array => the sorted version of our original array. 
+     
+     ![alt-text](https://cdn.programiz.com/sites/tutorial2program/files/merge-sort-example_0.png)
 
      The overall complexity comes from merging all the subarrays. 
      <ul>
@@ -77,8 +92,7 @@ Problem: Sort an array with n elements.
 
 - <p>The idea is to use a heap of the elements of the array and get the top of the heap util we go trough all the elements.<br>
 
-     Insertion into a heap in with log n complexity and we do it n times => O(n log n) to build the heap. Removing the top happens in O(1) and we do it n times => O(n) times =><br>
-     Overall complexity oi O(n lon n) + O(n) = O(n log n).</p>
+     Insertion into a heap in with log n complexity and we do it n times => O(n log n) to build the heap. Removing the top happens in O(1) and we do it n times => O(n) times => overall complexity is O(n lon n) + O(n) = O(n log n).</p>
 
 ### Counting sort
 - O(n + largest number) complexity.
@@ -102,9 +116,8 @@ Problem: Sort an array with n elements.
        <li>...
        <li>Lastly we sort them by their first digit.
      </ul><br>
-     
      This procedure will yield a sorted array for obvious reasons I beleive.<br>
 
-     We perform a counting sort with comlexity O(n + 10) = O(n) for evert digit) => O(n * log10(largest number)) = O(n log(largest number))</p>.
+     We perform a counting sort with comlexity O(n + 10) = O(n) for evert digit) => O(n * log10(largest number)) = O(n log(largest number)).</p>
   
 

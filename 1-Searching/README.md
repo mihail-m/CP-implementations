@@ -15,6 +15,10 @@
 
      After shrinking out interval enough times it will consist of only a single value. It is easy to see that we will shrink the interval at most log2 (r - l + 1) times, because after every shrink the size is halved, hense we have:<br> 
      (r - l + 1), (r - l + 1) / 2,        (r - l + 1) / 2^2, ..., (r - l + 1) / 2^log2 (r - l + 1) = 1 => O(log2 (r - l + 1)).</p>
+     
+     <p align="center">
+       <img src="https://blog.penjee.com/wp-content/uploads/2015/04/binary-and-linear-search-animations.gif">
+     </p>
 
 ## Jump search:
 - Search for an element in a sorted array.
@@ -27,6 +31,10 @@
   The first block that has a bigger last element is the only block that can be containg the value, because all elements in the following  blocks are certainly bigger and all elements in the previous blocks are certainly smaller. We know this, because the array is sorted.<br>
   
   This allows us to find the correct block in O(√n), because we have to check only the last element of every block <br>(which are √n). And after that O(√n) more steps to find if the value is in the chosen block, because we know that every block also has a size of √n => O(√n + √n) = O(√n).</p>
+  
+     <p align="center">
+       <img src="https://harkishen-singh.github.io/jump-search-visualisation/this.gif">
+     </p>
     
 ## Exponential search:
 - Search for an element in a sorted array.

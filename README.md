@@ -9,7 +9,6 @@ algorithms and some explanations.
   - Exponential search
   - Ternary search
   - Quick select
-  - Bit Trie
 
 - Sorting:
   - Selection sort

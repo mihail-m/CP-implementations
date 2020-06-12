@@ -46,9 +46,7 @@ Problem: Sort an array with n elements.
      </ul><br>
      Then we repeat the prosedure for each of the created subarrays until we end up with small enough subarrays: of size 1 or 0.<br>
 
-     This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it<br>
-     into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is <br>
-     sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
+     This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
 
 ### Merge sort
 - O(n log n) complexity.

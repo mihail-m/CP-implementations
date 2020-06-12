@@ -12,10 +12,6 @@
 
 ## Min(Max) queue
 
-## Jump list
-
-## Skip list
-
 ## Heap
 
 ## Hash table

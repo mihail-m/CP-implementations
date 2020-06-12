@@ -56,6 +56,7 @@ algorithms and some explanations.
   - Min cost max flow (assignment problem)
   - Virtual tree
   - Path queries on tree (LSA + Segment tree)
+  - A*
 
 - String matching:
   - Rolling hash
@@ -64,15 +65,16 @@ algorithms and some explanations.
   - Knuth Morris Pratt (KMP)
   - Aho corasick (KMP Generalization)
   - Suffix array
+  - Hash segment tree
 
 - Range Query:
   - Sqrt decomposition
   - Sparse table
   - 2D Sparse table
+  - Fenwick tree (BITree)
   - Segment tree
   - 2D Segment Tree
   - Merge sort segment tree
-  - Fenwick tree (BITree)
   - Implicit treap
 
 - Persistance:

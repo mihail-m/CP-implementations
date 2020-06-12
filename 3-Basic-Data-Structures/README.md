@@ -8,6 +8,10 @@
 
   - Queue:
 
+  - Min(Max) stack:
+
+  - Min(Max) queue:
+
   - Jump list:
 
   - Skip list:

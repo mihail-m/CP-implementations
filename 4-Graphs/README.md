@@ -46,6 +46,8 @@
 
   - Path queries on tree (LSA + Segment tree):
 
+  - A*
+
 
   
 

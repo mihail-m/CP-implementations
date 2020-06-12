@@ -12,5 +12,6 @@
 
   - Suffix array:
 
+  - Hash segment tree
   
 

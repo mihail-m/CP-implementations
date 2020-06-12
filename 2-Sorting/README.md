@@ -2,7 +2,7 @@
 
 Problem: Sort an array with n elements.
 
-### Selection sort
+## Selection sort
 - O(n^2) complexity.
 
 - <p>For each position of the array choose the correct element by finding the minimal element from the elements with positions greater than the current one<br>
@@ -17,7 +17,7 @@ Problem: Sort an array with n elements.
        <img src="https://thumbs.gfycat.com/SnappyMasculineAmericancicada-size_restricted.gif">
      </p>
 
-### Bubble sort
+## Bubble sort
 - O(n^2) complexity.
 
 - <p>The idea is that every time we find a pair of consecutive elements that are in the wrong order we swap them.<br>
@@ -30,7 +30,7 @@ Problem: Sort an array with n elements.
        <img src="https://miro.medium.com/max/802/1*7seGXJi3te9beNfpAvFXEQ.gif">
      </p>
 
-### Insertion sort
+## Insertion sort
 - O(n^2) complexity.
 
 - <p>We insert each element in such a postion that the already processed part of the array in sorted.<br>
@@ -44,7 +44,7 @@ Problem: Sort an array with n elements.
        <img src="https://thumbs.gfycat.com/DenseBaggyIbis-size_restricted.gif">
      </p>
 
-### Quick sort
+## Quick sort
 - n log n average case complexity and n^2 worst case.
 
 - <p>We will use the fact that we can choose a random element from an array and order the array in such a way that all smaller elements are before the chosen element and all bigger are after it. More importantly this can be done in linear time (O(n)).<br>
@@ -64,7 +64,7 @@ Problem: Sort an array with n elements.
 
      This will lead to a sorted array, because for every subarray of size 3 the above prosedure sorts its elements. And for the case where the subarray is of bigger size the algorithms splits it into 2 smaller subarrays such that all element in the first one are smaller then all elements in the second one are bigger. When the first part that contains all the smaller elements is sorted and the second part that contains all the bigger elements is sorted the subarray that is a concatenation of them is also sorted. </p>
 
-### Merge sort
+## Merge sort
 - O(n log n) complexity.
 
 - <p>The idea is that we can split the array into 2 subarray with equial sizes and sort them insted, then we can merge them in linear time.<br>
@@ -87,14 +87,14 @@ Problem: Sort an array with n elements.
      </ul><br>
      => We have n operations log2(n) times => O(n log n).</p>
 
-### Heap sort
+## Heap sort
 - O(n log n) complexity.
 
 - <p>The idea is to use a heap of the elements of the array and get the top of the heap util we go trough all the elements.<br>
 
      Insertion into a heap in with log n complexity and we do it n times => O(n log n) to build the heap. Removing the top happens in O(1) and we do it n times => O(n) times => overall complexity is O(n lon n) + O(n) = O(n log n).</p>
 
-### Counting sort
+## Counting sort
 - O(n + largest number) complexity.
 
 - <p>The idea is to count how much times each element is contained in the array and then constuct the sorted array form that information.<br>
@@ -105,7 +105,7 @@ Problem: Sort an array with n elements.
 
      We traverse the array once to count the elements and then we must traverse count until the largest encountered number => O(n + largest number).</p>
 
-### Radix sort
+## Radix sort
 - O(n * log(largest number)) complexity.
 
 - <p>In order to sort the array we perform a counting sort for each digit of the numbers of the array.<br>

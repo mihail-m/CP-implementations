@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-inline bool _lesser(const int a, const int b) { return a < b; }
-inline bool _greater(const int a, const int b) { return a > b; }
-
 class hash_table {
     private:
         static const int MOD = 100003;

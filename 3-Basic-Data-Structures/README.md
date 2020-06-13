@@ -55,6 +55,30 @@
   </p>
 
 ## Stack
+- A data structure that allows access only to the last added element.
+
+- O(1) complexity to add element.
+
+- O(1) comlexity to remove element.
+
+- O(1) complexity to get the top most element (the last added one).
+
+- <p> There are 2 ways to represent a stack:
+    <ul>
+      <li> With a linked list.
+      <li> With an array. 
+   <ul>
+      It the general case the array representation is faster.<br>
+           
+        |   top   |
+        |---------|
+        | element |
+        |---------|
+            ...
+        |---------|
+        | element |
+        |---------|
+  </p>
 
 ## Queue
 

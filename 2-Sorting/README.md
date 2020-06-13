@@ -5,8 +5,7 @@ Problem: Sort an array with n elements.
 ## Selection sort
 - O(n^2) complexity.
 
-- <p>For each position of the array choose the correct element by finding the minimal element from the elements with positions greater than the current one<br>
-     and swaping it with the current one.<br>
+- <p>For each position of the array choose the correct element by finding the minimal element from the elements with positions greater than the current one and swaping it with the current one.<br>
 
      When we are at postition i we have already picked the correct elements for positions 0, 1, ..., i - 1, so the correct<br>
      element for postition i will be the minimal element in the rest of the array: min(arr[i + 1], arr[i + 2], ..., arr[n - 1]).<br>

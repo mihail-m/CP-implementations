@@ -58,7 +58,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    </p>
 
 ## BFS
-- Depth first search. Visits every vertex reachable from the starting vertex. Splits the graph into levels. Finds the shortest path from the starting vertex to every other vertex in an unweight graph.
+- Breadth first search. Visits every vertex reachable from the starting vertex. Splits the graph into levels. Finds the shortest path from the starting vertex to every other vertex in an unweight graph.
 
 - O(V + E) complexity, where V is the number of vertixes, and E is the number of edges.
 

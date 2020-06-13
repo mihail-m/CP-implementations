@@ -55,13 +55,13 @@
   </p>
 
 ## Stack
-- A data structure that allows access only to the last added element.
+- A data structure that allows access only to the most recently added element.
 
 - O(1) complexity to add element.
 
 - O(1) comlexity to remove element.
 
-- O(1) complexity to get the top most element (the last added one).
+- O(1) complexity to get the top most element (the most recently added one).
 
 - <p> There are 2 ways to represent a stack:<br>
       - with an array<br>
@@ -69,19 +69,41 @@
       
   In the general case the array representation is faster. A visual representation would look something like this:<br>
 
-             ↓ ↑
-         |   top   |
-         |---------|                            |-------|     |-------|                |-------|
-         | element |                            | value |     | value |                | value |
-         |---------|               |------|     |-------|     |-------|                |-------|
-             ...                   | top -----> | link -----> | link -----> ... -----> | link -----> nullptr
-         |---------|               |------|     |-------|     |-------|                |-------|          
-         | element |
-         |---------|                                    Linked list representation
+              ↓ ↑
+          |   top   |
+          |---------|                            |-------|     |-------|                |-------|
+          | element |                            | value |     | value |                | value |
+          |---------|               |------|     |-------|     |-------|                |-------|
+              ...                   | top -----> | link -----> | link -----> ... -----> | link -----> nullptr
+          |---------|               |------|     |-------|     |-------|                |-------|          
+          | element |
+          |---------|                                    Linked list representation
       
       Array representation
+   
+     <p align="center">
+       <img src="https://cdn.programiz.com/sites/tutorial2program/files/stack.png">
+     </p>
 
 ## Queue
+- A data structure that allows access only to the least recently added element.
+
+- O(1) complexity to add element.
+
+- O(1) comlexity to remove element.
+
+- O(1) complexity to get the first element (the least recently added one).
+
+- <p> There are 2 ways to represent a stack:<br>
+      - with an array<br>
+      - with a linked list<br>
+      
+  In the general case the array representation is faster. A visual representation would look something like this:<br>
+  
+   <p align="center">
+      <img src="https://miro.medium.com/proxy/0*TRbfsq86lqDoqW6b.png">
+   </p>
+
 
 ## Min(Max) stack
 

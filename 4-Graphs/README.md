@@ -1,4 +1,46 @@
 # Graphs:
+<p>
+Let V be a set of vetrixes V = {v | v ∈ N}. <br>
+Let E be a set of edges connecting those vetrixes E = {(u, v) | u, v ∈ V}.<br>
+
+We will call G(V, E) a graph vith vetrixes V and edges E.<br>
+
+A path in G will be a sequence of vetrixes from V connected by edges from E:<br>
+p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.
+
+A graph can be represented programatically in a few ways:
+
+1. By a list of edges. (eg. vector<pair<int, int>> edges, where each pair is an edge).<br>
+
+2. By an adjacency matrix. A matrix where the cell at postition (i, j) indicates if there is an edge between vetrixes i and j.<br>
+
+3. By an adjacency list. A list for each vetrex containing all of it's neighbours (eg. vector<int> graph[]).<br>
+~~~    
+Graph: (1)---(2)---(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
+              |  /                       (2, 3)                      1 0 1 1                    2: 1, 3, 4
+              (4)                        (3, 4)                      0 1 0 1                    3: 2, 4
+                                         (2, 4)                      0 1 1 0                    4: 2, 3
+~~~                                         
+If we have a directed graph, then the edges are one way, and have a direction. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
+~~~  
+Graph: (1)--->(2)----->(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
+               |        |                    (2, 3)                      0 0 1 1                    2: 3, 4
+               |->(4)<--|                    (3, 4)                      0 0 0 1                    3: 4
+                                             (2, 4)                      0 0 0 0                    4:
+~~~
+A graph can have costs on its edges, it that case they are represented as triplets instead of pairs: e = (u, v, cost).
+~~~
+Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 0 0
+                |     /                      (2, 3, 2)                      3 0 2 1
+                1    5                       (3, 4, 5)                      0 2 0 5
+                |   /                        (2, 4, 1)                      0 1 5 0
+                |  /
+                (4)           Adjecency list: 1: (2, 3)
+                                              2: (1, 3), (3, 2), (4, 1)
+                                              3: (2, 2), (4, 5)
+                                              4: (2, 1), (3, 5)
+~~~                  
+</p>
 
 ## DFS
 

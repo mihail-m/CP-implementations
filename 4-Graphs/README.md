@@ -21,7 +21,7 @@ Graph: (1)---(2)---(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    
               (4)                        (3, 4)                      0 1 0 1                    3: 2, 4
                                          (2, 4)                      0 1 1 0                    4: 2, 3
 ~~~                                         
-If we have a directed graph, then the edges are one way, and have a direction. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
+If we have a directed graph, then the edges have a direction and can be traversed only one way. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
 ~~~  
 Graph: (1)--->(2)----->(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
                |        |                    (2, 3)                      0 0 1 1                    2: 3, 4
@@ -49,7 +49,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 - <p>We want to visit every vertex only once so we need to keep track of which vertixes we have visited. (bool visited[]).<br>
    
-   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to visit all of it's neighbours that aren't allready visited. When there are no more vertexes that are not visited, we are done.
+   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to recursively visit all of it's neighbours that aren't allready visited. When there are no more vertexes that are not visited, we are done.
    
    We consider every vertex only once and we consider each edge twice (once from evert direction) => O(n + m).</p>
    
@@ -58,6 +58,19 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    </p>
 
 ## BFS
+- Depth first search. Visits every vertex reachable from the starting vertex. Splits the graph into levels. Finds the shortest path from the starting vertex to every other vertex in an unweight graph.
+
+- O(V + E) complexity, where V is the number of vertixes, and E is the number of edges.
+
+- <p>We want to visit every vertex only once so we need to keep track of which vertixes we have visited. (bool visited[]).<br>
+   
+   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to add all of it's neighbours that aren't allready visited in a queue in order to be visited next. When there are no more vertexes that are not visited, we are done. The next vertex for processing is the one at the top of the queue.
+   
+   We consider every vertex only once and we consider each edge twice (once from evert direction) => O(n + m).</p>
+   
+   <p align="center">
+      <img width="60%" src="https://miro.medium.com/max/1280/0*miG6xdyYzdvrB67S.gif">
+   </p>
 
 ## Number of paths of fixed length
 

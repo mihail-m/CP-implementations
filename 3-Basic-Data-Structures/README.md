@@ -69,15 +69,15 @@
       
   In the general case the array representation is faster. A visual representation would look something like this:<br>
 
-              ↓ ↑
-          |   top   |
-          |---------|                             |-------|     |-------|                |-------|         
-          | element |                             | value |     | value |                | value |
-          |---------|                |------|     |-------|     |-------|                |-------|
-              ...                    | top -----> | link -----> | link -----> ... -----> | link -----> nullptr  
-          |---------|                |------|     |-------|     |-------|                |-------|                      
-          | element |
-          |---------|                                       Linked list representation
+             ↓ ↑
+         |   top   |
+         |---------|                   |-------|     |-------|                |-------|
+         | element |                   | value |     | value |                | value |
+         |---------|      |------|     |-------|     |-------|                |-------|
+             ...          | top -----> | link -----> | link -----> ... -----> | link -----> nullptr
+         |---------|      |------|     |-------|     |-------|                |-------|          
+         | element |
+         |---------|                           Linked list representation
       
       Array representation
 

@@ -63,22 +63,23 @@
 
 - O(1) complexity to get the top most element (the last added one).
 
-- <p> There are 2 ways to represent a stack:
-    <ul>
-      <li> With a linked list.
-      <li> With an array. 
-   <ul>
-      It the general case the array representation is faster.<br>
-           
-        |   top   |
-        |---------|
-        | element |
-        |---------|
-            ...
-        |---------|
-        | element |
-        |---------|
-  </p>
+- <p> There are 2 ways to represent a stack:<br>
+      - with an array<br>
+      - with a linked list<br>
+      
+  In the general case the array representation is faster. A visual representation would look something like this:<br>
+
+              ↓ ↑
+          |   top   |
+          |---------|                             |-------|     |-------|                |-------|         
+          | element |                             | value |     | value |                | value |
+          |---------|                |------|     |-------|     |-------|                |-------|
+              ...                    | top -----> | link -----> | link -----> ... -----> | link -----> nullptr  
+          |---------|                |------|     |-------|     |-------|                |-------|                      
+          | element |
+          |---------|                                       Linked list representation
+      
+      Array representation
 
 ## Queue
 

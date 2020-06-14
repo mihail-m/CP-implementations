@@ -6,9 +6,16 @@ Let E be a set of edges connecting those vertices E = {(u, v) | u, v ∈ V}.<br>
 We will call G(V, E) a graph vith vertices V and edges E.<br>
 
 A path in G will be a sequence of vertices from V connected by edges from E:<br>
-p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.
+p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.<br>
 
-A graph can be represented programatically in a few ways:
+A simple path in G will be a path p, such that no vertex in the path is repeated:<br>
+p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E, ∀ vi, vj : i != j => vi != vj.<br>
+
+The length of a path is the number of edges in the path.<br>
+
+In a weight graph the cost of a path is the sum of the cost of all edges in the path.<br>
+
+A graph can be represented programatically in a few ways:<br>
 
 1. By a list of edges. (eg. vector<pair<int, int>> where each pair is an edge).<br>
 
@@ -73,6 +80,28 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    </p>
 
 ## Number of paths of fixed length
+- Find the number of paths with lenght k between two nodes from the graph G.
+
+- O(n^3 log k) complexity.
+
+- <p>Let's take a look at the case where k = 1.<br>
+  
+  If we build the adjacency matrix Adj of the graph, then in the cell (u, v) we will have the number of ways to reach v from u by usin only one edge: 1 way if they are connected, 0 ways if they are not.<br>
+  
+  Now let's take a look at the case where we know the number of paths with length k - 1 from u to v and we want to find out the number of paths with lenght k from u to v. We can just take the result for every node i and multiply it by Adj[i][v], which will be 1 if i is connected to j and 0 if it is not.<br>
+  
+  Then the number of paths from u to v with lenght k can be computed by counting all paths with length k - 1 that start at u end in a node that is connected to v.<br>
+  
+  Let Pk-1 is the matrix that contains all the paths from u to v with lenght k - 1 in cell (u, v). Then we can calucate Pk with the help of the adjacency matrix Adj and Pk-1:<br>
+              
+  Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]), i =0,1,...,n.<br>
+  
+  This operation is actually just the multiplication of the two matrices Pk-1 and A => Pk = Pk-1 * Adj.<br>
+  
+  With this observation we can see that to calculate Pk we can calculate A to the power of k. Pk = Adj^k.<br>
+  
+  All path with length k from u to v can be found at (Adj^k)[u][v].
+  </p>
 
 ## Dijkstra
 

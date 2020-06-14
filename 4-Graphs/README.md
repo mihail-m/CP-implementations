@@ -14,7 +14,7 @@ p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E, ∀ vi, vj :
 
 The length of a path is the number of edges in the path.<br></li>
 
-In a weight graph the cost of a path is the sum of the cost of all edges in the path.<br></li>
+In a weighted graph the cost of a path is the sum of the cost of all edges in the path.<br></li>
 
 A graph can be represented programatically in a few ways:<br></li>
 
@@ -67,13 +67,19 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    </p>
 
 ## BFS
-- Breadth first search. Visits every vertex reachable from the starting vertex. Splits the graph into levels. Finds the shortest path from the starting vertex to every other vertex in an unweight graph.
+- Breadth first search. Visits every vertex reachable from the starting vertex. Splits the graph into levels. Finds the shortest path from the starting vertex to every other vertex in an unweighted graph.
 
 - O(V + E) complexity, where V is the number of vertixes, and E is the number of edges.
 
 - <p>We want to visit every vertex only once so we need to keep track of which vertixes we have visited. (bool visited[]).<br>
+  
+  We will use a queue to keep track of which is the current vertex we are at. This will always be the top of the queue.
    
-   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to add all of it's neighbours that aren't allready visited in a queue in order to be visited next. When there are no more vertexes that are not visited, we are done. The next vertex for processing is the one at the top of the queue.
+   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to add all of it's neighbours that aren't allready visited in the queue in order to be visited next. When there are no more vertexes that are not visited, we are done.<br>
+   
+   Let s be our starting vertex. The distance to s is 0. To find the distance to all of the neighbours of s is 1, the distance to all of their unvisited neighbours is 2 and so on. Those groups of vertices (that have the same distace to s) are the levels of the bfs. All vertices at level 1 are at distance 1 all at level to at distance 2 and so on.<br>
+   
+   When we are at vertex u that has level l, all of its unvisited neighbours are at level l + 1, because we must travel trough one more edge in order to reach them. So in order to calculate the distance, every time we add a new vertex to the queue, the distance to it is with 1 bigger that the distance to the vertex we are currently at: distance[new_vertex] = distance[current_vertex] + 1.
    
    We consider every vertex only once and we consider each edge twice (once from evert direction) => O(n + m).</p>
    
@@ -84,7 +90,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 ## Number of paths of fixed length
 - Find the number of paths with lenght k between two nodes from the graph G.
 
-- O(n^3 log k) complexity.
+- O(V^3 log k) complexity.
 
 - <p>Let's take a look at the case where k = 1.<br>
   
@@ -96,7 +102,8 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
   
   Let Pk-1 is the matrix that contains all the paths from u to v with lenght k - 1 in cell (u, v). Then we can calucate Pk with the help of the adjacency matrix Adj and Pk-1:<br>
               
-  Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]), i =0,1,...,n.<br>
+  Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]),<br>
+  i = 0, 1, ..., n.<br>
   
   This operation is actually just the multiplication of the two matrices Pk-1 and A => Pk = Pk-1 * Adj.<br>
   
@@ -105,11 +112,38 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
   All path with length k from u to v can be found at (Adj^k)[u][v].
   </p>
 
-## Dijkstra
-
 ## Belman Ford
+- Find the shortes path to every vertex from a starting vertex s in a weighted graph.
+
+- O(VE) complexity.
+
+- <p>We will create an array of distances dist[], which will contain the answer to the problem.<br>
+  
+  In the beginning we all elements of dist[] equal to infinity INT_MAX except for dist[s], which will be equal to 0, because it is our starting point.<br>
+  
+  Let (u, v, cost) in an edge from E. If the distance to v is greater that the distance to u plust the cost, then we can reach v more efficiently by using the path to u and the edge (u, v, cost) instead of the current path to v. This is called rexalxation and we will use it to solve our problem.<br>
+  
+  Relaxation: dist[u] + cost < dist[v] then dist[v] = dist[u] + cost.<br>
+
+  The algorithm consists of n - 1 phases. Each phase goest through all edges of the graph, and tries to perform a relaxation using each edge (u, v, cost). After tring to relax with each edge n - 1 times the array dist will contain the values of the shortest paths from s to every other vertex in G.
+</p>
 
 ## Shortest Path Faster Algorithm (SPFA)
+- Find the shortes path to every vertex from a starting vertex s in a weighted graph.
+
+- O(VE) complexity but works in O(E) in many caces.
+
+- SPFA is a improvement of the Bellman-Ford algorithm which takes advantage of the fact that not all attempts at relaxation will work. The main idea is to create a queue containing only the vertices that were relaxed but that still could further relax their neighbors. And whenever you can relax some neighbor, you should put him in the queue.
+
+## Dijkstra
+- Find the shortes path to every vertex from a starting vertex s in a weighted graph.
+
+- O(E log V) complexity or O(V ^ 2) complexity depending on implementation.
+
+- On dense graphs: https://cp-algorithms.com/graph/dijkstra.html
+
+- On sparce graphs: https://cp-algorithms.com/graph/dijkstra_sparse.html
+
 
 ## Floyd Warshall
 

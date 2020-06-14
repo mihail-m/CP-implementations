@@ -1,33 +1,35 @@
 # Graphs:
 <p>
-Let V be a set of vertices V = {v | v ∈ N}. <br>
-Let E be a set of edges connecting those vertices E = {(u, v) | u, v ∈ V}.<br>
+Let V be a set of vertices V = {v | v ∈ N}. <br></li>
 
-We will call G(V, E) a graph vith vertices V and edges E.<br>
+Let E be a set of edges connecting those vertices E = {(u, v) | u, v ∈ V}.<br></li>
+
+We will call G(V, E) a graph vith vertices V and edges E.<br></li>
 
 A path in G will be a sequence of vertices from V connected by edges from E:<br>
-p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.<br>
+p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.<br></li>
 
 A simple path in G will be a path p, such that no vertex in the path is repeated:<br>
-p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E, ∀ vi, vj : i != j => vi != vj.<br>
+p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E, ∀ vi, vj : i != j => vi != vj.<br></li>
 
-The length of a path is the number of edges in the path.<br>
+The length of a path is the number of edges in the path.<br></li>
 
-In a weight graph the cost of a path is the sum of the cost of all edges in the path.<br>
+In a weight graph the cost of a path is the sum of the cost of all edges in the path.<br></li>
 
-A graph can be represented programatically in a few ways:<br>
+A graph can be represented programatically in a few ways:<br></li>
 
 1. By a list of edges. (eg. vector<pair<int, int>> where each pair is an edge).<br>
 
 2. By an adjacency matrix. A matrix where the cell at postition (i, j) indicates if there is an edge between vertices i and j.<br>
 
 3. By an adjacency list. A list for each vetrex containing all of it's neighbours (eg. vector<int> graph[]).<br>
+
 ~~~    
 Graph: (1)---(2)---(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
               |  /                       (2, 3)                      1 0 1 1                    2: 1, 3, 4
               (4)                        (3, 4)                      0 1 0 1                    3: 2, 4
                                          (2, 4)                      0 1 1 0                    4: 2, 3
-~~~                                         
+~~~                  
 If we have a directed graph, then the edges have a direction and can be traversed only one way. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
 ~~~  
 Graph: (1)--->(2)----->(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
@@ -35,7 +37,7 @@ Graph: (1)--->(2)----->(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0
                |->(4)<--|                    (3, 4)                      0 0 0 1                    3: 4
                                              (2, 4)                      0 0 0 0                    4:
 ~~~
-A graph can have costs on its edges, it that case they are represented as triplets instead of pairs: e = (u, v, cost).
+A graph can have costs on its edges, it that case they are represented as triplets instead of pairs: e = (u, v, cost).</li>
 ~~~
 Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 0 0
                 |     /                      (2, 3, 2)                      3 0 2 1
@@ -86,11 +88,11 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 - <p>Let's take a look at the case where k = 1.<br>
   
-  If we build the adjacency matrix Adj of the graph, then in the cell (u, v) we will have the number of ways to reach v from u by usin only one edge: 1 way if they are connected, 0 ways if they are not.<br>
+  If we build the adjacency matrix Adj of the graph, then in the cell (u, v) we will have the number of ways to reach v from u by using only one edge: 1 way if they are connected, 0 ways if they are not.<br>
   
-  Now let's take a look at the case where we know the number of paths with length k - 1 from u to v and we want to find out the number of paths with lenght k from u to v. We can just take the result for every node i and multiply it by Adj[i][v], which will be 1 if i is connected to j and 0 if it is not.<br>
+  Now let's take a look at the case where we know the number of paths with length k - 1 from u to v and we want to find out the number of paths with lenght k from u to v.<br>
   
-  Then the number of paths from u to v with lenght k can be computed by counting all paths with length k - 1 that start at u end in a node that is connected to v.<br>
+  Then the number of paths from u to v with lenght k can be computed by counting all paths with length k - 1 that start at u end in a vertex that is connected to v. We can just sum the number of paths ending at every vertex connected to v. In order to do this we can take the paths ending at vertex i multiplied by Adj[i][v], which will be 1 if i is connected to v and 0 if it is not, and sum this value for every vertex i, which will add up to the total number ot paths from u to v with lenght k.<br>
   
   Let Pk-1 is the matrix that contains all the paths from u to v with lenght k - 1 in cell (u, v). Then we can calucate Pk with the help of the adjacency matrix Adj and Pk-1:<br>
               

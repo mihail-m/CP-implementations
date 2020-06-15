@@ -144,8 +144,33 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 - On sparce graphs: https://cp-algorithms.com/graph/dijkstra_sparse.html
 
-
 ## Floyd Warshall
+- Find the shortest path between every pair of vertices from the weighted graph G(V, E).
+
+- O(V ^ 3) complexity.
+
+- <p>The approach we will take is that we will find the shortest path between every pair of vertices (u, v, cost) that passes trough at most k edges. Since a path can't have more than n - 1 edges that means that we must compute the shortest paths for k = 0, 1, 2, ... n - 1.<br>
+
+     For k = 0 (the case where we do not use any edges) we simply mark the distance from every vertex to itself as 0 (dist[i][i][0] = 0).<br>
+
+     For k = 1 (the case there we use only a single edge) we mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (dist[i][j][1] = cost, where (i, j, cost) ∈ E). The distance between all pairs of vertices that are not conected by an edge we init as INT_MAX.<br>
+
+     Once we have computed the aswers for 0, 1, ... k - 1, we can compute the asnwer for k as follows:<br>
+
+     For every triplet of vertices (u, v, i), and a fixed ammount for edges passed from u to i, let that number be j, we check if:<br>
+
+     distance[u][i][j] + distance[i][v][k - j] < distance[u][v][k - 1] or distance[u][i][k - j] + distance[i][v][j] < distance[u][v][k - 1]<br>
+
+     If so, we can reach v from u, by passing through k edges and with a path with a lower cost than the best path that uses less than k edges. To perform this procedure will require O(V ^ 4) time, but we can see that this can be lowered to O(V ^ 3) if we drop the requiremet for the number of edges.<br>
+
+     Instead of calculating the optimal path from u to v using at most k edges, we can simply calculate the optimal path from u to v by checking if we can lower it's cost by adding an additional vertex along the way, without bothering with the exact number of edges in the path.<br>
+     
+     We again initialize distance[i][i] = 0 and distance[i][j] as the cost of the edge between i and j if there is one and INT_MAX if there isn't. Then we try to optimise the cost of the path between each pair of vertices (u, v), by tring to add an arbitary vertex i along the way:<br>
+
+     if distance[u][i] + distance[i][v] < distance[u][v] then distance[u][v] = distance[u][i] + distance[i][v]<br>
+     
+     With this optimisation our procedure will run in O(V ^ 3) time.
+</p>
 
 ## Prim
 

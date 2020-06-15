@@ -149,27 +149,24 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 - O(V ^ 3) complexity.
 
-- <p>The approach we will take is that we will find the shortest path between every pair of vertices (u, v, cost) that passes trough at most k edges. Since a path can't have more than n - 1 edges that means that we must compute the shortest paths for k = 0, 1, 2, ... n - 1.<br>
+- <p>The approach we will take is that we will find the shortest path between every pair of vertices (u, v, cost) that uses only vertices with numbers less than k ({0, 1, 2, ..., k - 1}) as internal vertices (does not apply for the start and end vertex). Since we have V vertices that means that we must compute the shortest paths for k = 0, 1, 2, ..., V - 1.<br>
 
-     For k = 0 (the case where we do not use any edges) we simply mark the distance from every vertex to itself as 0 (dist[i][i][0] = 0).<br>
+     Firstly we mark the distance from every vertex to itself as 0 (dist[i][i][k] = 0 for every k < V).<br>
 
-     For k = 1 (the case there we use only a single edge) we mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (dist[i][j][1] = cost, where (i, j, cost) ∈ E). The distance between all pairs of vertices that are not conected by an edge we init as INT_MAX.<br>
+     We mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (dist[i][j][k] = cost, where (i, j, cost) ∈ E). The distance between all other pairs of vertices (that are not conected by an edge) we init as INT_MAX.<br>
 
      Once we have computed the aswers for 0, 1, ... k - 1, we can compute the asnwer for k as follows:<br>
 
-     For every triplet of vertices (u, v, i), and a fixed ammount for edges passed from u to i, let that number be j, we check if:<br>
+     For every pair of vertices (u, v), we check if we can reach v from u by passing trough the vertex k with a lower cost than the best found up untill now:<br>
 
-     distance[u][i][j] + distance[i][v][k - j] < distance[u][v][k - 1] or distance[u][i][k - j] + distance[i][v][j] < distance[u][v][k - 1]<br>
-
-     If so, we can reach v from u, by passing through k edges and with a path with a lower cost than the best path that uses less than k edges. To perform this procedure will require O(V ^ 4) time, but we can see that this can be lowered to O(V ^ 3) if we drop the requiremet for the number of edges. When updating the distance from u to v, the best possible path would be to use: distance[u][i][k - 1] + distance[i][v][k - 1] even if it uses more than k edges since if it does we will simply use it at a later stage (when we are at the neccessery k) => we need only the best path found for every pair (i, j), the value at distance[i][j][k] and not any of the values distance[i][j][x], where x < k which makes the requirement for the numebr of edges redundant in our state and we can modifiy it to distance[u][v].<br>
-
-     Instead of calculating the optimal path from u to v using at most k edges, we can simply calculate the optimal path from u to v by checking if we can lower it's cost by adding an additional vertex along the way, without bothering with the exact number of edges in the path.<br>
+     distance[u][v][k] = min(distance[u][i][k] + distance[i][v][k], distance[u][v][k - 1]).<br>
      
-     We again initialize distance[i][i] = 0 and distance[i][j] as the cost of the edge between i and j if there is one and INT_MAX if there isn't. Then we try to optimise the cost of the path between each pair of vertices (u, v), by tring to add an arbitary vertex i along the way:<br>
-
-     if distance[u][i] + distance[i][v] < distance[u][v] then distance[u][v] = distance[u][i] + distance[i][v]<br>
+     We can see that the last dimention is redundant since we use only the last stored value => we can drop it from our state:<br>
      
-     With this optimisation our procedure will run in O(V ^ 3) time.
+     distance[u][v] = min (distance[u][i] + distance[i][v], distance[u][v]).<br>
+     
+     We consider each pair of vertices a total of V times (every time we add a new vertex we update the best paths between every two vertices) => O(V^2 * V) = O(V ^ 3) time complexity. 
+     
 </p>
 
 ## Prim

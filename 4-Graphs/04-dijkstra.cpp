@@ -9,7 +9,7 @@ vector<pair<int, int>> graph[MAX_SIZE];
 int dist[MAX_SIZE];
 
 // Usually better 
-// O(n log n + m)
+// O(m log n)
 void dijkstra(int start) {
     fill(dist, dist + n, INT_MAX);
     dist[start] = 0;
@@ -32,7 +32,7 @@ void dijkstra(int start) {
 }
 
 // Better on dense graphs, where m -> n^2
-// O(n^2 + m) < O(n log n + m) = O(n log n + n ^ 2)
+// O(n^2 + m) = O(n ^ 2) < O(m log n) = O(n ^ 2 log n)
 void dijkstra_dense(int start) {
     fill(dist, dist + n, INT_MAX);
     dist[start] = 0;
@@ -61,7 +61,7 @@ void dijkstra_dense(int start) {
     }
 }
 
-void solve() {
+void test() {
     dijkstra(0);
 
     for (int u = 0; u < n; u++) {
@@ -95,7 +95,7 @@ int main() {
     cout.tie(nullptr);
 
     input();
-    solve();
+    test();
 
     return 0;
 }

@@ -40,7 +40,7 @@ void dfs_iterative(int start) {
     }
 }
 
-void solve() {
+void test() {
     dfs(0);
     cerr << "\n";
 
@@ -68,7 +68,7 @@ int main() {
     cout.tie(nullptr);
 
     input();
-    solve();
+    test();
 
     return 0;
 }

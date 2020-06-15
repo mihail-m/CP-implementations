@@ -161,7 +161,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
      distance[u][i][j] + distance[i][v][k - j] < distance[u][v][k - 1] or distance[u][i][k - j] + distance[i][v][j] < distance[u][v][k - 1]<br>
 
-     If so, we can reach v from u, by passing through k edges and with a path with a lower cost than the best path that uses less than k edges. To perform this procedure will require O(V ^ 4) time, but we can see that this can be lowered to O(V ^ 3) if we drop the requiremet for the number of edges.<br>
+     If so, we can reach v from u, by passing through k edges and with a path with a lower cost than the best path that uses less than k edges. To perform this procedure will require O(V ^ 4) time, but we can see that this can be lowered to O(V ^ 3) if we drop the requiremet for the number of edges. When updating the distance from u to v, the best possible path would be to use: distance[u][i][k - 1] + distance[i][v][k - 1] even if it uses more than k edges since if it does we will simply use it at a later stage (when we are at the neccessery k) => we need only the best path found for every pair (i, j), the value at distance[i][j][k] and not any of the values distance[i][j][x], where x < k which makes the requirement for the numebr of edges redundant in our state and we can modifiy it to distance[u][v].<br>
 
      Instead of calculating the optimal path from u to v using at most k edges, we can simply calculate the optimal path from u to v by checking if we can lower it's cost by adding an additional vertex along the way, without bothering with the exact number of edges in the path.<br>
      

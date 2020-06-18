@@ -4,7 +4,7 @@ using namespace std;
 static const int MAX_SIZE = 1 << 18;
 static const int LOG2 = 18;
 
-int n, q;
+int n;
 vector<int> tree[MAX_SIZE];
 
 int cnt = 0;
@@ -63,7 +63,7 @@ int lca(int u, int v) {
 }
 
 void test() {
-	   int q;
+	int q;
     cin >> q;
 
     for (int i = 0; i < q; i++) {

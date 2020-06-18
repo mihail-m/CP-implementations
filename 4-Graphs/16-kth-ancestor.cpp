@@ -4,7 +4,7 @@ using namespace std;
 static const int LOG2 = 18;
 static const int MAX_SIZE = 1 << LOG2;
 
-int n; // nodes and edges
+int n; // nodes
 vector<int> tree[MAX_SIZE];
 
 int index[MAX_SIZE][LOG2];

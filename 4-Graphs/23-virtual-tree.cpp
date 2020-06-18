@@ -47,7 +47,7 @@ void dfs(int v, int d) {
     out[v] = t++;
 }
 
-void build_lsa(int root) {
+void build_lca(int root) {
     dfs(root, 0);
 
     for (int i = 2; i < 2 * n; i++) {
@@ -69,7 +69,7 @@ bool upper(int u, int v) {
     return in[u] < in[v] && out[u] > out[v];
 }
 
-int lsa(int u, int v) {
+int lca(int u, int v) {
     int f = occur[u];
     int t = occur[v];
 
@@ -89,7 +89,7 @@ int build_vt(vector<int> &nodes) {
 
     int to = nodes.size();
     for (int i = 1; i < to; i++) {
-        nodes.push_back(lsa(nodes[i - 1], nodes[i]));
+        nodes.push_back(lca(nodes[i - 1], nodes[i]));
     }
 
     sort(nodes.begin(), nodes.end(), cmp);
@@ -134,8 +134,8 @@ long long sum_dist(int u, int par, int total) {
     return res;
 }
 
-void solve() {
-    build_lsa(0);
+void test() {
+    build_lca(0);
 
     for (int i = 0; i < q; i++) {
         int k;
@@ -180,7 +180,7 @@ int main() {
     cout.tie(nullptr);
 
     input();
-    solve();
+    test();
 
     return 0;
 }

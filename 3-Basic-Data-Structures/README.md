@@ -101,7 +101,7 @@
   In the general case the array representation is faster. A visual representation would look something like this:</p>
   
    <p align="center">
-      <img src="https://miro.medium.com/proxy/0*TRbfsq86lqDoqW6b.png">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Queue.png">
    </p>
 
 
@@ -168,7 +168,7 @@ The supported operations are: adding an element, removing the top element, getti
    </p>
    
     <p align="center">
-      <img src="https://www.geeksforgeeks.org/wp-content/uploads/MinHeapAndMaxHeap.png">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/HeapImage.png">
    </p>
 
 

@@ -85,5 +85,7 @@
   For each subarray this will take us linear time to do, but each time the subarray will be smaller. On average the prosedure will comlete after O(n) operations, but in the worst case scenario it will take O(n^2).<br>
   
   The worst case happens rarely enough that this method is prefered over the sort and take the element an index k which takes O(n log n) time.
-      
-      
+  
+     <p align="center">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/QuickSelect.gif">
+     </p>

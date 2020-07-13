@@ -190,7 +190,7 @@ The supported operations are: adding an element, removing the top element, getti
      </p>
      
     <p align="center">
-      <img src="https://lh3.googleusercontent.com/proxy/-KMxqLqwr2KlSLe3-Uiil63137aOkrJ9_KGCNjFyIzZZNTKhIZqzBuOkk9eWskMzcxFfpd2J-eD9DSeRfGKT-qVhWowFmesfA4c3yb0r48-XaPFqCuOSM8MvNilkog">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/HashTableImage.png">
    </p>     
 
       

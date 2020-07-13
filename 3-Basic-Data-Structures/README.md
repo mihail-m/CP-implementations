@@ -67,19 +67,7 @@
       - with an array<br>
       - with a linked list<br>
       
-  In the general case the array representation is faster. A visual representation would look something like this:<br>
-
-              ↓ ↑
-          |   top   |
-          |---------|                            |-------|     |-------|                |-------|
-          | element |                            | value |     | value |                | value |
-          |---------|               |------|     |-------|     |-------|                |-------|
-              ...                   | top -----> | link -----> | link -----> ... -----> | link -----> nullptr
-          |---------|               |------|     |-------|     |-------|                |-------|          
-          | element |
-          |---------|                                    Linked list representation
-      
-      Array representation
+  In the general case the array representation is faster.</p>
    
      <p align="center">
        <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Stack.png">
@@ -98,7 +86,7 @@
       - with an array<br>
       - with a linked list<br>
       
-  In the general case the array representation is faster. A visual representation would look something like this:</p>
+  In the general case the array representation is faster.</p>
   
    <p align="center">
       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Queue.png">

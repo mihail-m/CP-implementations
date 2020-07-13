@@ -33,7 +33,7 @@
   This allows us to find the correct block in O(√n), because we have to check only the last element of every block <br>(which are √n). And after that O(√n) more steps to find if the value is in the chosen block, because we know that every block also has a size of √n => O(√n + √n) = O(√n).</p>
   
      <p align="center">
-       <img src="https://harkishen-singh.github.io/jump-search-visualisation/this.gif">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/JumpSearch.gif">
      </p>
     
 ## Exponential search:

@@ -58,7 +58,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 - <p>We want to visit every vertex only once so we need to keep track of which vertixes we have visited. (bool visited[]).<br>
    
-   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to recursively visit all of it's neighbours that aren't allready visited. When there are no more vertexes that are not visited, we are done.
+   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to recursively visit all of it's neighbours that aren't allready visited. When there are no more vertices that are not visited, we are done.
    
    We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
    
@@ -74,8 +74,10 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 - <p>We want to visit every vertex only once so we need to keep track of which vertixes we have visited. (bool visited[]).<br>
   
   We will use a queue to keep track of which is the current vertex we are at. This will always be the top of the queue.
+  
+  In the beginning all vertices are marked as not visited, except for the starting vertex.
    
-   Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to add all of it's neighbours that aren't allready visited in the queue in order to be visited next. When there are no more vertexes that are not visited, we are done.<br>
+   Let v be the vertex we are currenlty at.We need to add all of it's neighbours that aren't allready visited in the queue in order to be visited next and mark them as visited, so we do not add them to the queue more than once. When there are no more vertices that are not visited, we are done.<br>
    
    Let s be our starting vertex. The distance to s is 0. To find the distance to all of the neighbours of s is 1, the distance to all of their unvisited neighbours is 2 and so on. Those groups of vertices (that have the same distace to s) are the levels of the bfs. All vertices at level 1 are at distance 1 all at level to at distance 2 and so on.<br>
    

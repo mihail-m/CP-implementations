@@ -77,7 +77,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
   
   In the beginning all vertices are marked as not visited, except for the starting vertex.
    
-   Let v be the vertex we are currenlty at.We need to add all of it's neighbours that aren't allready visited in the queue in order to be visited next and mark them as visited, so we do not add them to the queue more than once. When there are no more vertices that are not visited, we are done.<br>
+   Let v be the vertex we are currenlty at. We need to add all of it's neighbours that aren't allready visited in the queue for processing and mark them as visited, so we do not add them to the queue more than once. When there are no more vertices that are not visited, we are done.<br>
    
    Let s be our starting vertex. The distance to s is 0. To find the distance to all of the neighbours of s is 1, the distance to all of their unvisited neighbours is 2 and so on. Those groups of vertices (that have the same distace to s) are the levels of the bfs. All vertices at level 1 are at distance 1 all at level to at distance 2 and so on.<br>
    

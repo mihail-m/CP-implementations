@@ -17,7 +17,7 @@
      (r - l + 1), (r - l + 1) / 2,        (r - l + 1) / 2^2, ..., (r - l + 1) / 2^log2 (r - l + 1) = 1 => O(log2 (r - l + 1)).</p>
      
      <p align="center">
-       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/binary-search.gif">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BinarySearch.gif">
      </p>
 
 ## Jump search:

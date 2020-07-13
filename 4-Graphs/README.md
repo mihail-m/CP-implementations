@@ -4,7 +4,7 @@ Let V be a set of vertices V = {v | v ∈ N}. <br></li>
 
 Let E be a set of edges connecting those vertices E = {(u, v) | u, v ∈ V}.<br></li>
 
-We will call G(V, E) a graph vith vertices V and edges E.<br></li>
+We will call G(V, E) a graph with vertices V and edges E.<br></li>
 
 A path in G will be a sequence of vertices from V connected by edges from E:<br>
 p = (v1, v2, ..., vn), v1, v2, ... vn ∈ V & ∀ (vi, vi+1) ∈ E.<br></li>

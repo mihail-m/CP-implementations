@@ -60,7 +60,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    
    Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to recursively visit all of it's neighbours that aren't allready visited. When there are no more vertexes that are not visited, we are done.
    
-   We consider every vertex only once and we consider each edge twice (once from evert direction) => O(n + m).</p>
+   We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
    
    <p align="center">
       <img width="60%" src="https://inginious.org/course/competitive-programming/graphs-dfs/dfs.gif">
@@ -81,7 +81,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    
    When we are at vertex u that has level l, all of its unvisited neighbours are at level l + 1, because we must travel trough one more edge in order to reach them. So in order to calculate the distance, every time we add a new vertex to the queue, the distance to it is with 1 bigger that the distance to the vertex we are currently at: distance[new_vertex] = distance[current_vertex] + 1.
    
-   We consider every vertex only once and we consider each edge twice (once from evert direction) => O(n + m).</p>
+   We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
    
    <p align="center">
       <img width="60%" src="https://miro.medium.com/max/1280/0*miG6xdyYzdvrB67S.gif">

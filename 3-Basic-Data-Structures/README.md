@@ -82,7 +82,7 @@
       Array representation
    
      <p align="center">
-       <img src="https://cdn.programiz.com/sites/tutorial2program/files/stack.png">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Stack.png">
      </p>
 
 ## Queue

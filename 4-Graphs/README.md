@@ -183,7 +183,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
 
 ## Topological sort
 
-## Strongly connected components (Koraraju)
+## Strongly connected components (Kosaraju)
 
 ## Boolean 2 satisfiability (2-SAT)
 

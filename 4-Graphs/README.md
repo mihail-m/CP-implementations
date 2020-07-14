@@ -63,7 +63,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
    
    <p align="center">
-      <img width="60%" src="https://inginious.org/course/competitive-programming/graphs-dfs/dfs.gif">
+      <img width="60%" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/DFS.gif">
    </p>
 
 ## BFS
@@ -86,7 +86,7 @@ Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 
    We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
    
    <p align="center">
-      <img width="60%" src="https://miro.medium.com/max/1280/0*miG6xdyYzdvrB67S.gif">
+      <img width="60%" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BFS.gif">
    </p>
 
 ## Number of paths of fixed length

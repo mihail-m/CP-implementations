@@ -33,19 +33,10 @@
 
 - <p> Elements are represented as triplets of a value and two links, the links are pointers to the next and previous elements. We keep pointers to the beginning and ending of the list.<br>
 
-      |-------------------------------|
-      | pointer to the last element  -----------------------------------------
-      |-------------------------------|                                      |
-                                                                             |
-                                                                             |
-                                            |-------|     |-------|          |      |-------|
-                                            | value |     | value |          |----> | value |
-      |-------------------------------|     |-------|     |-------|                 |-------|
-      | pointer to the first element -----> | next -----> | next -----> ...  -----> | next -----> nullptr        
-      |-------------------------------|     |-------|     |-------|                 |-------|
-                                            |       |     |       |                 |       |
-                                nullptr <----- prev | <----- prev | <-- ... <--------- prev |
-                                            |-------|     |-------|                 |-------|
+   <p align="center">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/DoublyLinkedList.png">
+   </p>
+   
   </p>
 
 ## Stack

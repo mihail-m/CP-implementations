@@ -13,7 +13,7 @@ Problem: Sort an array with n elements.
      Once we do this for each postition we end up with a sorted array.</p>
      
      <p align="center">
-       <img src="https://thumbs.gfycat.com/SnappyMasculineAmericancicada-size_restricted.gif">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/SelectionSort.gif">
      </p>
 
 ## Bubble sort
@@ -29,11 +29,11 @@ Problem: Sort an array with n elements.
        <img src="https://miro.medium.com/max/802/1*7seGXJi3te9beNfpAvFXEQ.gif">
      </p> <br>
 
-- <p>There is an interesting thing we can observe here: After each iteration, the smallest (or the largest, depending on the order we are sorting in) element
-     of the unsorted part of the array finds its place - it "swims" to the front. That's why it is called "Bubble sort". <br>
-     However, if the largest element was in the front in the beginning (an we are sorting in ascending order), it will take lots of iterations to put it in it's place.<br> 
-     That is why, a slight modification of Bubble Sort exists - `Shaker Sort`. The idea is absolutely the same, but instead of always going forward, we <br>
-     iterate forward, then backwards, then forward again and so on. This does not decrease the asimptotic time complexity of the algorithm, but provides a marginal improvement.</p>
+- <p>
+     There is an interesting thing we can observe here: After each iteration, the smallest (or the largest, depending on the order we are sorting in) elemen of the unsorted part of the array finds its place - it "swims" to the front. That's why it is called "Bubble sort". <br>
+     
+     However, if the largest element was in the front in the beginning (and we are sorting in ascending order), it will take lots of iterations to put it in it's place. That is why, a slight modification of Bubble Sort exists - `Shaker Sort`. The idea is absolutely the same, but instead of always going forward, we iterate forward, then backwards, then forward again and so on. This does not decrease the asimptotic time complexity of the algorithm, but provides a marginal improvement.
+   </p>
 
      <p align="center">
        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif">

@@ -13,17 +13,11 @@
 
 - <p> Elements are represented as pairs of a value and a link, and the link is a pointer to the next element. We keep a pointer to the beginning of the list, so that we are able to access it.<br>
       We can also store an additional pointer to the end of the list to speed up adding to the end and accesing the last element, because they are common operations. <br>
-
-      |-------------------------------|
-      | pointer to the last element  -----------------------------------------
-      |-------------------------------|                                      |
-                                                                             |
-                                                                             |
-                                            |-------|     |-------|          |     |-------|
-                                            | value |     | value |          |---> | value |
-      |-------------------------------|     |-------|     |-------|                |-------|
-      | pointer to the first element -----> | link -----> | link -----> ... -----> | link -----> nullptr        
-      |-------------------------------|     |-------|     |-------|                |-------|
+      
+   <p align="center">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/LinkedList.png">
+   </p>
+   
   </p>
 
 ## Doubly linked list

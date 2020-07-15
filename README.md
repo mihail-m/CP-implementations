@@ -28,12 +28,12 @@ Repository with implementations and explanations of the following data structure
   - Hash table
 
 ### Graphs:
+#### Fundamentals:
   - DFS
   - BFS
   - Number of paths of fixed length
   - Dijkstra
   - Belman Ford
-  - Shortest Path Faster Algorithm (SPFA)
   - Floyd Warshall
   - Prim
   - Kruskal
@@ -41,11 +41,13 @@ Repository with implementations and explanations of the following data structure
   - Find bridges
   - Find articulation points
   - Topological sort
+  - Max flow (Edmonds Karp)
+#### Advanced:
+  - Shortest Path Faster Algorithm (SPFA)
   - Strongly connected components (Koraraju)
   - Boolean 2 satisfiability (2-SAT)
   - K-th ancestor
   - Lowest common ancestor (LSA)
-  - Max flow (Edmonds Karp)
   - Max flow (Dinic)
   - Max flow (MPM)
   - Min cost max flow (assignment problem)

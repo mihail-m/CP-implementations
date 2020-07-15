@@ -141,7 +141,7 @@ The supported operations are: adding an element, removing the top element, getti
    </p>
    
     <p align="center">
-      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/HeapImage.png">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Heap.png">
    </p>
 
 
@@ -163,7 +163,7 @@ The supported operations are: adding an element, removing the top element, getti
      </p>
      
     <p align="center">
-      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/HashTableImage.png">
+      <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/HashTable.png">
    </p>     
 
       

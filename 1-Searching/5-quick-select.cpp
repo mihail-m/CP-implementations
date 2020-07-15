@@ -33,7 +33,7 @@ int kth_smallest(int k) {
             return arr[pivot];
         }
 
-        if (arr[pivot] < k) {
+        if (pivot < k - 1) {
             l = pivot + 1;
         } else {
             r = pivot - 1;

@@ -18,10 +18,10 @@ bool ternary_search(int num) {
             return true;
         }
 
-        if (key < ar[mid1]) { 
+        if (num < arr[mid1]) { 
             r = mid1 - 1; 
         } 
-        else if (key > ar[mid2]) { 
+        else if (num > arr[mid2]) { 
             l = mid2 + 1; 
         } 
         else { 

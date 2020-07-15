@@ -34,7 +34,7 @@ bool exp_search(int num) {
         i *= 2;
     }
 
-    return bin_search(i / 2, min(i, n), num);
+    return bin_search(i / 2, min(i, n - 1), num);
 }
 
 void test() {

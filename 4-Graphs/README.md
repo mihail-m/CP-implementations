@@ -23,32 +23,23 @@ A graph can be represented programatically in a few ways:<br></li>
 2. By an adjacency matrix. A matrix where the cell at postition (i, j) indicates if there is an edge between vertices i and j.<br>
 
 3. By an adjacency list. A list for each vetrex containing all of it's neighbours (eg. vector<int> graph[]).<br>
-
-~~~    
-Graph: (1)---(2)---(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
-              |  /                       (2, 3)                      1 0 1 1                    2: 1, 3, 4
-              (4)                        (3, 4)                      0 1 0 1                    3: 2, 4
-                                         (2, 4)                      0 1 1 0                    4: 2, 3
-~~~                  
+  
+   <p align="center">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs1.png">
+   </p>
+  
 If we have a directed graph, then the edges have a direction and can be traversed only one way. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
-~~~  
-Graph: (1)--->(2)----->(3)    List of edges: (1, 2)    Adjecency matrix: 0 1 0 0    Adjecency list: 1: 2
-               |        |                    (2, 3)                      0 0 1 1                    2: 3, 4
-               |->(4)<--|                    (3, 4)                      0 0 0 1                    3: 4
-                                             (2, 4)                      0 0 0 0                    4:
-~~~
+
+   <p align="center">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs2.png">
+   </p>
+   
 A graph can have costs on its edges, it that case they are represented as triplets instead of pairs: e = (u, v, cost).</li>
-~~~
-Graph: (1)--3--(2)--2--(3)    List of edges: (1, 2, 3)    Adjecency matrix: 0 3 0 0
-                |     /                      (2, 3, 2)                      3 0 2 1
-                1    5                       (3, 4, 5)                      0 2 0 5
-                |   /                        (2, 4, 1)                      0 1 5 0
-                |  /
-                (4)           Adjecency list: 1: (2, 3)
-                                              2: (1, 3), (3, 2), (4, 1)
-                                              3: (2, 2), (4, 5)
-                                              4: (2, 1), (3, 5)
-~~~                  
+
+   <p align="center">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs3.png">
+   </p>
+   
 </p>
 
 

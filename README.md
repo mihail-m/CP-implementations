@@ -2,7 +2,7 @@
 
 ### Repository with implementations and explanations of the following data structures and algorithms.
 
-***
+#
 
 ### Searching:
   - Binary search 
@@ -11,7 +11,7 @@
   - Ternary search
   - Quick select
   
-***
+#
 
 ### Sorting:
   - Selection sort
@@ -23,7 +23,7 @@
   - Counting sort
   - Radix sort
   
-***
+#
 
 ### Basic Data Structures:
   - Linked list
@@ -33,7 +33,7 @@
   - Heap
   - Hash table
   
-***
+#
 
 ### Graphs:
 #### Fundamentals:
@@ -64,7 +64,7 @@
   - Path queries on tree (LSA + Segment tree)
   - A*
   
-***
+#
 
 ### String matching:
   - Rolling hash
@@ -75,7 +75,7 @@
   - Suffix array
   - Hash segment tree
   
-***
+#
 
 ### Range Query:
   - Sqrt decomposition
@@ -87,14 +87,14 @@
   - Merge sort segment tree
   - Implicit treap
   
-***
+#
 
 ### Persistance:
   - Persitent array
   - Persistent stack
   - Persistent segment tree
   
-***
+#
 
 ### Math:
   - Fast pow
@@ -106,13 +106,13 @@
   - Matrix fast pow
   - Fast Fourier transform
   
-***
+#
 
 ### Geometry:
   - Convex hull (Graham Scan)
   - KD tree
     
-***
+#
 
 
   

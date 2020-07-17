@@ -1,10 +1,7 @@
 # Data structures and algorithms library.
 
 <p display="inline">
-  Repository with implementations and explanations of the following data structures and algorithms in:&nbsp&nbsp
-  <img width="2.8%" margin-left="10px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png">
-   &nbsp   
-  <img width="3.8%" src="https://pragmatic.bg/wp-content/uploads/2014/11/java8_logo.png">
+  Repository with implementations and explanations of the following data structures and algorithms:
 </p>
 
 #

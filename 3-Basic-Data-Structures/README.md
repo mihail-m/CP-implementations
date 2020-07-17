@@ -7,6 +7,8 @@
 
 - O(1) adding to the beginning and the ending
 
+- O(1) deletion in the beginnig and O(n) deletion in the end
+
 - O(n) complexity for insertion and delition in the middle
 
 - O(n) complexity to find an element in the list
@@ -26,6 +28,8 @@
 - O(1) access to the first element and the last element
 
 - O(1) adding to the beginning and the ending
+
+- O(1) deletion in the beginnig and in the end
 
 - O(n) complexity for insertion and delition in the middle
 

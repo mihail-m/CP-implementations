@@ -11,6 +11,12 @@ struct Node {
         prev = nullptr;
         next = nullptr;
     }
+
+    Node(int v, Node* n, Node* p) {
+        value = v;
+        next = n;
+        prev = p;
+    }
 };
 
 class doubly_linked_list {
@@ -19,6 +25,27 @@ class doubly_linked_list {
         Node* last;
 
         int _elements;
+
+        Node* goToPos(int pos) {
+            if (pos < _elements - pos) {
+                int cnt = 0;
+                Node* cur = first;
+                while (cnt < pos) {
+                    cur = cur->next;
+                    cnt++;
+                }
+
+                return cur;
+            }
+
+            int cnt = _elements - 1;
+            Node* cur = last;
+            while (cnt > pos) {
+                cur = cur->prev;
+                cnt--;
+            }
+            return cur;
+        }
 
     public:
         doubly_linked_list() {
@@ -31,38 +58,31 @@ class doubly_linked_list {
             _elements++;
 
             if (last == nullptr) {
-                first = new Node();
-                first->value = num;
+                first = new Node(num, nullptr, nullptr);
                 last = first;
                 return;
             }
 
-            Node* temp = new Node();
-            temp->value = num;
-            temp->prev = last;
-            last->next = temp;
-            last = temp;
+            last->next = new Node(num, nullptr, last);
+            last = last->next;
         }
 
         void insert_begin(int num) {
             _elements++;
 
             if (first == nullptr) {
-                first = new Node();
-                first->value = num;
+                first = new Node(num, nullptr, nullptr);
                 last = first;
                 return;
             }
 
-            Node* temp = new Node();
-            temp->value = num;
-            temp->next = first;
-            first->prev = temp;
-            first = temp;
+            first = new Node(num, first, nullptr);
         }
 
         void insert_pos(int num, int pos) {
-            _elements++;
+            if (pos < 0 || pos > _elements) {
+                throw invalid_argument("Possition out of bounds.");
+            }
 
             if (pos >= _elements) {
                 insert_end(num);
@@ -74,19 +94,11 @@ class doubly_linked_list {
                 return;
             }
 
-            int cnt = 0;
-            Node* cur = first;
-            while (cnt < pos - 1) {
-                cur = cur->next;
-                cnt++;
-            }
+            _elements++;
 
-            Node* temp = new Node();
-            temp->value = num;
-            temp->next = cur->next;
-            temp->prev = cur;
-            temp->next->prev = temp;
-            temp->prev->next = temp;
+            Node* cur = goToPos(pos - 1);
+            cur->next = new Node(num, cur->next, cur);
+            cur->next->next->prev = cur->next;
         }
 
         void erase_begin() {
@@ -109,20 +121,14 @@ class doubly_linked_list {
 
             _elements--;
 
-            Node* temp = first;
-            while (temp->next != last) {
-                temp = temp->next;
-            }
-            
-            last = temp;
-            temp = temp->next;
-            delete temp;
+            last = last->prev;
+            delete last->next;
             last->next = nullptr;
         }
 
         void erase_pos(int pos) {
-            if (pos >= _elements) {
-                return;
+            if (pos < 0 || pos >= _elements) {
+                throw invalid_argument("Possition out of bounds.");
             }
 
             if (pos == 0) {
@@ -137,12 +143,7 @@ class doubly_linked_list {
 
             _elements--;
 
-            int cnt = 0;
-            Node* cur = first;
-            while (cnt < pos - 1) {
-                cur = cur->next;
-                cnt++;
-            }
+            Node* cur = goToPos(pos - 1);
 
             Node* temp = cur->next;
             cur->next = temp->next;
@@ -166,6 +167,22 @@ class doubly_linked_list {
                 backward = backward->prev;
                 cnt++;
             }
+        }
+
+        int get_begin() {
+            return first->value;
+        }
+
+        int get_end() {
+            return last->value;
+        }
+
+        int get(int pos) {
+            if (pos >= _elements || pos < 0) {
+                throw invalid_argument("Possition out of bounds.");
+            }
+
+            return goToPos(pos)->value;
         }
 
         int elements() {
@@ -202,15 +219,10 @@ class doubly_linked_list {
 };
 
 void test() {
-    int n;
-    cin >> n;
-
     doubly_linked_list l;
 
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        l.insert_end(num);
+    for (int i = 0; i < 5; i++) {
+        l.insert_end(i);
     }
 
     l.print();
@@ -223,7 +235,7 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-
+    
     test();
 
     return 0;

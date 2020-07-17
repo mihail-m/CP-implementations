@@ -47,7 +47,7 @@ public class Queue<T> {
     @SuppressWarnings("unchecked")
     public T front() {
         if (left > right) {
-            throw new IllegalStateException("Stack is empty");
+            throw new IllegalStateException("Queue is empty");
         }
 
         return (T) elements[left];
@@ -58,7 +58,7 @@ public class Queue<T> {
      */
     public void pop() {
         if (left > right) {
-            throw new IllegalStateException("Stack is empty");
+            throw new IllegalStateException("Queue is empty");
         }
 
         checkCapacity(right - left);

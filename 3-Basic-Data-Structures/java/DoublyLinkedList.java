@@ -119,7 +119,10 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
         size--;
         first = first.next;
-        first.previous = null;
+
+        if (first != null) {
+            first.previous = null;
+        }
     }
 
     /**
@@ -133,7 +136,10 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         size--;
 
         last = last.previous;
-        last.next = null;
+
+        if (last != null) {
+            last.next = null;
+        }
     }
 
     /**

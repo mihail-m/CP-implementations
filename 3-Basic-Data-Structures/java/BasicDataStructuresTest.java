@@ -68,4 +68,54 @@ public class BasicDataStructuresTest {
         Assert.assertEquals(7, (int) queue.front());
         Assert.assertEquals("[7, 73, 2]", queue.toString());
     }
+
+    @Test
+    public void testMinQueue() {
+        MinQueue<Integer> queue = new MinQueue<>();
+
+        queue.push(9);
+        Assert.assertEquals(9, (int) queue.minimum());
+
+        queue.push(7);
+        Assert.assertEquals(7, (int) queue.minimum());
+
+        queue.push(2);
+        Assert.assertEquals(2, (int) queue.minimum());
+
+        queue.push(73);
+        Assert.assertEquals(2, (int) queue.minimum());
+
+        queue.push(5);
+        Assert.assertEquals(2, (int) queue.minimum());
+
+        queue.pop();
+        queue.pop();
+        queue.pop();
+        Assert.assertEquals(5, (int) queue.minimum());
+    }
+
+    @Test
+    public void testMinStack() {
+        MinStack<Integer> stack = new MinStack<>();
+
+        stack.push(3);
+        Assert.assertEquals(3, (int) stack.minimum());
+
+        stack.push(7);
+        Assert.assertEquals(3, (int) stack.minimum());
+
+        stack.push(2);
+        Assert.assertEquals(2, (int) stack.minimum());
+
+        stack.push(73);
+        Assert.assertEquals(2, (int) stack.minimum());
+
+        stack.push(5);
+        Assert.assertEquals(2, (int) stack.minimum());
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        Assert.assertEquals(3, (int) stack.minimum());
+    }
 }

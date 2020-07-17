@@ -36,7 +36,7 @@ Problem: Sort an array with n elements.
    </p>
 
      <p align="center">
-       <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif">
+       <img  width="40%" src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Sorting_shaker_sort_anim.gif">
      </p> <br>
 
 ## Insertion sort

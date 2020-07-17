@@ -3,20 +3,21 @@ using namespace std;
 
 void bubble_sort(vector<int>& arr) {
     for (int i = 0; i < arr.size(); i++) {
-        for (int j = i; j > 0 && arr[j] < arr[j - 1]; j--) {
-            swap(arr[j], arr[j - 1]);
+        for (int j = arr.size() - 1; j > i; j--) {
+            if (arr[j] < arr[j - 1]) {
+            	swap(arr[j], arr[j - 1]);
+            }
         }
     }
 }
 
 void test() {
-    int n;
-    cin >> n;
-
+	int n = 10;
     vector<int> arr(n);
     for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+        arr[i] = i;
     }
+    random_shuffle(arr.begin(), arr.end());
 
     bubble_sort(arr);
 

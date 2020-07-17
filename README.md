@@ -1,6 +1,8 @@
 # Data structures and algorithms library.
 
-Repository with implementations and explanations of the following data structures and algorithms.
+### Repository with implementations and explanations of the following data structures and algorithms.
+
+***
 
 ### Searching:
   - Binary search 
@@ -8,6 +10,8 @@ Repository with implementations and explanations of the following data structure
   - Exponential search
   - Ternary search
   - Quick select
+  
+***
 
 ### Sorting:
   - Selection sort
@@ -18,6 +22,8 @@ Repository with implementations and explanations of the following data structure
   - Heap sort
   - Counting sort
   - Radix sort
+  
+***
 
 ### Basic Data Structures:
   - Linked list
@@ -26,6 +32,8 @@ Repository with implementations and explanations of the following data structure
   - Queue
   - Heap
   - Hash table
+  
+***
 
 ### Graphs:
 #### Fundamentals:
@@ -54,6 +62,8 @@ Repository with implementations and explanations of the following data structure
   - Virtual tree
   - Path queries on tree (LSA + Segment tree)
   - A*
+  
+***
 
 ### String matching:
   - Rolling hash
@@ -63,6 +73,8 @@ Repository with implementations and explanations of the following data structure
   - Aho corasick (KMP Generalization)
   - Suffix array
   - Hash segment tree
+  
+***
 
 ### Range Query:
   - Sqrt decomposition
@@ -73,11 +85,15 @@ Repository with implementations and explanations of the following data structure
   - 2D Segment Tree
   - Merge sort segment tree
   - Implicit treap
+  
+***
 
 ### Persistance:
   - Persitent array
   - Persistent stack
   - Persistent segment tree
+  
+***
 
 ### Math:
   - Fast pow
@@ -88,10 +104,14 @@ Repository with implementations and explanations of the following data structure
   - Modular multiplicative inverse
   - Matrix fast pow
   - Fast Fourier transform
+  
+***
 
 ### Geometry:
   - Convex hull (Graham Scan)
   - KD tree
+    
+***
 
 
   

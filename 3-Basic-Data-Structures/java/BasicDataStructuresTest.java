@@ -31,6 +31,7 @@ public class BasicDataStructuresTest {
         list.addToEnd(5);
         list.insertAt(4,1);
         list.insertAt(19, 2);
+
         Assert.assertEquals("[1, 4, 19, 5]", list.toString());
 
         list.reverse();
@@ -44,7 +45,6 @@ public class BasicDataStructuresTest {
     @Test
     public void testStack() {
         Stack<Integer> stack = new Stack<>();
-
         stack.push(1);
         stack.push(7);
         stack.push(73);
@@ -117,5 +117,22 @@ public class BasicDataStructuresTest {
         stack.pop();
         stack.pop();
         Assert.assertEquals(3, (int) stack.minimum());
+    }
+
+    @Test
+    public void testHashTable() {
+        HashTable<String, Integer> map = new HashTable<>();
+
+        map.put("1", 1);
+        map.put("2", 2);
+        map.put("3", 3);
+        map.put("4", 4);
+
+        Assert.assertNull(map.get("7"));
+        Assert.assertEquals(2, (int) map.get("2"));
+
+        map.erase("3");
+
+        Assert.assertEquals("{(1, 1), (2, 2), (4, 4)}", map.toString());
     }
 }

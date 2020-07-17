@@ -1,7 +1,5 @@
 package basic.data.structures;
 
-import java.util.Objects;
-
 /**
  * Stack implementation with an array.
  * O(1) push, pop and top operations (Constant Amortized Time)

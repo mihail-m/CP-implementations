@@ -1,7 +1,6 @@
 package basic.data.structures;
 
 import java.util.Iterator;
-import java.util.Objects;
 
 /**
  * Doubly Linked List.

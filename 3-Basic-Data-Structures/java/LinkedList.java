@@ -5,9 +5,11 @@ import java.util.Objects;
 
 /**
  * Singly Linked List.
- *
  * Each element has a link to the next element.
- * O(1) access, insertion and deletion at the beginning and ending of the list.
+ *
+ * O(1) access, insertion and deletion at the beginning of the list.
+ * O(1) access and insertion at the ending of the list.
+ * O(size) deletion at the ending of the list.
  * O(size) access, insertion and deletion in the middle of the list.
  *
  * @param <T> Type of the objects stored in the Linked List
@@ -235,36 +237,6 @@ public class LinkedList<T> implements Iterable<T> {
      */
     public int size() {
         return size;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (!(o instanceof LinkedList)) {
-            return false;
-        }
-
-        LinkedList<?> that = (LinkedList<?>) o;
-        return this.hashCode() == that.hashCode();
-    }
-
-    @Override
-    public int hashCode() {
-        Object[] objects = new Object[size + 1];
-        objects[0] = size;
-
-        int i = 0;
-        Node cur = first;
-
-        while (cur != null) {
-            objects[i++] = cur.value;
-            cur = cur.link;
-        }
-
-        return Objects.hashCode(objects);
     }
 
     @Override

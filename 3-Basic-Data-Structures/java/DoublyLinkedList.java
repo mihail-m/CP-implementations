@@ -231,36 +231,6 @@ public class DoublyLinkedList<T> implements Iterable<T> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-
-        if (!(o instanceof LinkedList)) {
-            return false;
-        }
-
-        LinkedList<?> that = (LinkedList<?>) o;
-        return this.hashCode() == that.hashCode();
-    }
-
-    @Override
-    public int hashCode() {
-        Object[] objects = new Object[size + 1];
-        objects[0] = size;
-
-        int i = 0;
-        Node cur = first;
-
-        while (cur != null) {
-            objects[i++] = cur.value;
-            cur = cur.next;
-        }
-
-        return Objects.hashCode(objects);
-    }
-
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
 

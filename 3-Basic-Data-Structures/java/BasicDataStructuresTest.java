@@ -3,6 +3,8 @@ package basic.data.structures;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.persistence.criteria.CriteriaBuilder;
+
 public class BasicDataStructuresTest {
 
     @Test
@@ -39,5 +41,19 @@ public class BasicDataStructuresTest {
         list.eraseAt(1);
         list.eraseEnd();
         Assert.assertEquals("[5, 4]", list.toString());
+    }
+
+    @Test
+    public void testStack() {
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(1);
+        stack.push(7);
+        stack.push(73);
+        stack.push(2);
+
+        Assert.assertEquals(2, (int) stack.pop());
+        Assert.assertEquals(73, (int) stack.top());
+        Assert.assertEquals("[1, 7, 73]", stack.toString());
     }
 }

@@ -25,19 +25,19 @@ A graph can be represented programatically in a few ways:<br></li>
 3. By an adjacency list. A list for each vetrex containing all of it's neighbours (eg. vector<int> graph[]).<br>
   
    <p align="center">
-     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs1.png">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Graphs1.png">
    </p>
   
 If we have a directed graph, then the edges have a direction and can be traversed only one way. The edge (i, j) allows us to go from vetrex i to vetrex j but not the other way around. We must take this into account when we build our graph.<br>
 
    <p align="center">
-     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs2.png">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Graphs2.png">
    </p>
    
 A graph can have costs on its edges, it that case they are represented as triplets instead of pairs: e = (u, v, cost).</li>
 
    <p align="center">
-     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/graphs3.png">
+     <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Graphs3.png">
    </p>
    
 </p>

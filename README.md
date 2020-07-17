@@ -50,7 +50,7 @@
   - Find articulation points
   - Topological sort
   - Max flow (Edmonds Karp)
-#
+
 #### Advanced:
   - Shortest Path Faster Algorithm (SPFA)
   - Strongly connected components (Koraraju)

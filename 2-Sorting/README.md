@@ -21,12 +21,12 @@ Problem: Sort an array with n elements.
 
 - <p>The idea is that every time we find a pair of consecutive elements that are in the wrong order we swap them.<br>
 
-     When we are at postion i we start swapping our current element with the previous one while they are in the wrong order.<br>
+     We preform n interation. On the ith iteration we start at the end of the array and interate backwards utill we reach position i - 1. Every time we encounter two consecutive elements that are in the wrong order, we swap them.<br>
 
      Once we do this for each position we end up with a sorted array.</p>
      
      <p align="center">
-       <img src="https://miro.medium.com/max/802/1*7seGXJi3te9beNfpAvFXEQ.gif">
+       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BubbleSort.gif">
      </p> <br>
 
 - <p>

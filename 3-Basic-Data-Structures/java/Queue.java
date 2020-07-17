@@ -1,87 +1,79 @@
 package basic.data.structures;
 
-import java.util.Objects;
-
 /**
- * Stack implementation with an array.
- * O(1) push, pop and top operations (Constant Amortized Time)
+ *  * Queue implementation with an array.
+ *  * O(1) push, pop and front operations (Constant Amortized Time)
  *
  * @param <T> Type of the elements of the stack.
  */
-public class Stack<T> {
+public class Queue<T> {
     private static final int DEFAULT_CAPACITY = 16;
 
     private Object[] elements;
     private int capacity;
-    private int size;
+    private int left;
+    private int right;
 
     /**
-     * Create an empty stack.
+     * Create an empty queue.
      */
-    public Stack() {
+    public Queue() {
         elements = new Object[DEFAULT_CAPACITY];
         capacity = DEFAULT_CAPACITY;
-        size = 0;
+        left = 0;
+        right = -1;
     }
 
     /**
-     * Add an element to the top of the stack.
+     * Add an element to the back of the queue.
      *
      * @param value Object to be added.
      */
     public void push(T value) {
-        checkCapacity(size + 1);
-        elements[size++] = value;
+        checkCapacity(right - left + 2);
+
+        if (right + 1 == capacity) {
+            shift();
+        }
+
+        elements[++right] = value;
     }
 
     /**
-     * Return the element at the top of the stack.
+     * Return the element at the front of the queue.
      *
      * @return Reference to the object.
      */
     @SuppressWarnings("unchecked")
-    public T top() {
-        if (size == 0) {
+    public T front() {
+        if (left > right) {
             throw new IllegalStateException("Stack is empty");
         }
 
-        return (T) elements[size - 1];
+        return (T) elements[left];
     }
 
     /**
-     * Remove an element from the top of the stack.
+     * Remove an element from the front of the queue.
      */
     public void pop() {
-        if (size == 0) {
+        if (left > right) {
             throw new IllegalStateException("Stack is empty");
         }
 
-        size--;
+        checkCapacity(right - left);
+        left++;
     }
 
     /**
-     * Remove the top element from the stack.
+     * Remove the front element from the queue.
      *
      * @return Reference to the removed object.
      */
     public T poll() {
-        T result = top();
+        T result = front();
         pop();
-        return result;
-    }
-
-    /**
-     * @return The current number of elements in the stack.
-     */
-    public int size() {
-        return size;
-    }
-
-    /**
-     * @return True if the stack has no elements and false otherwise.
-     */
-    public boolean empty() {
-        return size == 0;
+        return  result;
     }
 
     @Override
@@ -90,11 +82,11 @@ public class Stack<T> {
 
         sb.append("[");
 
-        for (int i = 0; i < size; i++) {
+        for (int i = left; i <= right; i++) {
             sb.append(elements[i].toString()).append(", ");
         }
 
-        if (size > 0) {
+        if (left <= right) {
             sb.delete(sb.length() - 2, sb.length());
         }
 
@@ -114,13 +106,22 @@ public class Stack<T> {
     }
 
     private void resize(int newCapacity) {
-        Object[] temp = new Object[size];
+        Object[] temp = new Object[right - left + 1];
 
-        System.arraycopy(elements, 0, temp, 0, size);
+        System.arraycopy(elements, left, temp, left, right - left + 1);
 
         capacity = newCapacity;
         elements = new Object[capacity];
 
-        System.arraycopy(temp, 0, elements, 0, size);
+        System.arraycopy(temp, 0, elements, 0, right - left + 1);
+    }
+
+    private void shift() {
+        for (int i = 0; i < right - left + 1; i++) {
+            elements[i] = elements[left + 1];
+        }
+
+        right = right - left;
+        left = 0;
     }
 }

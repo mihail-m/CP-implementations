@@ -247,7 +247,10 @@ public class LinkedList<T> implements Iterable<T> {
 
         this.forEach(value -> sb.append(value.toString()).append(", "));
 
-        sb.delete(sb.length() - 2, sb.length());
+        if (size > 0) {
+            sb.delete(sb.length() - 2, sb.length());
+        }
+
         sb.append("]");
 
         return sb.toString();

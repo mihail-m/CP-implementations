@@ -58,9 +58,13 @@ class linked_list {
         }
 
         void insert_pos(int num, int pos) {
+            if (pos < 0 || pos > _elements) {
+                throw invalid_argument("Possition out of bounds.");
+            }
+
             _elements++;
 
-            if (pos >= _elements) {
+            if (pos == _elements) {
                 insert_end(num);
                 return;
             }
@@ -84,10 +88,6 @@ class linked_list {
         }
 
         void erase_begin() {
-            if (first == nullptr) {
-                return;
-            }
-
             _elements--;
 
             Node* temp = first;
@@ -96,10 +96,6 @@ class linked_list {
         }
 
         void erase_end() {
-            if (last == nullptr) {
-                return;
-            }
-
             _elements--;
 
             Node* temp = first;
@@ -114,8 +110,8 @@ class linked_list {
         }
 
         void erase_pos(int pos) {
-            if (pos >= _elements) {
-                return;
+            if (pos >= _elements || pos < 0) {
+                throw invalid_argument("Possition out of bounds.");
             }
 
             if (pos == 0) {
@@ -140,6 +136,29 @@ class linked_list {
             Node* temp = cur->link;
             cur->link = temp->link;
             delete temp;
+        }
+
+        int get_begin() {
+            return first->value;
+        }
+
+        int get_end() {
+            return last->value;
+        }
+
+        int get(int pos) {
+            if (pos >= _elements || pos < 0) {
+                throw invalid_argument("Possition out of bounds.");
+            }
+
+            int cnt = 0;
+            Node* cur = first;
+            while (cnt < pos) {
+                cur = cur->link;
+                cnt++;
+            }
+
+            return cur->value;
         }
 
         void reverse() {

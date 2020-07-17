@@ -60,8 +60,10 @@ public class Sort {
      */
     public static <T extends Comparable<? super T>> void bubbleSort(List<T> list, int from, int to) {
         for (int i = from; i <= to; i++) {
-            for (int j = i; j > from && list.get(j).compareTo(list.get(j - 1)) < 0; j--) {
-                swap(list, j, j - 1);
+            for (int j = to; j > from; j--) {
+                if (list.get(j).compareTo(list.get(j - 1)) < 0) {
+                    swap(list, j, j - 1);
+                }
             }
         }
     }

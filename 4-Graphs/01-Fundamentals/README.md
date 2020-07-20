@@ -98,7 +98,7 @@
 
  - <p>
 
-      If the graph is sparce, we can use a sutable data structure that will help us get the minimum element quicker. We can use a heap like structure that allow adding an element and getting minimum element (possibly deletion of an element). In c++, sutable data structures would be `set`, and `prority_queue`. This will allow us to get the minimum element in O(1) time. Every time we perform a relaxation we need to update not only the dist[] array, but also our data structure.<br>
+      If the graph is sparce, we can use a sutable data structure that will help us get the minimum element quicker. We can use a heap like structure that allow adding an element and getting minimum element (possibly deletion of an element). In c++, sutable data structures would be `set`, and `prority_queue`. This will allow us to get the minimum element in O(1) time and insert/delete an element in O(log V) time. Every time we perform a relaxation we need to update not only the dist[] array, but also our data structure.<br>
 
       We can keep pairs of values in the data structure (dist[v], v), this way the top of the structure will always be the pair containing the vertex with the minimum distance. Istead of marking vertices, we simply remove them form the data strucure when we process them, since they will never go back in unless we find a shorter path to them. That ensures that vertices that allready have their shortest path calculate will not be considered anymore.<br>
       

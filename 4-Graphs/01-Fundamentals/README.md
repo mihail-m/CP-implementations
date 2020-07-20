@@ -9,7 +9,7 @@
    
    Let v be the vertex we are currenlty at. First we need to mark it as visited and then we need to recursively visit all of it's neighbours that aren't allready visited. When there are no more vertices that are not visited, we are done.
    
-   We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
+   We consider every vertex only once and we consider each edge twice (once from every direction) => O(V + E).</p>
    
    <p align="center">
       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/DFS.gif">
@@ -30,9 +30,9 @@
    
    Let s be our starting vertex. The distance to s is 0. To find the distance to all of the neighbours of s is 1, the distance to all of their unvisited neighbours is 2 and so on. Those groups of vertices (that have the same distace to s) are the levels of the bfs. All vertices at level 1 are at distance 1 all at level to at distance 2 and so on.<br>
    
-   When we are at vertex u that has level l, all of its unvisited neighbours are at level l + 1, because we must travel trough one more edge in order to reach them. So in order to calculate the distance, every time we add a new vertex to the queue, the distance to it is with 1 bigger that the distance to the vertex we are currently at: distance[new_vertex] = distance[current_vertex] + 1.
+   When we are at vertex u that has level l, all of its unvisited neighbours are at level l + 1, because we must travel trough one more edge in order to reach them. So in order to calculate the distance, every time we add a new vertex to the queue, the distance to it is with 1 bigger that the distance to the vertex we are currently at: `distance[new_vertex] = distance[current_vertex] + 1`.
    
-   We consider every vertex only once and we consider each edge twice (once from every direction) => O(n + m).</p>
+   We consider every vertex only once and we consider each edge twice (once from every direction) => O(V + E).</p>
    
    <p align="center">
       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BFS.gif">
@@ -53,8 +53,7 @@
   
   Let Pk-1 is the matrix that contains all the paths from u to v with lenght k - 1 in cell (u, v). Then we can calucate Pk with the help of the adjacency matrix Adj and Pk-1:<br>
               
-  Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]),<br>
-  i = 0, 1, ..., n.<br>
+  `Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]), i = 0, 1, ..., n.`<br>
   
   This operation is actually just the multiplication of the two matrices Pk-1 and A => Pk = Pk-1 * Adj.<br>
   
@@ -74,13 +73,13 @@
   
   Let (u, v, cost) in an edge from E. If the distance to v is greater that the distance to u plust the cost, then we can reach v more efficiently by using the path to u and the edge (u, v, cost) instead of the current path to v. This is called rexalxation and we will use it to solve our problem.<br>
   
-  Relaxation: dist[u] + cost < dist[v] then dist[v] = dist[u] + cost.<br>
+  Relaxation: `dist[u] + cost < dist[v] then dist[v] = dist[u] + cost.`<br>
 
   The algorithm consists of n - 1 phases. Each phase goest through all edges of the graph, and tries to perform a relaxation using each edge (u, v, cost). After tring to relax with each edge n - 1 times the array dist will contain the values of the shortest paths from s to every other vertex in G.
 </p>
 
 ## Dijkstra
-- Find the shortes path to every vertex from a starting vertex s in a weighted graph.
+- Find the shortes path to every vertex from a starting vertex in a weighted graph.
 
 - O(E log V) complexity on sparce graphs.
 
@@ -90,7 +89,7 @@
 
      Additionally, we need to keep track of the vertices that are maked. A vertex v is marked if we allready know the shortest path from start to v. Initially all vertices are unmarked.<br>
 
-     On every iteration, we choose the vertex v for which dist[v] is the smallest and v is unmarked. (On the first iteration the selected vertex will be start). When a vertex is slected, we mark it (makred[v] = true) and then we try to perform relaxations with all edges going out of v: (v, to, cost). A relaxation for the edge (v, to, cost) would look like this: dist[to] = min (dist[tp], dist[v] + cost).<br>
+     On every iteration, we choose the vertex v for which dist[v] is the smallest and v is unmarked. (On the first iteration the selected vertex will be start). When a vertex is slected, we mark it (makred[v] = true) and then we try to perform relaxations with all edges going out of v: (v, to, cost). A relaxation for the edge (v, to, cost) would look like this: `dist[to] = min (dist[tp], dist[v] + cost).`<br>
 
      After V iteraions all vertices will be marked and the procedure will terminate yelding the aswer in the array dist: the distance for start to v will be in dist[v]. If there are any unreachable vetices from start the distance to them will remain ∞.</p>
 
@@ -102,7 +101,7 @@
 
       We can keep pairs of values in the data structure (dist[v], v), this way the top of the structure will always be the pair containing the vertex with the minimum distance. Istead of marking vertices, we simply remove them form the data strucure when we process them, since they will never go back in unless we find a shorter path to them. That ensures that vertices that allready have their shortest path calculate will not be considered anymore.<br>
       
-      Every time a relaxation is repformed: dist[u] = dist[v] + cost, we must erase the old pair for the u from the data structure (remove(dist[u], u)) and add the new one (dist[v] + cost, u) in addition to updating the dist[] array. If the data strucure we have chosen does not support the removal of up element, evry time we select an element for processing we must check if the distance stored in the data structure matches the distance in the dist[] array and if it does not we must skip it (this acts as a delayed removal).<br>
+      Every time a relaxation is repformed: `dist[u] = dist[v] + cost`, we must erase the old pair for the u from the data structure (remove(dist[u], u)) and add the new one (dist[v] + cost, u) in addition to updating the dist[] array. If the data strucure we have chosen does not support the removal of up element, evry time we select an element for processing we must check if the distance stored in the data structure matches the distance in the dist[] array and if it does not we must skip it (this acts as a delayed removal).<br>
       
       The overall complexity of this approach is O(E log V). In dense graphs O(E) = O(V^2) and the complexity becomes O(V^2 log V) which is worse that O(V^2) and in this situation the other approach is prefferd.</p>
   
@@ -116,17 +115,17 @@
 
      Firstly we mark the distance from every vertex to itself as 0 (dist[i][i][k] = 0 for every k < V).<br>
 
-     We mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (dist[i][j][k] = cost, where (i, j, cost) ∈ E). The distance between all other pairs of vertices (that are not conected by an edge) we init as INT_MAX.<br>
+     We mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (`dist[i][j][k] = cost, where (i, j, cost) ∈ E`). The distance between all other pairs of vertices (that are not conected by an edge) we init as INT_MAX.<br>
 
      Once we have computed the aswers for 0, 1, ... k - 1, we can compute the asnwer for k as follows:<br>
 
      For every pair of vertices (u, v), we check if we can reach v from u by passing trough the vertex k with a lower cost than the best found up untill now:<br>
 
-     distance[u][v][k] = min(distance[u][i][k] + distance[i][v][k], distance[u][v][k - 1]).<br>
+     `distance[u][v][k] = min(distance[u][i][k] + distance[i][v][k], distance[u][v][k - 1])`.<br>
      
      We can see that the last dimention is redundant since we use only the last stored value => we can drop it from our state:<br>
      
-     distance[u][v] = min (distance[u][i] + distance[i][v], distance[u][v]).<br>
+     `distance[u][v] = min (distance[u][i] + distance[i][v], distance[u][v])`.<br>
      
      We consider each pair of vertices a total of V times (every time we add a new vertex we update the best paths between every two vertices) => O(V^2 * V) = O(V ^ 3) time complexity. 
      

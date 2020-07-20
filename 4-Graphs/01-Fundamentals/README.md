@@ -73,7 +73,7 @@
   
   Let (u, v, cost) in an edge from E. If the distance to v is greater that the distance to u plust the cost, then we can reach v more efficiently by using the path to u and the edge (u, v, cost) instead of the current path to v. This is called rexalxation and we will use it to solve our problem.<br>
   
-  Relaxation: `if dist[u] + cost < dist[v] then dist[v] = dist[u] + cost`.<br>
+  Relaxation: `dist[v] = min(dist[v], dist[u] + cost)`.<br>
 
   The algorithm consists of n - 1 phases. Each phase goest through all edges of the graph, and tries to perform a relaxation using each edge (u, v, cost). After tring to relax with each edge n - 1 times the array dist will contain the values of the shortest paths from s to every other vertex in G.
 </p>
@@ -89,7 +89,7 @@
 
      Additionally, we need to keep track of the vertices that are maked. A vertex v is marked if we allready know the shortest path from start to v. Initially all vertices are unmarked.<br>
 
-     On every iteration, we choose the vertex v for which dist[v] is the smallest and v is unmarked. (On the first iteration the selected vertex will be start). When a vertex is slected, we mark it (makred[v] = true) and then we try to perform relaxations with all edges going out of v: (v, to, cost). A relaxation for the edge (v, to, cost) would look like this: `dist[to] = min (dist[tp], dist[v] + cost).`<br>
+     On every iteration, we choose the vertex v for which dist[v] is the smallest and v is unmarked. (On the first iteration the selected vertex will be start). When a vertex is slected, we mark it (makred[v] = true) and then we try to perform relaxations with all edges going out of v: (v, to, cost). A relaxation for the edge (v, to, cost) would look like this: `dist[to] = min (dist[to], dist[v] + cost).`<br>
 
      After V iteraions all vertices will be marked and the procedure will terminate yelding the aswer in the array dist: the distance for start to v will be in dist[v]. If there are any unreachable vetices from start the distance to them will remain ∞.</p>
 

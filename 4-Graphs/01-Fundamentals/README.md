@@ -82,11 +82,19 @@
 ## Dijkstra
 - Find the shortes path to every vertex from a starting vertex s in a weighted graph.
 
-- O(E log V) complexity or O(V ^ 2) complexity depending on implementation.
+- O(E log V) complexity on sparce graphs.
 
-- On dense graphs: https://cp-algorithms.com/graph/dijkstra.html
+- O(V ^ 2) complexity on dense graphs.
 
-- On sparce graphs: https://cp-algorithms.com/graph/dijkstra_sparse.html
+- <p>We will create an array dist[], that will contain the current distance from start to v in dist[v]. Initially dist[start] = 0 and dist[i] = ∞, i ≠ start.<br>
+
+     Additionally, we need to keep track of the vertices that are maked. A vertex v is marked if we allready know the shortest path from start to v. Initially all vertices are unmarked.<br>
+
+     On every iteration, we choose the vertex v for which dist[v] is the smallest and v is unmarked. (On the first iteration the selected vertex will be start). When a vertex is slected, we mark it (makred[v] = true) and then we try to perform relaxations with all edges going out of v: (v, to, cost). A relaxation for the edge (v, to, cost) would look like this: dist[to] = min (dist[tp], dist[v] + cost).<br>
+
+     After n iteraions all vertices will be marked and the procedure will terminate yelding the aswer in the array dist: the distance for start to v will be in dist[v]. If there are any unreachable vetices from start the distance to them will remain ∞.
+
+</p>
 
 ## Floyd Warshall
 - Find the shortest path between every pair of vertices from the weighted graph G(V, E).

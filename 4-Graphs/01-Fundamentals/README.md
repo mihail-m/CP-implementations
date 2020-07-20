@@ -53,7 +53,7 @@
   
   Let Pk-1 is the matrix that contains all the paths from u to v with lenght k - 1 in cell (u, v). Then we can calucate Pk with the help of the adjacency matrix Adj and Pk-1:<br>
               
-  `Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]), i = 0, 1, ..., n.`<br>
+  Pk [u][v] = Pk-1[u][0] * Adj[0][v] + Pk[u][1] * Adj[1][v] + ... + Pk-1[u][n - 1] * Adj[n - 1][v] = sum (Pk-1[u][i] * Adj[i][v]),<br> i = 0, 1, ..., n.<br>
   
   This operation is actually just the multiplication of the two matrices Pk-1 and A => Pk = Pk-1 * Adj.<br>
   
@@ -115,7 +115,7 @@
 
      Firstly we mark the distance from every vertex to itself as 0 (dist[i][i][k] = 0 for every k < V).<br>
 
-     We mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (`dist[i][j][k] = cost, where (i, j, cost) ∈ E`). The distance between all other pairs of vertices (that are not conected by an edge) we init as INT_MAX.<br>
+     We mark the distance between every two vertices that are connected by an edge (u, v, cost) as that edges cost (dist[i][j][k] = cost, where (i, j, cost) ∈ E). The distance between all other pairs of vertices (that are not conected by an edge) we init as INT_MAX.<br>
 
      Once we have computed the aswers for 0, 1, ... k - 1, we can compute the asnwer for k as follows:<br>
 

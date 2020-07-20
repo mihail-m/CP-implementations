@@ -73,7 +73,7 @@
   
   Let (u, v, cost) in an edge from E. If the distance to v is greater that the distance to u plust the cost, then we can reach v more efficiently by using the path to u and the edge (u, v, cost) instead of the current path to v. This is called rexalxation and we will use it to solve our problem.<br>
   
-  Relaxation: `dist[u] + cost < dist[v] then dist[v] = dist[u] + cost.`<br>
+  Relaxation: `if dist[u] + cost < dist[v] then dist[v] = dist[u] + cost`.<br>
 
   The algorithm consists of n - 1 phases. Each phase goest through all edges of the graph, and tries to perform a relaxation using each edge (u, v, cost). After tring to relax with each edge n - 1 times the array dist will contain the values of the shortest paths from s to every other vertex in G.
 </p>

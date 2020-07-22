@@ -76,6 +76,14 @@ public class Queue<T> {
         return  result;
     }
 
+    public int size() {
+        return right - left + 1;
+    }
+
+    public boolean empty() {
+        return size() == 0;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

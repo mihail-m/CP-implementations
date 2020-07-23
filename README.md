@@ -58,12 +58,12 @@
   - Strongly connected components (Koraraju)
   - Boolean 2 satisfiability (2-SAT)
   - K-th ancestor
-  - Lowest common ancestor (LSA)
+  - Lowest common ancestor (LCA)
   - Max flow (Dinic)
   - Max flow (MPM)
   - Min cost max flow (assignment problem)
   - Virtual tree
-  - Path queries on tree (LSA + Segment tree)
+  - Path queries on tree (LCA + Segment tree)
   - A*
   
 #

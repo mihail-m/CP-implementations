@@ -40,7 +40,7 @@ class MPM {
         int source, sink;
         int q_head, q_tail;
 
-        void resize (int vetrices) {
+        void resize(int vetrices) {
             n = vetrices;
 
             graph.resize(n);
@@ -63,11 +63,11 @@ class MPM {
             }
         }
 
-        long long potential (int node) {
+        long long potential(int node) {
             return min(potentialential_in[node], potentialential_out[node]);
         }
 
-        void remove_node (int node) {
+        void remove_node(int node) {
             for (int i : in[node]) {
                 int u = edges[i].from;
                 auto it = find(out[u].begin(), out[u].end(), i);

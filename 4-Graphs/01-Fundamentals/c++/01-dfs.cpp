@@ -9,9 +9,8 @@ vector<int> graph[MAX_SIZE];
 bool visited[MAX_SIZE];
 
 void dfs(int u) {
-    cerr << u << " ";
-
     visited[u] = true;
+
     for (int v : graph[u]) {
         if (!visited[v]) {
             dfs(v);
@@ -29,8 +28,6 @@ void dfs_iterative(int start) {
         int u = s.top();
         s.pop();
 
-        cerr << u << " ";
-
         for (int v : graph[u]) {
             if (!visited[v]) {
                 s.push(v);
@@ -38,16 +35,6 @@ void dfs_iterative(int start) {
             }
         }
     }
-}
-
-void test() {
-    dfs(0);
-    cerr << "\n";
-
-    fill(visited, visited + n, false);
-
-    dfs_iterative(0);
-    cerr << "\n";
 }
 
 void input() {
@@ -66,9 +53,6 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-
-    input();
-    test();
 
     return 0;
 }

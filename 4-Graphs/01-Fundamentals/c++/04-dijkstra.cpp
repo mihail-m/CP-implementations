@@ -62,31 +62,48 @@ void dijkstra_dense(int start) {
 }
 
 void test() {
+    n = 9;
+    m = 14;
+
+    vector<pair<pair<int, int>, int>> edges;
+    edges.push_back({{0, 1}, 4});
+    edges.push_back({{0, 7}, 8});
+    edges.push_back({{1, 2}, 8});
+    edges.push_back({{1, 7}, 11});
+    edges.push_back({{2, 3}, 7});
+    edges.push_back({{2, 5}, 4});
+    edges.push_back({{2, 8}, 2});
+    edges.push_back({{3, 4}, 9});
+    edges.push_back({{3, 5}, 14});
+    edges.push_back({{4, 5}, 10});
+    edges.push_back({{5, 6}, 2});
+    edges.push_back({{6, 7}, 1});
+    edges.push_back({{6, 8}, 6});
+    edges.push_back({{7, 8}, 7});
+
+    for (auto p : edges) {
+        graph[p.first.first].push_back({p.first.second, p.second});
+        graph[p.first.second].push_back({p.first.first, p.second});
+    }
+
+    int expectedResult[] {0, 4, 12, 19, 21, 11, 9, 8, 14};
+
     dijkstra(0);
 
-    for (int u = 0; u < n; u++) {
-        cerr << dist[u] << " ";
+    for (int i = 0; i < 9; i++) {
+        assert(expectedResult[i] == dist[i]);
     }
-    cerr << "\n";
 
     dijkstra_dense(0);
 
-    for (int u = 0; u < n; u++) {
-        cerr << dist[u] << " ";
+    for (int i = 0; i < 9; i++) {
+        assert(expectedResult[i] == dist[i]);
     }
-    cerr << "\n";
-}
 
-void input() {
-    cin >> n >> m;
-    for (int i = 0; i < m; i++) {
-        int u, v, cost;
-        cin >> u >> v >> cost;
-        u--, v--;
-
-        graph[u].push_back({v, cost});
-        graph[v].push_back({u, cost});
+    for (int i = 0; i < n; i++) {
+        graph[i].clear();
     }
+    n = m = 0;
 }
 
 int main() {
@@ -94,7 +111,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

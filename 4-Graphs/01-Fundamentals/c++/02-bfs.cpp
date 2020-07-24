@@ -20,8 +20,6 @@ void bfs(int start) {
         int u = q.front();
         q.pop();
 
-        cerr << u << " ";
-
         for (int v : graph[u]) {
             if (!visited[v]) {
                 q.push(v);
@@ -30,16 +28,6 @@ void bfs(int start) {
             }
         }
     }
-}
-
-void solve() {
-    bfs(0);
-    cerr << "\n";
-
-    for (int u = 0; u < n; u++) {
-        cerr << dist[u] << " ";
-    }
-    cerr << "\n";
 }
 
 void input() {
@@ -58,9 +46,6 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
-
-    input();
-    solve();
 
     return 0;
 }

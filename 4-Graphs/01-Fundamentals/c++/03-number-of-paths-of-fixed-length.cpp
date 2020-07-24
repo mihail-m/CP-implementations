@@ -65,34 +65,21 @@ int paths(int** mat, int from, int to) {
 }
 
 void test() {
-    int n, m;
-    cin >> n >> m;
+    int** mat = new int*[9];
+    
+    //                     Graph adjacency matrix
+    mat[0] = new int[9] {0, 1, 0, 0, 0, 0, 0, 1, 0};
+    mat[1] = new int[9] {1, 0, 1, 0, 0, 0, 0, 1, 0};
+    mat[2] = new int[9] {0, 1, 0, 1, 0, 1, 0, 0, 1};
+    mat[3] = new int[9] {0, 0, 1, 0, 1, 1, 0, 0, 0};
+    mat[4] = new int[9] {0, 0, 0, 1, 0, 1, 0, 0, 0};
+    mat[5] = new int[9] {0, 0, 1, 1, 1, 0, 1, 0, 0};
+    mat[6] = new int[9] {0, 0, 0, 0, 0, 1, 0, 1, 1};
+    mat[7] = new int[9] {1, 1, 0, 0, 0, 0, 1, 0, 1};
+    mat[8] = new int[9] {0, 0, 1, 0, 0, 0, 1, 1, 0};
 
-    int** mat = init_matrix(n);
-
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        u--, v--;
-
-        mat[u][v] = 1;
-        mat[v][u] = 1;
-    } 
-
-    int k;
-    cin >> k;
-
-    int** index = pow_matrix(mat, n, k);
-
-    int q;
-    cin >> q;
-    for (int i = 0; i < q; i++) {
-        int f, t;
-        cin >> f >> t;
-        f--, t--;
-
-        cerr << paths(index, f, t) << "\n";
-    }
+    int** index = pow_matrix(mat, 9, 4);
+    assert(16 == index[2][4]);
 }
 
 

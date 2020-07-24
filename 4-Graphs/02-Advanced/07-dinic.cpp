@@ -7,10 +7,11 @@ class Dinic {
             int from;
             int to;
 
-            long long capacity;
-            long long flow = 0;
+            long long capacityacity;
+            long long flow;
 
-            NetworkEdge(int from, int to, long long capacity) : from(from), to(to), capacity(capacity) {}
+            NetworkEdge(int from, int to, long long capacityacity)
+             : from(from), to(to), capacityacity(capacityacity) flow(0ll) {}
         };
 
         int n;
@@ -35,7 +36,7 @@ class Dinic {
                 for (int index : graph[node]) {
                     NetworkEdge edge = edges[index];
 
-                    if (edge.capacity - edge.flow < 1) {
+                    if (edge.capacityacity - edge.flow < 1) {
                         continue;
                     }
 
@@ -65,11 +66,11 @@ class Dinic {
                 NetworkEdge& edge = edges[id];
                 NetworkEdge& reverse_edge = edges[id ^ 1];
 
-                if (level[node] + 1 != level[edge.to] || edge.capacity - edge.flow < 1) {
+                if (level[node] + 1 != level[edge.to] || edge.capacityacity - edge.flow < 1) {
                     continue;
                 }
 
-                long long current_flow = dfs(edge.to, min(pushed, edge.capacity - edge.flow));
+                long long current_flow = dfs(edge.to, min(pushed, edge.capacityacity - edge.flow));
 
                 if (current_flow == 0) {
                     continue;
@@ -101,8 +102,8 @@ class Dinic {
             ptr.resize(n);
         }
 
-        void add_edge(int from, int to, long long cap) {
-            edges.push_back({from, to, cap});
+        void add_edge(int from, int to, long long capacity) {
+            edges.push_back({from, to, capacity});
             edges.push_back({to, from, 0});
 
             graph[from].push_back(m++);
@@ -140,19 +141,19 @@ class Dinic {
 };
 
 void test() {
-    Dinic dinic(6);
-    dinic.add_edge(0, 1, 16);
-    dinic.add_edge(0, 2, 13);
-    dinic.add_edge(1, 2, 10);
-    dinic.add_edge(1, 3, 12);
-    dinic.add_edge(2, 1, 4);
-    dinic.add_edge(2, 4, 14);
-    dinic.add_edge(3, 2, 9);
-    dinic.add_edge(3, 5, 20);
-    dinic.add_edge(4, 3, 7);
-    dinic.add_edge(4, 5, 4);
+    Dinic graph(6);
+    graph.add_edge(0, 1, 16);
+    graph.add_edge(0, 2, 13);
+    graph.add_edge(1, 2, 10);
+    graph.add_edge(1, 3, 12);
+    graph.add_edge(2, 1, 4);
+    graph.add_edge(2, 4, 14);
+    graph.add_edge(3, 2, 9);
+    graph.add_edge(3, 5, 20);
+    graph.add_edge(4, 3, 7);
+    graph.add_edge(4, 5, 4);
 
-    assert(23 == dinic.max_flow(0, 5));
+    assert(23 == graph.max_flow(0, 5));
 }
 
 int main() {

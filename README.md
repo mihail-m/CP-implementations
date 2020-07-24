@@ -1,13 +1,18 @@
 # Data structures and algorithms library.
 
 <p display="inline">
-  Repository with implementations and explanations of the following data structures and algorithms:
+  Repository with implementations and explanations of the following data structures and algorithms.<br>
+  
+  Implementations in:
+  - C++<br>
+  - Java<br>
+  - <s>Python</s> `TODO`<br>
 </p>
 
 #
 
 ### Searching:
-  - Binary search 
+  - Binary search
   - Jump search
   - Exponential search
   - Ternary search

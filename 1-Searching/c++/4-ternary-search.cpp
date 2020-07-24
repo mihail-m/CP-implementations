@@ -1,14 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-static const int MAX_SIZE = 1 << 18;
-
-int n;
-int arr[MAX_SIZE];
-
-bool ternary_search(int num) { 
+bool ternary_search(vector<int>& arr, int num) { 
     int l = 0;
-    int r = n - 1;
+    int r = arr.size() - 1;
 
     while (l <= r) {
         int mid1 = l + (r - l) / 3;
@@ -34,17 +29,8 @@ bool ternary_search(int num) {
 }
 
 void test() {
-    int num;
-    cin >> num;
-
-    cerr << ternary_search(num) << endl;
-}
-
-void input() {
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    vector<int> testVector({1, 5, 9, 17, 33, 75});
+    assert(ternary_search(testVector, 17));
 }
 
 int main() {
@@ -52,7 +38,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

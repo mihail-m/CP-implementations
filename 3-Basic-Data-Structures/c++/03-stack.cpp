@@ -64,23 +64,30 @@ class stack_int {
         int size() {
             return _size;
         }
+
+        string to_string() {
+            string result = "[";
+            for (int i = 0; i < _size; i++) {
+                result.append(std::to_string(arr[i]));
+                if (i < _size - 1) {
+                    result.append(", ");
+                }
+            }
+            result.append("]");
+            return result;
+        }
 };
 
 void test() {
-    int n;
-    cin >> n;
+    stack_int stack;
+    stack.push(1);
+    stack.push(7);
+    stack.push(73);
+    stack.push(2);
 
-    stack_int s;
-
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        s.push(num);
-    }
-
-    while (s.size() > 0) {
-        cerr << s.poll() << endl;
-    }
+    assert(2 == stack.poll());
+    assert(73 == stack.top());
+    assert("[1, 7, 73]" == stack.to_string());
 }
 
 int main() {

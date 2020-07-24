@@ -1,12 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-static const int MAX_SIZE = 1 << 18;
-
-int n;
-int arr[MAX_SIZE];
-
-int partition(int l, int r)  { 
+int partition(vector<int>& arr, int l, int r)  { 
     int pivot = l + rand() % (r - l + 1);
     swap(arr[r], arr[pivot]);
 
@@ -22,12 +17,12 @@ int partition(int l, int r)  {
     return i; 
 } 
 
-int kth_smallest(int k) {
+int kth_smallest(vector<int>& arr, int k) {
     int l = 0;
-    int r = n - 1;
+    int r = arr.size() - 1;
 
     while (l <= r) {
-        int pivot = partition(l, r);
+        int pivot = partition(arr, l, r);
 
         if (pivot == k - 1) {
             return arr[pivot];
@@ -43,21 +38,11 @@ int kth_smallest(int k) {
     return INT_MIN;
 } 
 
-
 void test() {
-    int k;
-    cin >> k;
-
-    srand(time(nullptr));
-
-    cerr << kth_smallest(k) << endl;
-}
-
-void input() {
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    vector<int> testVector({1, 5, 9, 17, 33, 75});
+    random_shuffle(testVector.begin(), testVector.end());
+    
+    assert(9 == kth_smallest(testVector, 3));
 }
 
 int main() {
@@ -65,7 +50,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

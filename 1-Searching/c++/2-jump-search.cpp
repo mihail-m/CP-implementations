@@ -1,16 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-static const int MAX_SIZE = 1 << 18;
-
-int n;
-int arr[MAX_SIZE];
-
-bool jump_search(int num) {
-    int jump = sqrt(n);
+bool jump_search(vector<int>& arr, int num) {
+    int jump = sqrt(arr.size());
 
     int i = 0;
-    while (i < n) {
+    while (i < arr.size()) {
         if (arr[i] == num) {
             return true;
         }
@@ -19,7 +14,7 @@ bool jump_search(int num) {
             break;
         }
 
-        i = min(i + jump, n);
+        i = min(i + jump, (int)arr.size());
     }
 
     for (int j = 1; j < jump; j++) {
@@ -32,17 +27,8 @@ bool jump_search(int num) {
 }
 
 void test() {
-    int num;
-    cin >> num;
-
-    cerr << jump_search(num) << endl;
-}
-
-void input() {
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    vector<int> testVector({1, 5, 9, 17, 33, 75});
+    assert(jump_search(testVector, 17));
 }
 
 int main() {
@@ -50,7 +36,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

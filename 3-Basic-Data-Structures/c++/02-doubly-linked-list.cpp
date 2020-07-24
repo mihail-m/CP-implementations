@@ -79,7 +79,7 @@ class doubly_linked_list {
             first = new Node(num, first, nullptr);
         }
 
-        void insert_pos(int num, int pos) {
+        void insert_at(int num, int pos) {
             if (pos < 0 || pos > _elements) {
                 throw invalid_argument("Possition out of bounds.");
             }
@@ -126,7 +126,7 @@ class doubly_linked_list {
             last->next = nullptr;
         }
 
-        void erase_pos(int pos) {
+        void erase_at(int pos) {
             if (pos < 0 || pos >= _elements) {
                 throw invalid_argument("Possition out of bounds.");
             }
@@ -189,13 +189,21 @@ class doubly_linked_list {
             return _elements;
         }
 
-        void print() {
+        string to_string() {
+            string res = "[";
+
             Node* cur = first;
             while (cur != nullptr) {
-                cout << cur->value << " ";
+                res.append(std::to_string(cur->value));
+                if (cur->next != nullptr) {
+                    res.append(", ");
+                }
+
                 cur = cur->next;
             }
-            cout << "\n";
+
+            res.append("]");
+            return res;
         }
 
         void free() {
@@ -219,16 +227,20 @@ class doubly_linked_list {
 };
 
 void test() {
-    doubly_linked_list l;
+    doubly_linked_list list;
 
-    for (int i = 0; i < 5; i++) {
-        l.insert_end(i);
-    }
+    list.insert_begin(1);
+    list.insert_end(5);
+    list.insert_at(4, 1);
+    list.insert_at(19, 2);
+    assert("[1, 4, 19, 5]" == list.to_string());
 
-    l.print();
-    l.reverse();
-    l.print();
-    l.free();
+    list.reverse();
+    assert("[5, 19, 4, 1]" == list.to_string());
+
+    list.erase_at(1);
+    list.erase_end();
+    assert("[5, 4]" == list.to_string());
 }
 
 int main() {

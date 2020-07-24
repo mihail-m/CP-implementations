@@ -65,7 +65,7 @@ class linked_list {
             first = new Node(num, first);
         }
 
-        void insert_pos(int num, int pos) {
+        void insert_at(int num, int pos) {
             if (pos < 0 || pos > _elements) {
                 throw invalid_argument("Possition out of bounds.");
             }
@@ -83,7 +83,7 @@ class linked_list {
             _elements++;
 
             Node* temp = goToPos(pos - 1);
-            temp->link = new Node(num, temp->link->link);
+            temp->link = new Node(num, temp->link);
         }
 
         void erase_begin() {
@@ -105,7 +105,7 @@ class linked_list {
             last->link = nullptr;
         }
 
-        void erase_pos(int pos) {
+        void erase_at(int pos) {
             if (pos >= _elements || pos < 0) {
                 throw invalid_argument("Possition out of bounds.");
             }
@@ -172,13 +172,21 @@ class linked_list {
             return _elements;
         }
 
-        void print() {
+        string to_string() {
+            string res = "[";
+
             Node* cur = first;
             while (cur != nullptr) {
-                cout << cur->value << " ";
+                res.append(std::to_string(cur->value));
+                if (cur->link != nullptr) {
+                    res.append(", ");
+                }
+
                 cur = cur->link;
             }
-            cout << "\n";
+
+            res.append("]");
+            return res;
         }
 
         void free() {
@@ -202,16 +210,20 @@ class linked_list {
 };
 
 void test() {
-    linked_list l;
+    linked_list list;
 
-    for (int i = 0; i < 5; i++) {
-        l.insert_end(i);
-    }
+    list.insert_begin(1);
+    list.insert_end(5);
+    list.insert_at(4, 1);
+    list.insert_at(19, 2);
+    assert("[1, 4, 19, 5]" == list.to_string());
 
-    l.print();
-    l.reverse();
-    l.print();
-    l.free();
+    list.reverse();
+    assert("[5, 19, 4, 1]" == list.to_string());
+
+    list.erase_at(1);
+    list.erase_end();
+    assert("[5, 4]" == list.to_string());
 }
 
 int main() {

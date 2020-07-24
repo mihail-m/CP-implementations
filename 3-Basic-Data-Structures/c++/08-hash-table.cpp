@@ -25,8 +25,8 @@ class hash_table {
         void remove(int num) {
             int pos = num % MOD;
 
-            for (int i : arr[pos]) {
-                if (i == num) {
+            for (int i = 0; i < arr[pos].size(); i++) {
+                if (arr[pos][i] == num) {
                     arr[pos].erase(arr[pos].begin() + i);
                     _size--;
 
@@ -53,25 +53,21 @@ class hash_table {
 };
 
 void test() {
-    int n;
-    cin >> n;
+    hash_table map;
 
-    hash_table ht;
+    map.add(1);
+    map.add(2);
+    map.add(3);
+    map.add(4);
+    assert(false == map.contains(7));
+    assert(true == map.contains(3));
 
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        ht.add(num);
-    }
+    map.remove(3);
+    assert(false == map.contains(3));
 
-    int q;
-    cin >> q;
-    for (int i = 0; i < q; i++) {
-        int num;
-        cin >> num;
-
-        cerr << ht.contains(num) << "\n";
-    }
+    assert(true == map.contains(1));
+    assert(true == map.contains(2));
+    assert(true == map.contains(4));
 }
 
 int main() {

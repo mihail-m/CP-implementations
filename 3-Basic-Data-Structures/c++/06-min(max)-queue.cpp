@@ -39,21 +39,27 @@ class min_queue {
 };
 
 void test() {
-    int n;
-    cin >> n;
+    min_queue queue;
 
-    min_queue q;
+    queue.push(9);
+    assert(9 == queue.get_min());
 
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        q.push(num);
-    }
+    queue.push(7);
+    assert(7 == queue.get_min());
 
-    while (q.size() > 0) {
-        cerr << q.get_min() << endl;
-        q.pop();
-    }
+    queue.push(2);
+    assert(2 == queue.get_min());
+
+    queue.push(73);
+    assert(2 == queue.get_min());
+
+    queue.push(5);
+    assert(2 == queue.get_min());
+
+    queue.pop();
+    queue.pop();
+    queue.pop();
+    assert(5 == queue.get_min());
 }
 
 int main() {

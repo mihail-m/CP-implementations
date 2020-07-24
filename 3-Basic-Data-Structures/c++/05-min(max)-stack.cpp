@@ -84,21 +84,27 @@ class min_stack {
 };
 
 void test() {
-    int n;
-    cin >> n;
+    min_stack stack;
 
-    min_stack s;
+    stack.push(3);
+    assert(3 == stack.get_min());
 
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        s.push(num);
-    }
+    stack.push(7);
+    assert(3 == stack.get_min());
 
-    while (s.size() > 0) {
-        cerr << s.get_min() << "\n";
-        s.pop();
-    }
+    stack.push(2);
+    assert(2 == stack.get_min());
+
+    stack.push(73);
+    assert(2 == stack.get_min());
+
+    stack.push(5);
+    assert(2 == stack.get_min());
+
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    assert(3 == stack.get_min());
 }
 
 int main() {

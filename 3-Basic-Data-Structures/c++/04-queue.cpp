@@ -90,23 +90,30 @@ class queue_int {
         int size() {
             return right - left + 1;
         }
+
+        string to_string() {
+            string result = "[";
+            for (int i = left; i <= right; i++) {
+                result.append(std::to_string(arr[i]));
+                if (i < right) {
+                    result.append(", ");
+                }
+            }
+            result.append("]");
+            return result;
+        }
 };
 
 void test() {
-    int n;
-    cin >> n;
+    queue_int queue;
+    queue.push(1);
+    queue.push(7);
+    queue.push(73);
+    queue.push(2);
 
-    queue_int q;
-
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        q.push(num);
-    }
-
-    while (q.size() > 0) {
-        cerr << q.poll() << endl;
-    }
+    assert(1 == queue.poll());
+    assert(7 == queue.front());
+    assert("[7, 73, 2]" == queue.to_string());
 }
 
 int main() {

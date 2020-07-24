@@ -33,20 +33,12 @@ void heap_sort(vector<int>& arr) {
 }
 
 void test() {
-    int n;
-    cin >> n;
+    vector<int> testVector({5, 1, 4, 7, 13, 2});
+    vector<int> sortedVector({1, 2, 4, 5, 7, 13});
 
-    vector<int> arr(n);
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-    heap_sort(arr);
-
-    for (int i : arr) {
-        cerr << i << " ";
-    }
-    cerr << "\n";
+    heap_sort(testVector);
+    
+    assert(testVector == sortedVector);
 }
 
 int main() {

@@ -31,20 +31,12 @@ void quick_sort(vector<int>& arr, int l, int r) {
 }
 
 void test() {
-    int n;
-    cin >> n;
+    vector<int> testVector({5, 1, 4, 7, 13, 2});
+    vector<int> sortedVector({1, 2, 4, 5, 7, 13});
 
-    vector<int> arr(n);
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    quick_sort(testVector, 0, testVector.size() - 1);
 
-    quick_sort(arr, 0, arr.size() - 1);
-
-    for (int i : arr) {
-        cerr << i << " ";
-    }
-    cerr << "\n";
+    assert(testVector == sortedVector);
 }
 
 int main() {

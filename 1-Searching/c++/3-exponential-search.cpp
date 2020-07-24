@@ -1,12 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-static const int MAX_SIZE = 1 << 18;
-
-int n;
-int arr[MAX_SIZE];
-
-bool bin_search(int l, int r, int num) {
+bool bin_search(vector<int> arr, int l, int r, int num) {
     while (l <= r) {
         int mid = (l + r) / 2;
 
@@ -24,31 +19,22 @@ bool bin_search(int l, int r, int num) {
     return false;
 }
 
-bool exp_search(int num) {
+bool exp_search(vector<int>& arr, int num) {
     if (arr[0] == num) {
         return true;
     }
 
     int i = 1;
-    while (i < n && arr[i] < num) {
+    while (i < arr.size() && arr[i] < num) {
         i *= 2;
     }
 
-    return bin_search(i / 2, min(i, n - 1), num);
+    return bin_search(arr, i / 2, min(i, (int)arr.size() - 1), num);
 }
 
 void test() {
-    int num;
-    cin >> num;
-
-    cerr << exp_search(num) << endl;
-}
-
-void input() {
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
+    vector<int> testVector({1, 5, 9, 17, 33, 75});
+    assert(exp_search(testVector, 17));
 }
 
 int main() {
@@ -56,7 +42,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

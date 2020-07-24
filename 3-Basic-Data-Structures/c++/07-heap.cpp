@@ -102,26 +102,36 @@ class heap {
         }
 };
 
-void test() {
-    int n;
-    cin >> n;
+void test_lesser() {
+    heap heap(_lesser);
+    heap.push(7);
+    heap.push(5);
 
-    heap h1(_lesser);
-    heap h2(_greater);
+    assert(5 == heap.top());
 
-    for (int i = 0; i < n; i++) {
-        int num;
-        cin >> num;
-        h1.push(num);
-        h2.push(num);
-        cerr << h1.top() << " " << h2.top() << "\n";
-    }
+    heap.push(6);
+    heap.push(3);
 
-    cerr << "\n";
+    assert(3 == heap.poll());
+    assert(5 == heap.poll());
+    assert(6 == heap.poll());
+    assert(7 == heap.poll());
+}
 
-    while (h1.size() > 0 && h2.size() > 0) {
-        cerr << h1.poll() << " " << h2.poll() << "\n";
-    }
+void test_greater() {
+    heap heap(_greater);
+    heap.push(7);
+    heap.push(5);
+
+    assert(7 == heap.top());
+
+    heap.push(9);
+    heap.push(3);
+
+    assert(9 == heap.poll());
+    assert(7 == heap.poll());
+    assert(5 == heap.poll());
+    assert(3 == heap.poll());
 }
 
 int main() {
@@ -129,7 +139,8 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    test();
+    test_lesser();
+    test_greater();
 
     return 0;
 }

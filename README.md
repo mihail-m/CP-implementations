@@ -1,29 +1,29 @@
 # Data structures and algorithms library.
 
-<p display="inline">
+<p>
   Repository with implementations and explanations of the following data structures and algorithms.<br>
-  
-  Implementations in:
-  - <p display="inline"> 
-      <strong>C++</strong>
-      <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
-    </p>
-  - <p display="inline"> 
-      <strong>Java</strong> 
-      <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
-    </p>
-  - <p display="inline"> 
-      <strong>Python<strong> 
-      <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
-    </p>
 </p>
-  
+
 #
+
+Implementations in:
+- <p display="inline"> 
+    <strong>C++</strong>
+    <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
+  </p>
+- <p display="inline"> 
+    <strong>Java</strong> 
+    <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
+  </p>
+- <p display="inline"> 
+    <strong>Python<strong> 
+    <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
+  </p>
 
 <p align="right">
   <br>
   <strong>Tutorial:</strong>
-<p>
+</p>
 
 #
 

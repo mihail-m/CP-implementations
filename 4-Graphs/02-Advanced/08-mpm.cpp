@@ -137,8 +137,7 @@ class MPM {
                         }
 
                         it = temp_it;
-                    } 
-                    else {
+                    }  else {
                         break;
                     }
 
@@ -150,16 +149,16 @@ class MPM {
         }
 
         bool bfs() {
-            while(q_head < q_tail) {
+            while (q_head < q_tail) {
                 int node = q[q_head++];
 
-                for(int id : graph[node]) {
+                for (int id : graph[node]) {
                     NetworkEdge edge = edges[id];
                     if(edge.capacity - edge.flow < 1) {
                         continue;
                     }
 
-                    if(level[edge.to] != -1) {
+                    if (level[edge.to] != -1) {
                         continue;
                     }
 

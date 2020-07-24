@@ -17,11 +17,14 @@
       <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
     </p>
 </p>
+  
+#
 
 <p align="right">
+  <br>
   <strong>Tutorial:</strong>
 <p>
-  
+
 #
 
 ### Searching:

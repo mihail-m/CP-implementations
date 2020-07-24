@@ -1,8 +1,7 @@
 # Data structures and algorithms library.
 
-<p>
-  Repository with implementations and explanations of the following data structures and algorithms.<br>
-</p>
+<br>
+Repository with implementations and explanations of the following data structures and algorithms.<br>
 
 #
 

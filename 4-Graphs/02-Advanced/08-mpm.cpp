@@ -121,7 +121,7 @@ class MPM {
 
                     ex[next_node] += pushed;
                     edges[*it].flow += pushed;
-                    edges[(*it)^1].flow -= pushed;
+                    edges[(*it) ^ 1].flow -= pushed;
                     must -= pushed;
 
                     if (edges[*it].capacity - edges[*it].flow == 0) {
@@ -154,7 +154,7 @@ class MPM {
 
                 for (int id : graph[node]) {
                     NetworkEdge edge = edges[id];
-                    if(edge.capacity - edge.flow < 1) {
+                    if (edge.capacity - edge.flow < 1) {
                         continue;
                     }
 

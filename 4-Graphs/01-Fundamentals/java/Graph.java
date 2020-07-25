@@ -2,6 +2,7 @@ package graphs;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Graph {
     public int vertices;
@@ -63,6 +64,12 @@ public class Graph {
 
         @Override
         public int compareTo(Edge other) {
+            if (this.cost == other.cost) {
+                if (this.from == other.from) {
+                    return Integer.compare(this.to, other.to);
+                }
+                return Integer.compare(this.from, other.from);
+            }
             return Integer.compare(this.cost, other.cost);
         }
     }
@@ -70,6 +77,11 @@ public class Graph {
     public static class ReachableVertex implements Comparable<ReachableVertex> {
         public int to;
         public int cost;
+
+        public ReachableVertex() {
+            this.to = -1;
+            this.cost = Integer.MAX_VALUE;
+        }
 
         public ReachableVertex(int to) {
             this.to = to;

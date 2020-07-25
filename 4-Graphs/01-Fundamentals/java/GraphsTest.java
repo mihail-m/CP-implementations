@@ -3,6 +3,7 @@ package graphs;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Objects;
 import java.util.function.BiFunction;
 
 public class GraphsTest {
@@ -39,13 +40,35 @@ public class GraphsTest {
         Assert.assertArrayEquals(expectedResult, Floyd.floyd(buildGraph()));
     }
 
-    private void testShortestPaths(BiFunction<Graph, Integer, int[]> function) {
-        int[] expectedResult = {0, 4, 12, 19, 21, 11, 9, 8, 14};
-        Assert.assertArrayEquals(expectedResult, function.apply(buildGraph(), 0));
+    @Test
+    public void testPrim() {
+        testMinimumSpanningTree(Prim.minimumSpanningTree(buildGraph()));
     }
 
-    private Graph buildGraph() {
+    @Test
+    public void testKruskal() {
+        testMinimumSpanningTree(Kruskal.minimumSpanningTree(buildGraph()));
+    }
+
+    @Test
+    public void testCycles() {
+        Assert.assertTrue(Cycles.findCycle(buildGraph()));
+        Assert.assertFalse(Cycles.findCycle(buildDirectedGraph()));
+    }
+
+    public Graph buildGraph() {
         Graph graph = new Graph(9);
+        addEdges(graph);
+        return graph;
+    }
+
+    public DirectedGraph buildDirectedGraph() {
+        DirectedGraph graph = new DirectedGraph(9);
+        addEdges(graph);
+        return graph;
+    }
+
+    public void addEdges(Graph graph) {
         graph.addEdge(0, 1, 4);
         graph.addEdge(0, 7, 8);
         graph.addEdge(1, 2, 8);
@@ -60,7 +83,25 @@ public class GraphsTest {
         graph.addEdge(6, 7, 1);
         graph.addEdge(6, 8, 6);
         graph.addEdge(7, 8, 7);
-        return graph;
     }
 
+    public void testShortestPaths(BiFunction<Graph, Integer, int[]> function) {
+        int[] expectedResult = {0, 4, 12, 19, 21, 11, 9, 8, 14};
+        Assert.assertArrayEquals(expectedResult, function.apply(buildGraph(), 0));
+    }
+
+    public void testMinimumSpanningTree(Graph tree) {
+        Assert.assertEquals(9, Objects.requireNonNull(tree).vertices);
+
+        DFS.dfs(tree, 0);
+        for (int vertex = 0; vertex < tree.vertices; vertex++) {
+            Assert.assertTrue(tree.visited[vertex]);
+        }
+
+        int sum = 0;
+        for (int i = 0; i < tree.edgesList.size(); i += 2) {
+            sum += tree.edgesList.get(i).cost;
+        }
+        Assert.assertEquals(37, sum);
+    }
 }

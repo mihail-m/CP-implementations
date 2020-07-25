@@ -66,7 +66,7 @@ Implementations in:
   - Belman Ford <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
   - Floyd Warshall <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
   - Prim <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
-  - Kruskal <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
+  - Kruskal <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
   - Find cycles <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
   - Find bridges <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png"> 
   - Find articulation points <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">

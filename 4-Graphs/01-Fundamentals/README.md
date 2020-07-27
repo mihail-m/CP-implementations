@@ -37,6 +37,16 @@
    <p align="center">
       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BFS.gif">
    </p>
+   
+## Topological sort
+
+## Find cycles
+
+- Find if a graph has a cycle.
+
+- O(V + E) complexity.
+
+- To check for a cycle we will run a series of DFSs on the graph (possibly 1) and colour it's vertices in 3 colours. Initially all vertices are white (color 0). When we enter a vertex it becomes gray (color 1) and when we exit a vertex it becomes black (color 2). If at any point we encounter an edge to a gray vertex then the graph has a cycle. If the graph is undirected we must also keep track of the vertex we came from so that we do not consider it when checking for a gray vertex.
 
 ## Number of paths of fixed length
 - Find the number of paths with lenght k between two nodes from the graph G.
@@ -61,6 +71,10 @@
   
   All path with length k from u to v can be found at (Adj^k)[u][v].
   </p>
+  
+## Find bridges
+
+## Find articulation points
 
 ## Belman Ford
 - Find the shortes path to every vertex from a starting vertex s in a weighted graph.
@@ -175,16 +189,4 @@
    The find operation's complexity when ditributed over E calls is an amortized constant O(1) since it's distributed complexity is equivalent to the inverse Ackermann function α, and α(n) <= 5 for any reasonable n. The unite operation's complexity is also O(1) => the overall complexity comes from the sorting of the edges. 
   </p>
 
-## Find cycles
-
-## Find bridges
-
-## Find articulation points
-
-## Topological sort
-
 ## Max flow (Edmonds Karp)
-
-
-  
-

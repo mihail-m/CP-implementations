@@ -19,7 +19,10 @@ void dfs(int u) {
     top_sort.push_back(u);
 }
 
-void solve() {
+void topological_sort() {
+	fill(visited, visited + n, false);
+	top_sort.clear();
+
     for (int u = 0; u < n; u++) {
         if (!visited[u]) {
             dfs(u);
@@ -27,22 +30,32 @@ void solve() {
     }
 
     reverse(top_sort.begin(), top_sort.end());
-
-    for (int u : top_sort) {
-        cerr << u << " ";
-    }
-    cerr << "\n";
 }
 
-void input() {
-    cin >> n >> m;
-    for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        u--, v--;
+void test() {
+	n = m = 6;
+	
+	vector<pair<int, int>> edges;
+	edges.push_back({5, 2}); 
+    edges.push_back({5, 0}); 
+    edges.push_back({4, 0}); 
+    edges.push_back({4, 1}); 
+    edges.push_back({2, 3}); 
+    edges.push_back({3, 1}); 
 
-        graph[u].push_back(v);
-    }
+	for (int i = 0; i < m; i++) {
+		graph[edges[i].first].push_back(edges[i].second);
+	}
+
+	topological_sort();
+
+	vector<int> expectedResult({5, 4, 2, 3, 1, 0});
+	assert(expectedResult == top_sort);
+
+	for (int i = 0; i < n; i++) {
+		graph[i].clear();
+	}
+	n = m = 0;
 }
 
 int main() {
@@ -50,10 +63,7 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    freopen("test.in", "r", stdin);
-
-    input();
-    solve();
+    test();
 
     return 0;
 }

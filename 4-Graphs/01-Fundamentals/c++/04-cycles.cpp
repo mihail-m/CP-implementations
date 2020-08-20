@@ -8,7 +8,6 @@ vector<int> graph[MAX_SIZE];
 
 int colour[MAX_SIZE];
 
-
 bool cycle_directed(int u) {
     colour[u] = 1;
 
@@ -44,24 +43,35 @@ bool cycle_undirected(int u, int par) {
 }
 
 void test() {
-    bool res = false;
-    for (int i = 0; i < n; i++) {
-        if (colour[i] == 0) {
-            res |= cycle_directed(i);
-        }
-    }
-    cerr << res << "\n";
-}
+    n = m = 6;
 
-void input() {
-    cin >> n >> m;
+    vector<pair<int, int>> edges;
+    edges.push_back({5, 2}); 
+    edges.push_back({5, 0}); 
+    edges.push_back({4, 0}); 
+    edges.push_back({4, 1}); 
+    edges.push_back({2, 3}); 
+    edges.push_back({3, 1}); 
+    
     for (int i = 0; i < m; i++) {
-        int u, v;
-        cin >> u >> v;
-        u--, v--;
-
-        graph[u].push_back(v);
+        graph[edges[i].first].push_back(edges[i].second);
     }
+
+    assert(false == cycle_directed(0));
+
+    for (int i = 0; i < m; i++) {
+        graph[edges[i].second].push_back(edges[i].first);
+    }
+
+    fill(colour, colour + n, 0);
+
+    assert(true == cycle_undirected(0, -1));
+
+    fill(colour, colour + n, 0);
+    for (int i = 0; i < n; i++) {
+        graph[i].clear();
+    }
+    n = m = 0;
 }
 
 int main() {
@@ -69,7 +79,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

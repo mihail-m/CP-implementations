@@ -84,26 +84,31 @@ int kruskal() {
 }
 
 void test() {
-    cerr << kruskal() << "\n";
+    n = 9;
+    m = 14;
 
-    for (int u = 0; u < n; u++) {
-        cerr << u << ": ";
-        for (auto e : mst[u]) {
-            cerr << "(" << e.first << ", " << e.second << "), ";
-        }
-        cerr << "\n";
+    edges.push_back({0, 1, 4});
+    edges.push_back({0, 7, 8});
+    edges.push_back({1, 2, 8});
+    edges.push_back({1, 7, 11});
+    edges.push_back({2, 3, 7});
+    edges.push_back({2, 5, 4});
+    edges.push_back({2, 8, 2});
+    edges.push_back({3, 4, 9});
+    edges.push_back({3, 5, 14});
+    edges.push_back({4, 5, 10});
+    edges.push_back({5, 6, 2});
+    edges.push_back({6, 7, 1});
+    edges.push_back({6, 8, 6});
+    edges.push_back({7, 8, 7});
+
+    assert(37 == kruskal());
+
+    for (int i = 0; i < n; i++) {
+        mst[i].clear();
     }
-}
-
-void input() {
-    cin >> n >> m;
-    for (int i = 0; i < m; i++) {
-        int u, v, cost;
-        cin >> u >> v >> cost;
-        u--, v--;
-
-        edges.push_back({u, v, cost});
-    }
+    edges.clear();
+    n = m = 0;
 }
 
 int main() {
@@ -111,7 +116,6 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    input();
     test();
 
     return 0;

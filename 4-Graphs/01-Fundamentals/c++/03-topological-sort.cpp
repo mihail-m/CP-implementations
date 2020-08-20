@@ -20,8 +20,8 @@ void dfs(int u) {
 }
 
 void topological_sort() {
-	fill(visited, visited + n, false);
-	top_sort.clear();
+....fill(visited, visited + n, false);
+....top_sort.clear();
 
     for (int u = 0; u < n; u++) {
         if (!visited[u]) {
@@ -33,29 +33,29 @@ void topological_sort() {
 }
 
 void test() {
-	n = m = 6;
-	
-	vector<pair<int, int>> edges;
-	edges.push_back({5, 2}); 
+....n = m = 6;
+....
+....vector<pair<int, int>> edges;
+....edges.push_back({5, 2}); 
     edges.push_back({5, 0}); 
     edges.push_back({4, 0}); 
     edges.push_back({4, 1}); 
     edges.push_back({2, 3}); 
     edges.push_back({3, 1}); 
 
-	for (int i = 0; i < m; i++) {
-		graph[edges[i].first].push_back(edges[i].second);
-	}
+....for (int i = 0; i < m; i++) {
+........graph[edges[i].first].push_back(edges[i].second);
+....}
 
-	topological_sort();
+....topological_sort();
 
-	vector<int> expectedResult({5, 4, 2, 3, 1, 0});
-	assert(expectedResult == top_sort);
+....vector<int> expectedResult({5, 4, 2, 3, 1, 0});`
+....assert(expectedResult == top_sort);
 
-	for (int i = 0; i < n; i++) {
-		graph[i].clear();
-	}
-	n = m = 0;
+....for (int i = 0; i < n; i++) {
+........graph[i].clear();
+....}
+....n = m = 0;
 }
 
 int main() {

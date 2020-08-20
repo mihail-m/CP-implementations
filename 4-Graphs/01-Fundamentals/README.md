@@ -37,6 +37,16 @@
    <p align="center">
       <img src="https://github.com/mihail-m/CP-implementations/blob/master/resources/BFS.gif">
    </p>
+   
+## Topological sort
+
+## Find cycles
+
+- Find if a graph has a cycle.
+
+- O(V + E) complexity.
+
+- To check for a cycle we will run a series of DFSs on the graph (possibly 1) and colour it's vertices in 3 colours. Initially all vertices are white (color 0). When we enter a vertex it becomes gray (color 1) and when we exit a vertex it becomes black (color 2). If at any point we encounter an edge to a gray vertex then the graph has a cycle. If the graph is undirected we must also keep track of the vertex we came from so that we do not consider it when checking for a gray vertex.
 
 ## Number of paths of fixed length
 - Find the number of paths with lenght k between two nodes from the graph G.
@@ -61,6 +71,10 @@
   
   All path with length k from u to v can be found at (Adj^k)[u][v].
   </p>
+  
+## Find bridges
+
+## Find articulation points
 
 ## Belman Ford
 - Find the shortes path to every vertex from a starting vertex s in a weighted graph.
@@ -145,17 +159,34 @@
 - If the graph is sparce, then we can again use the same approach as in the Dijkstra alorithgm. We use a heap like structure, but instead of keeping the distance to the vertex we keep we will keep lowest cost of an edge going into the vertex. The overall complexity of this approach is O(E log V). In dense graphs O(E) = O(V^2) and the complexity becomes O(V^2 log V) which is worse that O(V^2) and in this situation the other approach is prefferd.<br>
 
 ## Kruskal
+- Find the minimum spanning tree of a weighted graph.
 
-## Find cycles
+- O(E log V) complexity.
 
-## Find bridges
-
-## Find articulation points
-
-## Topological sort
+- <p> The idea of the agorithm is to add the edges one by one. Each time we add the edge with the lowest cost that connects vertices from different components. This way we start with V components and each time we add an edgethe number of components is decreased by one. Afrer adding V - 1 edges there will be exactly 1 connected component - the minimum spannig tree.<br>
+   
+   The easiest way to do this is to sort the edges and then try to add each edge consecutively by check with dfs/bfs if the two ends of the edge are in the same component. The overall complexity of this approach is O(E * (V + E)), because we run a dfs/bfs for each edge, which is very slow.<br>
+   
+   In order to speed this porcess up we will use a data structure knows as Dijoint Set, this approach is also reffered to as Disjoint Set Union (DSU). It is essentially a set of dijoint sets.<br>
+   
+   The Disjoined Set supports the folowing operations:
+   - Add an element to a set.
+   - Find which set an element belongs to.
+   - Unite two sets.
+   
+   The sets are sotred a tree, where each element has a parent element. The root of each set is a special case since it has no parent so we can say that it is its own parent.<br>
+   
+   The sets a deferentiated by their root elements. To check which set a given element bellongs to, we simply traverse trough the parents until we reach the root.<br>
+   
+   Uniting two sets is done by simply assigning one root as the parent of the other root.<br>
+   
+   In order to speed up this data strucure we must add two optimisations:
+   - Add a weight to each set, that can be either the number of elements, or the depth of the tree of the set. This way we can always attach the sets with the smaller weight to the ones with bigger weight so that when a union is done the depth of the resulting set is with at most 1 more that the depth of the sets that are being united. This is so, because if we unite sets with different depths, the one with lower depth is attached to the one with bigger depth and the overall depth is preserved, but if we unite sets with equal depth then the depth is increased by one because of the edge between the two roots.
+   - When traversing trought the parents, while searching for the root of a set, we attach each visited node directly to the root, by changing their parents to the root.
+   
+   In order to find the minumum spanning tree we will need only the find and unite operations of the Disjoint Set. Each set wil contain the vetrices from one connected component. When considering an edge if both ends are in the same set, then it connects vertices from the same component and must be skiped, otherwise it is added to the tree and the the sets containing both ends are united, since their components are now connected. In the start all verices will be in seperate sets.<br>
+   
+   The find operation's complexity when ditributed over E calls is an amortized constant O(1) since it's distributed complexity is equivalent to the inverse Ackermann function α, and α(n) <= 5 for any reasonable n. The unite operation's complexity is also O(1) => the overall complexity comes from the sorting of the edges. 
+  </p>
 
 ## Max flow (Edmonds Karp)
-
-
-  
-

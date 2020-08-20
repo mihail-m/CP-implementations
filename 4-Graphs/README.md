@@ -77,7 +77,15 @@ Let A be the adjacency matrix of the graph: A[u][v] is the number of edges betwe
 
 - BFS
 
+- Topological sort
+
+- Find cycles
+
 - Number of paths of fixed length
+
+- Find bridges
+
+- Find articulation points
 
 - Belman Ford
 
@@ -89,16 +97,7 @@ Let A be the adjacency matrix of the graph: A[u][v] is the number of edges betwe
 
 - Kruskal
 
-- Find cycles
-
-- Find bridges
-
-- Find articulation points
-
-- Topological sort
-
 - Max flow (Edmonds Karp)
-
 
 ## Graphs Advanced:
 

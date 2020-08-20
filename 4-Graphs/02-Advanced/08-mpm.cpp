@@ -40,7 +40,7 @@ class MPM {
         int source, sink;
         int q_head, q_tail;
 
-        void resize (int vetrices) {
+        void resize(int vetrices) {
             n = vetrices;
 
             graph.resize(n);
@@ -63,11 +63,11 @@ class MPM {
             }
         }
 
-        long long potential (int node) {
+        long long potential(int node) {
             return min(potentialential_in[node], potentialential_out[node]);
         }
 
-        void remove_node (int node) {
+        void remove_node(int node) {
             for (int i : in[node]) {
                 int u = edges[i].from;
                 auto it = find(out[u].begin(), out[u].end(), i);
@@ -121,7 +121,7 @@ class MPM {
 
                     ex[next_node] += pushed;
                     edges[*it].flow += pushed;
-                    edges[(*it)^1].flow -= pushed;
+                    edges[(*it) ^ 1].flow -= pushed;
                     must -= pushed;
 
                     if (edges[*it].capacity - edges[*it].flow == 0) {
@@ -137,8 +137,7 @@ class MPM {
                         }
 
                         it = temp_it;
-                    } 
-                    else {
+                    }  else {
                         break;
                     }
 
@@ -150,16 +149,16 @@ class MPM {
         }
 
         bool bfs() {
-            while(q_head < q_tail) {
+            while (q_head < q_tail) {
                 int node = q[q_head++];
 
-                for(int id : graph[node]) {
+                for (int id : graph[node]) {
                     NetworkEdge edge = edges[id];
-                    if(edge.capacity - edge.flow < 1) {
+                    if (edge.capacity - edge.flow < 1) {
                         continue;
                     }
 
-                    if(level[edge.to] != -1) {
+                    if (level[edge.to] != -1) {
                         continue;
                     }
 

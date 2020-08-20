@@ -9,7 +9,7 @@ public class Floyd {
      * @return int matrix containing the distances between each pair of vertices.
      */
     public static int[][] floyd(Graph graph) {
-        int[][] adjacencyMatrix = getAdjacencyMatrix(graph);
+        int[][] adjacencyMatrix = graph.getAdjacencyMatrix();
         int[][] dist = new int[graph.vertices][graph.vertices];
 
         for (int u = 0; u < graph.vertices; u++) {
@@ -33,14 +33,5 @@ public class Floyd {
         }
 
         return dist;
-    }
-
-    private static int[][] getAdjacencyMatrix(Graph g) {
-        int[][] matrix = new int[g.vertices][g.vertices];
-        g.edgesList.forEach(edge -> {
-            matrix[edge.from][edge.to] = edge.cost;
-            matrix[edge.to][edge.from] = edge.cost;
-        });
-        return matrix;
     }
 }

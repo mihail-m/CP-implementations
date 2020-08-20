@@ -18,4 +18,13 @@ public class DirectedGraph extends Graph {
         edgesList.add(new Edge(from, to, cost));
         edges++;
     }
+
+    @Override
+    public int[][] getAdjacencyMatrix() {
+        int[][] matrix = new int[vertices][vertices];
+        edgesList.forEach(edge -> {
+            matrix[edge.from][edge.to] = edge.cost;
+        });
+        return matrix;
+    }
 }

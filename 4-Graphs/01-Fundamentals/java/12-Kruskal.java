@@ -40,22 +40,22 @@ public class Kruskal {
     }
 
     private static class DisjointSet {
-        private static class SetEntry {
+        private static class Set {
             int parent;
             int depth;
 
-            public SetEntry(int parent) {
+            public Set(int parent) {
                 this.depth = 0;
                 this.parent = parent;
             }
         }
 
-        private final SetEntry[] set;
+        private final Set[] set;
 
         public DisjointSet(int size) {
-            this.set = new SetEntry[size];
+            this.set = new Set[size];
             for (int i = 0; i < size; i++) {
-                this.set[i] = new SetEntry(i);
+                this.set[i] = new Set(i);
             }
         }
 

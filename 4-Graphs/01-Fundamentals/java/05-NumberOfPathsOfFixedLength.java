@@ -1,5 +1,7 @@
 package graphs;
 
+import java.util.Arrays;
+
 public class NumberOfPathsOfFixedLength {
     public static class PathsIndex {
         private final int k;
@@ -16,12 +18,14 @@ public class NumberOfPathsOfFixedLength {
          */
         public PathsIndex(Graph g, int k) {
             this.k = k;
-
-            matrix = new int[g.vertices][g.vertices];
-            g.edgesList.forEach(edge -> {
-                matrix[edge.from][edge.to] = 1;
-                matrix[edge.to][edge.from] = 1;
-            });
+            matrix = g.getAdjacencyMatrix();
+            for (int i = 0; i < matrix.length; i++) {
+                for (int j = 0; j < matrix.length; j++) {
+                    if (matrix[i][j] > 0) {
+                        matrix[i][j] = 1;
+                    }
+                }
+            }
             matrix = powMatrix(matrix, k);
         }
 

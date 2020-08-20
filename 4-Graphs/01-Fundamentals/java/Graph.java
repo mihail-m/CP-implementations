@@ -45,6 +45,15 @@ public class Graph {
         edges++;
     }
 
+    public int[][] getAdjacencyMatrix() {
+        int[][] matrix = new int[vertices][vertices];
+        edgesList.forEach(edge -> {
+            matrix[edge.from][edge.to] = edge.cost;
+            matrix[edge.to][edge.from] = edge.cost;
+        });
+        return matrix;
+    }
+
     public static class Edge implements Comparable<Edge> {
         public int from;
         public int to;
@@ -71,6 +80,14 @@ public class Graph {
                 return Integer.compare(this.from, other.from);
             }
             return Integer.compare(this.cost, other.cost);
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Edge)) return false;
+            Edge edge = (Edge) o;
+            return this.compareTo(edge) == 0;
         }
     }
 

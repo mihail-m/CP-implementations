@@ -153,14 +153,3 @@ int main() {
 
     return 0;
 }
-
-BM report:
-Project Service :green-circle: All but one changes are promoted
-EBS :green-circle: All changes are promoted
-CAS Adapters SDK :green-circle:
-Public cloud adapters  :green-circle: All but one changes are promoted
-Provisioning Service :red-circle: 2 blocker issues:
-- Tango- https://jira.eng.vmware.com/browse/VCOM-19494
-- Prelude-E2E-UI: https://jira.eng.vmware.com/browse/VCOM-19531
-
-

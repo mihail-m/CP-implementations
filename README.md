@@ -8,7 +8,7 @@ Repository with implementations and explanations of the following data structure
 Implementations in:
 - <p display="inline"> 
     <strong>C++</strong>
-    <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
+    <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
   </p>
 - <p display="inline"> 
     <strong>Java</strong> 

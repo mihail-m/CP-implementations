@@ -49,7 +49,7 @@ void fft(complex_base *a, int lg) {
     for(int i = 1; i < n; i++) {
         bit_rev[i] = (bit_rev[i >> 1] >> 1) | ((i & 1) << (lg - 1));
         if(bit_rev[i] < i) {
-        	swap(a[i], a[bit_rev[i]]);
+            swap(a[i], a[bit_rev[i]]);
         }
     }
 
@@ -82,7 +82,7 @@ void inv_fft(complex_base *a, int lg) {
         bit_rev[i] = (bit_rev[i >> 1] >> 1) | ((i & 1) << (lg - 1));
 
         if(bit_rev[i] < i) {
-        	swap(a[i], a[bit_rev[i]]);
+            swap(a[i], a[bit_rev[i]]);
         }
     }
 
@@ -108,17 +108,17 @@ vector<int> mult(vector<int> a, vector<int> b) {
     int lg = 0; 
 
     while((1 << lg) < (int)(a.size() + b.size())) {
-    	lg++;
+        lg++;
     }
 
     for(int i = 0; i < (1 << lg); i++) {
-    	A[i] = B[i] = complex_base(0, 0);
+        A[i] = B[i] = complex_base(0, 0);
     }
     for(int i = 0; i < (int)a.size(); i++) {
-    	A[i] = complex_base(a[i], 0);
+        A[i] = complex_base(a[i], 0);
     }
     for(int i = 0; i < (int)b.size(); i++) {
-    	B[i] = complex_base(b[i], 0);
+        B[i] = complex_base(b[i], 0);
     }
 
     fft(A, lg); fft(B, lg);
@@ -139,7 +139,7 @@ vector<int> mult(vector<int> a, vector<int> b) {
 }
 
 string multiply(string num1, string num2) {
-	if (num1 == "0" || num2 == "0") {
+    if (num1 == "0" || num2 == "0") {
         return "0";
     }
 
@@ -147,10 +147,10 @@ string multiply(string num1, string num2) {
     vector<int> b;
 
     for (int i = 0; i < num1.size(); i++) {
-    	a.push_back((int)(num1[i] - '0'));
+        a.push_back((int)(num1[i] - '0'));
     }
     for (int i = 0; i < num2.size(); i++) {
-    	b.push_back((int)(num2[i] - '0'));
+        b.push_back((int)(num2[i] - '0'));
     }
 
     vector<int> res = mult(a, b);
@@ -167,7 +167,7 @@ string multiply(string num1, string num2) {
     string result = "";
 
     if (carry > 0) {
-    	result.append(to_string(carry));
+        result.append(to_string(carry));
     }
 
     while (ans.empty() == false) {
@@ -179,10 +179,10 @@ string multiply(string num1, string num2) {
 }
 
 void test() {
-	string num1 = "123456789";
-	string num2 = "123454321";
+    string num1 = "123456789";
+    string num2 = "123454321";
 
-	assert("15241274058835269" == multiply(num1, num2));
+    assert("15241274058835269" == multiply(num1, num2));
 }
 
 int main() {
@@ -190,7 +190,7 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-   	test();
+       test();
 
     return 0;
 }

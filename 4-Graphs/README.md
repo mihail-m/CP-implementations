@@ -1,4 +1,4 @@
-# Graphs:
+﻿# Graphs:
 <p>
 Let V be a set of vertices V = {v | v ∈ N}. <br></li>
 
@@ -118,8 +118,6 @@ Let A be the adjacency matrix of the graph: A[u][v] is the number of edges betwe
 - Min cost max flow (assignment problem)
 
 - Virtual tree
-
-- Path queries on tree (LSA + Segment tree)
 
 - A*
 

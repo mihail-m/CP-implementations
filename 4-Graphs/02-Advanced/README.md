@@ -23,8 +23,6 @@
 
 ## Virtual tree
 
-## Path queries on tree (LSA + Segment tree)
-
 ## A*
 
 

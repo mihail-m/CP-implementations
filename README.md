@@ -22,53 +22,53 @@ Implementations in:
 
 ### Searching:
   - Binary search 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/java/Search.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Jump search 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/java/Search.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/2-jump-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Exponential search
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/java/Search.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/3-exponential-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Ternary search
-     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+     <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/java/Search.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/4-ternary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Quick select
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/java/Search.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/5-quick-select.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
 #

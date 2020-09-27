@@ -159,63 +159,63 @@ Implementations in:
 
 ### Basic Data Structures:
   - Linked list
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java/01-LinkedList.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/01-linked-list.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Doubly linked list
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java/02-DoublyLinkedList.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/02-doubly-linked-list.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Stack
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java/03-Stack.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/03-stack.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Queue
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java/04-Queue.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/04-queue.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Heap
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/07-heap.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Hash table
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/3-Basic-Data-Structures">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/java/08-HashTable.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/3-Basic-Data-Structures/c%2B%2B/08-hash-table.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   

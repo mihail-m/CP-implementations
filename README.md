@@ -68,7 +68,7 @@ Implementations in:
   - Max flow (Edmonds Karp) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png"><img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png"><img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
 
 #### Advanced:
-  - Shortest Path Faster Algorithm (SPFA) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
+  - Shortest Path Faster Algorithm (SPFA) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png"><img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   - Strongly connected components (Koraraju) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   - Boolean 2 satisfiability (2-SAT) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   - K-th ancestor <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">

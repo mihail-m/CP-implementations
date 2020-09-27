@@ -2,17 +2,9 @@
 
   - Fast pow:
 
-  - Euclidean algorithm (greatest common divisor):
+  - Matrix fast pow:
 
   - Sieve of Eratosthenes:
-
-  - Linear diophantine equations:
-
-  - Gaussian elimination:
-
-  - Modular multiplicative inverse:
-
-  - Matrix fast pow:
 
   - Fast Fourier transform:
   

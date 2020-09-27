@@ -77,7 +77,6 @@ Implementations in:
   - Max flow (MPM) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   - Min cost max flow (assignment problem) <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   - Virtual tree <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
-  - Path queries on tree (LCA + Segment tree) <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
   - A* <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
   
 #

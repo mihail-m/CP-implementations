@@ -75,83 +75,83 @@ Implementations in:
 
 ### Sorting:
   - Selection sort
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/1-selection-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Bubble sort 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/2-bubble-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Insertion sort 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/3-insertion-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Quick sort 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/4-quick-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Merge sort 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/5-merge-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Heap sort 
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/6-heap-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Counting sort
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/7-counting-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Radix sort
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/java/Sort.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/9-radix-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   

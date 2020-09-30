@@ -40,6 +40,13 @@
    
 ## Topological sort
 
+- Given a directed graph G(V, E), assign the numbers from 0 to |V| - 1 to the vertices such that each edge leads from a vertex with a smalled number to a vertex with a larger number. This will create a permutation of the vertices (the assigned numbers act as indexes), that perumtation is a topological order of the vertices. There can be more that one such permutation.
+
+- O(V + E) complexity.
+
+- <p> One topoligical order can be found using Depth First Search (DFS). When we are at some vertex v, the DFS recursively visits all of its neighbours (outgoing edges) and after that returns - exiting from the vertex v. After that v will never be visited again, which means that all vertices that will be after v in the topological order will be visited before exiting from v. So we can just store each vertex in a stack just before the DFS exits from it. After the DFS completes the stack will contain a topological order of the vertices of the graph.
+  </p>
+
 ## Find cycles
 
 - Find if a graph has a cycle.

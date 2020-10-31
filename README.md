@@ -359,8 +359,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/01-SPFA.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/01-spfa.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -369,8 +369,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/02-Kosaraju.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/03-kosaraju.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -379,8 +379,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/03-SAT2.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/04-2-sat.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -389,8 +389,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/04-KthAncestor.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/05-kth-ancestor.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -399,8 +399,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/05-LowestCommonAncestor.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/06-lca.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -409,8 +409,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/06-Dinic.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/07-dinic.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -439,8 +439,8 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/09-VirtualTree.java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/11-virtual-tree.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">

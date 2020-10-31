@@ -362,7 +362,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/01-spfa.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/01-spfa.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Strongly connected components (Koraraju)
@@ -372,7 +372,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/03-kosaraju.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Boolean 2 satisfiability (2-SAT)
@@ -382,7 +382,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/04-2-sat.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - K-th ancestor
@@ -392,7 +392,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/05-kth-ancestor.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Lowest common ancestor (LCA)
@@ -402,7 +402,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/06-lca.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Max flow (Dinic)
@@ -412,7 +412,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/07-dinic.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Max flow (MPM)
@@ -422,7 +422,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/08-mpm.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Min cost max flow (assignment problem)
@@ -432,7 +432,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/10-assignment-problem.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Virtual tree
@@ -442,7 +442,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/11-virtual-tree.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - A*
@@ -452,7 +452,7 @@ Implementations in:
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/12-a-star.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   

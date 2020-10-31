@@ -51,7 +51,6 @@ int rabin_karp(string text, string word) {
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    cout.tie(nullptr);
 
     string text;
     string word;

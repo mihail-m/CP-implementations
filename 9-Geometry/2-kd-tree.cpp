@@ -1,128 +1,123 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-static const int SIZE = 200001;
-
-int n, k;
-vector<vector<int>> points;
-
 struct point_comparator {
     int dimension;
 
     point_comparator(int dimension = 0) : dimension(dimension) {}
 
-    bool operator()(const vector<int>& point1, const vector<int>& point2) {
+    const bool operator()(const vector<int>& point1, const vector<int>& point2) const {
         return point1[dimension] < point2[dimension];
     } 
 };
 
-long long distance_squared(vector<int>& point1, vector<int>& point2) {
+inline long long square(long long num) {
+    return num * num;
+}
+
+long long distance_squared(const vector<int>& point1, const vector<int>& point2) {
     long long dist = 0;
-
-    for(int i = 0; i < k; i++) {
-        dist += (point1[i] - point2[i]) * (point1[i] - point2[i]);
+    for(size_t i = 0; i < point1.size(); i++) {
+        dist += square(point1[i] - point2[i]);
     }
-
     return dist;
 }
 
-struct kd_node {
-    vector<int> point;
+class kd_tree {
+    private:
+        struct kd_node {
+            vector<int> point;
 
-    int axis;
+            int axis;
 
-    kd_node* left;
-    kd_node* right;
+            kd_node* left;
+            kd_node* right;
+            
+            kd_node(const vector<int>& point, int axis) : point(point), axis(axis) {}
+        };
+    
+        int k;
+        kd_node* root;
+
+        kd_node* build(vector<vector<int>>& points, int from, int to, int axis) {
+            if (from > to) {
+                return nullptr;
+            }
+
+            int mid = (from + to) / 2;
+            nth_element(points.begin() + from, 
+                        points.begin() + mid, 
+                        points.begin() + to + 1, 
+                        point_comparator(axis));
+
+            kd_node* node = new kd_node(points[mid], axis);
+            node->left = build(points, from, mid - 1, (axis + 1) % k);
+            node->right = build(points, mid + 1, to, (axis + 1) % k);
+
+            return node;
+        }
+    
+        long long closest_point_distance(kd_node* node, const vector<int>& point) {
+            if (node == nullptr) {
+                return LLONG_MAX;
+            }
+
+            bool descend_left = point[node->axis] < node->point[node->axis];
+
+            long long dist = distance_squared(node->point, point);
+            dist = min(dist, closest_point_distance(descend_left ? node->left : node->right, point));
+
+            if (dist > square(node->point[node->axis] - point[node->axis])) {
+                dist = min(dist, closest_point_distance(descend_left ? node->right : node->left, point));
+            }
+
+            return dist;
+        }
+    
+    public:
+        kd_tree(vector<vector<int>> points, int dimensions) {
+            k = dimensions;
+            root = build(points, 0, points.size() - 1, 0);
+        }
+    
+        double closest_point(const vector<int>& point) {
+            return sqrt(closest_point_distance(root, point));
+        }
 };
 
-kd_node* root;
+void test() {
+    vector<vector<int>> points({
+    	{-3, -9, 9, -5},
+		{8, -4, 5, -10},
+		{7, -5, -4, -6},
+		{0, -9, -5, 10},
+		{10, 10, -2, 10},
+		{-7, 8, 3, -2},
+		{3, -5, 5, -9},
+		{-9, 9, -5, -4},
+		{3, 5, 0, -6},
+		{5, 6, 9, -6},
+		{3, -5, 5, -9}});
 
-int mem_cnt;
-kd_node memory_holder[SIZE];
+    kd_tree tree(points, 4);
 
+    vector<vector<int>> queries({
+    	{-9, 9, -9, -1},
+		{7, 2, -8, 7},
+		{6, 5, -9, -8},
+		{7, 2, -8, 7},
+		{0, -9, -5, 10}});
 
-kd_node* build(int from, int to, int axis) {
-    if (from == to) {
-        return nullptr;
-    }
+    vector<double> expected_results({
+    	5.000,
+		10.863,
+		9.695,
+		10.863,
+		0.000});
 
-    int mid = (from + to) / 2;
-
-    nth_element(points.begin() + from, 
-                points.begin() + mid, 
-                points.begin() + to, 
-                point_comparator(axis));
-
-    kd_node* node = &memory_holder[mem_cnt++];
-
-    node->axis = axis;
-    node->point = points[mid];
-
-    node->left = build(from, mid, (axis + 1) % k);
-    node->right = build(mid + 1, to, (axis + 1) % k);
-
-    return node;
-}
-
-long long nearest_neighbour(kd_node* node, vector<int>& point) {
-    if (node == nullptr) {
-        return LLONG_MAX;
-    }
-
-    long long result = distance_squared(node->point, point);
-
-    if (node->point[node->axis] <= point[node->axis]) {
-        result = min(result, nearest_neighbour(node->right, point));
-
-        if (node->left && point[node->axis] - sqrt(result) <= node->point[node->axis]) {
-            result = min(result, nearest_neighbour(node->left, point));
-        }
-    } else {
-        result = min(result, nearest_neighbour(node->left, point));
-
-        if (node->right && point[node->axis] - sqrt(result) >= node->point[node->axis]) {
-            result = min(result, nearest_neighbour(node->right, point));
-        }
-    }
-
-    return result;
-}
-
-void input() {
-    cin >> n >> k;
-    for (int i = 0; i < n; i++) {
-        vector<int> point;
-
-        for (int i = 0; i < k; i++) {
-            int coordinate;
-            cin >> coordinate;
-
-            point.push_back(coordinate);
-        }
-
-        points.push_back(point);
-    }
-}
-
-void solve() {
-    root = build(0, n, 0);
-
-    int q;
-    cin >> q;
-
-    cout << fixed << setprecision(2);
-
-    for (int i = 0; i < q; i++) {
-        vector<int> point;
-
-        for (int j = 0; j < k; j++) {
-            int coordinate;
-            cin >> coordinate;
-
-            point.push_back(coordinate);
-        }
-
-        cout << sqrt(nearest_neighbour(root, point)) << "\n";
+    const double eps = 0.001;
+    for (int i = 0; i < queries.size(); i++) {
+    	assert(abs(tree.closest_point(queries[i]) - expected_results[i]) < eps);
     }
 }
 
@@ -130,8 +125,7 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    input();
-    solve();
+    test();
 
     return 0;
 }

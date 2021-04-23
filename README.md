@@ -5,21 +5,6 @@ Repository with implementations and explanations of the following data structure
 
 #
 
-Implementations in:
-- <p display="inline"> 
-    <strong>C++</strong>
-    <img height="24px" align="right" left="10px" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Done.png">
-  </p>
-- <p display="inline"> 
-    <strong>Java</strong> 
-    <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/InProgress.png">
-  </p>
-- <p display="inline"> 
-    <strong>Python<strong> 
-    <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/ToDo.png">
-  </p>
-#
-
 ### Searching:
   - Binary search 
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/1-Searching">
@@ -245,7 +230,7 @@ Implementations in:
     </a>
   - Topological sort
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
-        <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/03-TopologicalSort.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -275,7 +260,7 @@ Implementations in:
     </a>
   - Find bridges
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
-        <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/06-Bridges.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -285,7 +270,7 @@ Implementations in:
     </a>
   - Find articulation points
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
-        <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/07-ArticulationPoints.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -345,7 +330,7 @@ Implementations in:
     </a>
   - Max flow (Edmonds Karp)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
-        <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/13-EdmondsKarp.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -367,7 +352,7 @@ Implementations in:
     </a>
   - Strongly connected components (Koraraju)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/02-Kosaraju.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -377,7 +362,7 @@ Implementations in:
     </a>
   - Boolean 2 satisfiability (2-SAT)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/03-SAT2.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -387,7 +372,7 @@ Implementations in:
     </a>
   - K-th ancestor
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/04-KthAncestor.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -397,7 +382,7 @@ Implementations in:
     </a>
   - Lowest common ancestor (LCA)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/05-LowestCommonAncestor.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -407,7 +392,7 @@ Implementations in:
     </a>
   - Max flow (Dinic)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/06-Dinic.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -417,7 +402,7 @@ Implementations in:
     </a>
   - Max flow (MPM)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
@@ -427,17 +412,17 @@ Implementations in:
     </a>
   - Min cost max flow (assignment problem)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/10-assignment-problem.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Virtual tree
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/09-VirtualTree.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
@@ -447,7 +432,7 @@ Implementations in:
     </a>
   - A*
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
-        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">

@@ -53,7 +53,7 @@
 
 - O(V + E) complexity.
 
-- To check for a cycle we will run a series of DFSs on the graph (possibly 1) and colour it's vertices in 3 colours. Initially all vertices are white (color 0). When we enter a vertex it becomes gray (color 1) and when we exit a vertex it becomes black (color 2). If at any point we encounter an edge to a gray vertex then the graph has a cycle. If the graph is undirected we must also keep track of the vertex we came from so that we do not consider it when checking for a gray vertex.
+- To check for a cycle we will run a series of DFSs on the graph (possibly 1) and colour it's vertices in 3 colours. Initially all vertices are white (color 0). When we enter a vertex it becomes gray (color 1) and when we exit from a vertex it becomes black (color 2). If at any point we encounter an edge to a gray vertex then the graph has a cycle. If the graph is undirected we must also keep track of the vertex we came from so that we do not consider it when checking for a gray vertex.
 
 ## Number of paths of fixed length
 - Find the number of paths with lenght k between two nodes from the graph G.

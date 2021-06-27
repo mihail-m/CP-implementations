@@ -266,9 +266,6 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Find cycles
-    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
-        <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/emptyLabel.png">
-    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/04-Cycles.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -452,7 +449,7 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Aho corasick (KMP Generalization)
-  <a href="https://github.com/mihail-m/CP-implementations/blob/master/5-String-Matching/5-aho-corasick.cpp">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/5-String-Matching/5-aho-corasick.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Suffix array

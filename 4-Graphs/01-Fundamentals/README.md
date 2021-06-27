@@ -44,7 +44,7 @@
 
 - O(V + E) complexity.
 
-- <p> One topoligical order can be found using Depth First Search (DFS). When we are at some vertex v, the DFS recursively visits all of its neighbours (outgoing edges) and after that returns - exiting from the vertex v. After that v will never be visited again, which means that all vertices that will be after v in the topological order will be visited before exiting from v. So we can just store each vertex in a stack just before the DFS exits from it. After the DFS completes the stack will contain a topological order of the vertices of the graph.
+- <p> One topoligical order can be found using Depth First Search (DFS). When we are at some vertex v, the DFS recursively visits all of its neighbours (outgoing edges) and after that returns - exiting from the vertex v. After that v will never be visited again, which means that all vertices that will be after v in the topological order will be visited before exiting from v. So we can just store each vertex in a stack just before the DFS exits from said vertex. After the DFS completes the stack will contain a topological order of the vertices of the graph.
   </p>
 
 ## Find cycles

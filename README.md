@@ -431,12 +431,18 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
     </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/08-mpm.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Min cost max flow (assignment problem)
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/10-assignment-problem.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
@@ -454,6 +460,9 @@ Repository with implementations and explanations of the following data structure
   - A*
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/12-a-star.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">

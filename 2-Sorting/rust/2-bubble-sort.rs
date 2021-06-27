@@ -19,7 +19,7 @@ mod sort {
 mod tests {
 
     #[test]
-    fn test_selection_sort() {
+    fn test_bubble_sort() {
         let mut test_array: Vec<i32> = vec![5, 1, 4, 7, 13, 2];
         let expected_result: Vec<i32> = vec![1, 2, 4, 5, 7, 13];
     

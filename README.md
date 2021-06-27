@@ -136,6 +136,9 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/5-merge-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/rust/5-merge-sort.rs">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
+    </a>
   - Heap sort 
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
@@ -145,6 +148,9 @@ Repository with implementations and explanations of the following data structure
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/6-heap-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
+    </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/rust/6-heap-sort.rs">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   - Counting sort
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
@@ -156,6 +162,9 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/7-counting-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/rust/7-counting-sort.rs">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
+    </a>
   - Radix sort
     <a href="https://github.com/mihail-m/CP-implementations/tree/master/2-Sorting">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
@@ -165,6 +174,9 @@ Repository with implementations and explanations of the following data structure
     </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/c%2B%2B/9-radix-sort.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
+    </a>
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/2-Sorting/rust/8-radix-sort.rs">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   
 #

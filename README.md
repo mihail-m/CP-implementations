@@ -266,6 +266,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Find cycles
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/01-Fundamentals">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/01-Fundamentals/java/04-Cycles.java">
         <img height="24px" align="right"  src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -375,6 +378,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Strongly connected components (Koraraju)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/02-Kosaraju.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -382,6 +388,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Boolean 2 satisfiability (2-SAT)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/03-SAT2.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -389,6 +398,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - K-th ancestor
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/04-KthAncestor.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -396,6 +408,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Lowest common ancestor (LCA)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/05-LowestCommonAncestor.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -403,6 +418,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Max flow (Dinic)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/06-Dinic.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -410,14 +428,23 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Max flow (MPM)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/08-mpm.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Min cost max flow (assignment problem)
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/10-assignment-problem.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - Virtual tree
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/java/09-VirtualTree.java">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/java.png">
     </a>
@@ -425,6 +452,9 @@ Repository with implementations and explanations of the following data structure
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
   - A*
+    <a href="https://github.com/mihail-m/CP-implementations/tree/master/4-Graphs/02-Advanced">
+        <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/tutorial.png">
+    </a>
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/4-Graphs/02-Advanced/c%2B%2B/12-a-star.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>

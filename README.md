@@ -16,7 +16,7 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/1-binary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/binary_search.rs">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/1-binary_search.rs">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   - Jump search 
@@ -29,7 +29,7 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/2-jump-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
-        <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/jump_search.rs">
+        <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/2-jump_search.rs">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   - Exponential search
@@ -42,7 +42,7 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/3-exponential-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/exponential_search.rs">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/3-exponential_search.rs">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   - Ternary search
@@ -55,7 +55,7 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/4-ternary-search.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/ternary_search.rs">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/4-ternary_search.rs">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
   - Quick select
@@ -68,7 +68,7 @@ Repository with implementations and explanations of the following data structure
     <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/c%2B%2B/5-quick-select.cpp">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/C%2B%2B.png">
     </a>
-    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/quick_select.rs">
+    <a href="https://github.com/mihail-m/CP-implementations/blob/master/1-Searching/rust/5-quick_select.rs">
         <img height="24px" align="right" src="https://github.com/mihail-m/CP-implementations/blob/master/resources/Rust.png">
     </a>
 #

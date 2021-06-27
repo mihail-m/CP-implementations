@@ -1,26 +1,30 @@
-// Bubble sort
-// Complexity: O(n^2)
+// Selection sort
 
-fn bubble_sort(array: &mut [i32]) {
-	for i in 0..array.len() {
-		for j in ((i + 1)..array.len()).rev() {
-
-			if array[j] < array[j - 1] {
-				array.swap(j, j - 1);
-			}
-		}
-	}
+mod sort {
+    /// Sort the given array via bubble sort
+    /// Complexity: O(array.len()^2)
+    pub fn bubble_sort(array: &mut Vec<i32>) {
+        for i in 0..array.len() {
+            for j in ((i + 1)..array.len()).rev() {
+    
+                if array[j] < array[j - 1] {
+                    array.swap(j, j - 1);
+                }
+            }
+        }
+    }
 }
 
-fn test() {
-	let mut test_array:[i32; 6] = [5, 1, 4, 7, 13, 2];
-	let expected_result:[i32; 6] = [1, 2, 4, 5, 7, 13];
+#[cfg(test)]
+mod tests {
 
-	bubble_sort(&mut test_array);
-
-	assert_eq!(expected_result, test_array);
-}
-
-fn main() {
-	test();
+    #[test]
+    fn test_selection_sort() {
+        let mut test_array: Vec<i32> = vec![5, 1, 4, 7, 13, 2];
+        let expected_result: Vec<i32> = vec![1, 2, 4, 5, 7, 13];
+    
+        crate::sort::bubble_sort(&mut test_array);
+    
+        assert_eq!(expected_result, test_array);
+    }
 }

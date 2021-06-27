@@ -1,49 +1,52 @@
 // Quick sort
-// Worst case complexity: O(n^2)
-// Average case complexity: O(n log n) 
 
-use rand::Rng;
-
-fn partition(array: &mut [i32], left: usize, right: usize) -> usize {
-
-    let pivot = rand::thread_rng().gen_range(left, right + 1);
-
-    array.swap(right, pivot);
-
-    let mut pivot = left;
-
-    for j in left..right {
-        if array[j] <= array[right] {
-            array.swap(pivot, j);
-            pivot = pivot + 1;
+mod sort {
+    /// Sort the given array via quick sort
+    /// Complexity: O(array.len()*log2(array.len())) on average,
+    /// but O(array.len()^2) worst case
+    pub fn quick_sort(array: &mut Vec<i32>, left: i32, right: i32) {
+        if left >= right {
+            return;
         }
-    }
-
-    array.swap(pivot, right);
-
-    return pivot;
-}
-
-fn quick_sort(array: &mut [i32], left: usize, right: usize) {
-    if left >= right {
-        return;
-    }
-
-    let pivot = partition(array, left, right);
-
-    quick_sort(array, left, pivot - 1);
-    quick_sort(array, pivot + 1, right);
-}
-
-fn test() {
-    let mut test_array: [i32; 6] = [5, 1, 4, 7, 13, 2];
-    let expected_result: [i32; 6] = [1, 2, 4, 5, 7, 13];
-
-    quick_sort(&mut test_array, 0, 5);
     
-    assert_eq!(expected_result, test_array);
+        let pivot: i32 = partition(array, left as usize, right as usize) as i32;
+    
+        quick_sort(array, left, pivot - 1);
+        quick_sort(array, pivot + 1, right);
+    }
+    
+    fn partition(values: &mut Vec<i32>, left: usize, right: usize) -> usize  { 
+        let pivot: usize = left + rand::random::<usize>() % (right - left + 1);
+    
+        values.swap(right, pivot);
+    
+        let mut i: usize = left;
+    
+        for j in left..right {
+            if values[j] <= values[right] {
+                values.swap(i, j); 
+                i = i + 1; 
+            } 
+        } 
+        
+        values.swap(i, right);
+        
+        return i; 
+    }
 }
 
-fn main() {
-    test();
+#[cfg(test)]
+mod tests {
+
+    #[test]
+    fn test_selection_sort() {
+        let mut test_array: Vec<i32> = vec![5, 1, 4, 7, 13, 2];
+        let expected_result: Vec<i32> = vec![1, 2, 4, 5, 7, 13];
+    
+        let from: i32 = 0;
+        let to: i32 = (test_array.len() - 1) as i32;
+        crate::sort::quick_sort(&mut test_array, from, to);
+    
+        assert_eq!(expected_result, test_array);
+    }
 }

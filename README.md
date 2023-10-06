@@ -1,7 +1,7 @@
 # Data structures and algorithms library.
 
 <br>
-Repository with implementations and explanations of the following data structures and algorithms.<br>
+Repository with implementations and explanations of the following data structures and algorithms used in competitive programming.<br>
 
 #
 
